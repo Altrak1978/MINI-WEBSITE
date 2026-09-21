@@ -2009,26 +2009,27 @@
     const hero = document.querySelector(".hero");
 
     const heroSlides = [
-      {
-        image: "assets/hero-mining.jpg",
-        title: "Powering Industries.<br>Moving Businesses.",
-        description:
-          "Your Total Partner for a Stronger, More Sustainable Indonesia."
-      },
-      {
-        image: "assets/hero-agriculture.jpg",
-        title: "Growing Agriculture.<br>Building Indonesia.",
-        description:
-          "Reliable solutions to support Indonesia's agricultural future."
-      },
-      {
-        image: "assets/hero-power.jpg",
-        title: "Reliable Power.<br>Ready for Tomorrow.",
-        description:
-          "Power solutions designed to keep your business moving."
-      }
-    ];
+  {
+    image: "assets/Konstruksi - Kategori.png",
+    title: "Powering Construction.<br>Moving Businesses.",
+    description:
+      "Your Total Partner for a Stronger, More Sustainable Indonesia."
+  },
 
+  {
+    image: "assets/Agriculture - Kategori.png",
+    title: "Growing Agriculture.<br>Building Indonesia.",
+    description:
+      "Reliable solutions to support Indonesia's agricultural future."
+  },
+
+  {
+    image: "assets/Powergen - Kategori.png",
+    title: "Reliable Power.<br>Ready for Tomorrow.",
+    description:
+      "Power solutions designed to keep your business moving."
+  }
+];
     let currentSlide = 0;
 
     const sliderButtons =
@@ -2067,16 +2068,19 @@
 
   const slide = heroSlides[currentSlide];
 
-  const heroTitle = document.querySelector(".hero h1");
-  const heroDescription = document.querySelector(".hero-description");
+  const heroTitle =
+    document.querySelector(".hero h1");
 
-  // Fade out
+  const heroDescription =
+    document.querySelector(".hero-description");
+
+  // Fade out text
   heroTitle.classList.add("hero-text-changing");
   heroDescription.classList.add("hero-text-changing");
 
   setTimeout(() => {
 
-    // Ganti background
+    // Ganti GAMBAR
     hero.style.backgroundImage = `
       linear-gradient(
         90deg,
@@ -2088,14 +2092,23 @@
       url("${slide.image}")
     `;
 
-    // Ganti text
+    // Ganti TEXT
     heroTitle.innerHTML = slide.title;
-    heroDescription.textContent = slide.description;
+
+    heroDescription.textContent =
+      slide.description;
 
     // Fade in
     requestAnimationFrame(() => {
-      heroTitle.classList.remove("hero-text-changing");
-      heroDescription.classList.remove("hero-text-changing");
+
+      heroTitle.classList.remove(
+        "hero-text-changing"
+      );
+
+      heroDescription.classList.remove(
+        "hero-text-changing"
+      );
+
     });
 
   }, 450);
