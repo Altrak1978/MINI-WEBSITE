@@ -789,25 +789,7 @@
        SERVICES
     ========================= */
 
-    .services::before {
-  content: "";
-  position: absolute;
-  left: 5%;
-  top: 15%;
-  width: 550px;
-  height: 350px;
-
-  background: radial-gradient(
-    ellipse,
-    rgba(255,255,255,0.55) 0%,
-    rgba(255,255,255,0.25) 40%,
-    rgba(255,255,255,0) 75%
-  );
-
-  z-index: 1;
-  pointer-events: none;
-} 
-    {
+    .services {
       position: relative;
       overflow: hidden;
 
@@ -819,15 +801,34 @@
       color: #0b355d;
     }
 
-    .services-wrapper {
-      position: relative;
-      z-index: 2;
+    .services::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  width: 550px;
+  height: 350px;
 
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
-      align-items: center;
-    }
+  background: radial-gradient(
+    ellipse,
+    rgba(255,255,255,0.35) 0%,
+    rgba(255,255,255,0.25) 40%,
+    rgba(255,255,255,0) 75%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+    .services-wrapper {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
 
     .services-copy .section-title {
       max-width: 430px;
