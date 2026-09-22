@@ -2234,19 +2234,41 @@
        NEXT / PREVIOUS BUTTONS
     ========================= */
 
-    sliderButtons.forEach((button, index) => {
+   sliderButtons.forEach((button, index) => {
 
-      button.addEventListener("click", () => {
+  button.addEventListener("click", () => {
 
-        if (index === 1) {
-          updateHero("next");
-        } else {
-          updateHero("previous");
-        }
+    if (index === 1) {
+      updateHero("next");
+    } else {
+      updateHero("previous");
+    }
 
-      });
+    startHeroAutoSlide();
 
-    });
+  });
+
+});
+
+    /* =========================
+   AUTO SLIDE
+========================= */
+
+let heroAutoSlide;
+
+function startHeroAutoSlide() {
+
+  clearInterval(heroAutoSlide);
+
+  heroAutoSlide = setInterval(() => {
+
+    updateHero("next");
+
+  }, 5000);
+
+}
+
+startHeroAutoSlide();
 
     /* =========================
        ACTIVE NAVIGATION
@@ -2283,6 +2305,17 @@
       });
 
     });
+
+    const heroSection =
+  document.querySelector(".hero");
+
+heroSection.addEventListener("mouseenter", () => {
+  clearInterval(heroAutoSlide);
+});
+
+heroSection.addEventListener("mouseleave", () => {
+  startHeroAutoSlide();
+});
 
   </script>
 
