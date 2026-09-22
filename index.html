@@ -1382,14 +1382,14 @@
 
           <div class="product-image">
             <img
-              src="assets/product-power-generation.jpg"
+              src="assets/Power Generation.png"
               alt="Power Generation"
             />
           </div>
 
           <div class="product-content">
             <h3>Power Generation</h3>
-            <p>Reliable power for a better tomorrow</p>
+            <p>Reliable power solutions for your business</p>
             <a href="#" class="product-link">
               View Products →
             </a>
@@ -1403,7 +1403,7 @@
 
           <div class="product-image">
             <img
-              src="assets/product-construction.jpg"
+              src="assets/Construction.png"
               alt="Construction Equipment"
             />
           </div>
@@ -1424,7 +1424,7 @@
 
           <div class="product-image">
             <img
-              src="assets/product-mining.jpg"
+              src="assets/Mining.png"
               alt="Mining Equipment"
             />
           </div>
@@ -1445,7 +1445,7 @@
 
           <div class="product-image">
             <img
-              src="assets/product-agriculture.jpg"
+              src="assets/Agriculture.png"
               alt="Agriculture Equipment"
             />
           </div>
@@ -1466,7 +1466,7 @@
 
           <div class="product-image">
             <img
-              src="assets/product-marine.jpg"
+              src="assets/Marine Engine.png"
               alt="Marine Equipment"
             />
           </div>
@@ -1487,7 +1487,7 @@
 
           <div class="product-image">
             <img
-              src="assets/product-industrial.jpg"
+              src="assets/Industrial.png"
               alt="Industrial Equipment"
             />
           </div>
@@ -2105,106 +2105,147 @@
 
     function updateHero(direction = "next") {
 
-      if (isAnimating) return;
+  if (isAnimating) return;
 
-      isAnimating = true;
+  isAnimating = true;
 
-      const oldSlide = heroSlides[currentSlide];
+  /* =========================
+     DETERMINE NEXT SLIDE
+  ========================= */
 
-      if (direction === "next") {
-        currentSlide++;
+  if (direction === "next") {
+    currentSlide++;
 
-        if (currentSlide >= heroSlides.length) {
-          currentSlide = 0;
-        }
-
-      } else {
-        currentSlide--;
-
-        if (currentSlide < 0) {
-          currentSlide = heroSlides.length - 1;
-        }
-      }
-
-      const slide = heroSlides[currentSlide];
-
-
-      /* =========================
-         PREPARE NEXT IMAGE
-      ========================= */
-
-      nextBg.style.backgroundImage =
-        `url("${slide.image}")`;
-
-      nextBg.style.opacity = "1";
-
-
-      /* =========================
-         FADE OUT TEXT
-      ========================= */
-
-      heroTitle.classList.add(
-        "hero-text-changing"
-      );
-
-      heroDescription.classList.add(
-        "hero-text-changing"
-      );
-
-
-      /* =========================
-         CROSSFADE IMAGE
-      ========================= */
-
-      requestAnimationFrame(() => {
-        currentBg.style.opacity = "0";
-      });
-
-
-      /* =========================
-         CHANGE TEXT DURING FADE
-      ========================= */
-
-      setTimeout(() => {
-
-        heroTitle.innerHTML =
-          slide.title;
-
-        heroDescription.textContent =
-          slide.description;
-
-        requestAnimationFrame(() => {
-
-          heroTitle.classList.remove(
-            "hero-text-changing"
-          );
-
-          heroDescription.classList.remove(
-            "hero-text-changing"
-          );
-
-        });
-
-      }, 450);
-
-
-      /* =========================
-         FINISH IMAGE TRANSITION
-      ========================= */
-
-      setTimeout(() => {
-
-        currentBg.style.backgroundImage =
-          `url("${slide.image}")`;
-
-        currentBg.style.opacity = "1";
-        nextBg.style.opacity = "0";
-
-        isAnimating = false;
-
-      }, 1250);
+    if (currentSlide >= heroSlides.length) {
+      currentSlide = 0;
     }
 
+  } else {
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+      currentSlide = heroSlides.length - 1;
+    }
+  }
+
+  const slide = heroSlides[currentSlide];
+
+
+  /* =========================
+     LOAD IMAGE FIRST
+     DON'T START FADE YET
+  ========================= */
+
+  const imageLoader = new Image();
+
+  imageLoader.onload = () => {
+
+    /* =========================
+       IMAGE IS READY
+       NOW SET BACKGROUND
+    ========================= */
+
+    nextBg.style.backgroundImage =
+      `url("${slide.image}")`;
+
+
+    /* =========================
+       FADE OUT TEXT
+    ========================= */
+
+    heroTitle.classList.add(
+      "hero-text-changing"
+    );
+
+    heroDescription.classList.add(
+      "hero-text-changing"
+    );
+
+
+    /* =========================
+       CROSSFADE BACKGROUND
+    ========================= */
+
+    requestAnimationFrame(() => {
+
+      nextBg.style.opacity = "1";
+      currentBg.style.opacity = "0";
+
+    });
+
+
+    /* =========================
+       CHANGE TEXT
+    ========================= */
+
+    setTimeout(() => {
+
+      heroTitle.innerHTML =
+        slide.title;
+
+      heroDescription.textContent =
+        slide.description;
+
+
+      requestAnimationFrame(() => {
+
+        heroTitle.classList.remove(
+          "hero-text-changing"
+        );
+
+        heroDescription.classList.remove(
+          "hero-text-changing"
+        );
+
+      });
+
+    }, 450);
+
+
+    /* =========================
+       FINISH CROSSFADE
+    ========================= */
+
+    setTimeout(() => {
+
+      currentBg.style.backgroundImage =
+        `url("${slide.image}")`;
+
+      currentBg.style.opacity = "1";
+
+      nextBg.style.opacity = "0";
+
+      isAnimating = false;
+
+    }, 1250);
+
+  };
+
+
+  /* =========================
+     IF IMAGE FAILS
+  ========================= */
+
+  imageLoader.onerror = () => {
+
+    console.error(
+      "Hero image gagal dimuat:",
+      slide.image
+    );
+
+    isAnimating = false;
+
+  };
+
+
+  /* =========================
+     START IMAGE LOADING
+  ========================= */
+
+  imageLoader.src = slide.image;
+
+}
 
     /* =========================
        NEXT / PREVIOUS BUTTONS
