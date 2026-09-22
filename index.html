@@ -529,41 +529,96 @@
        BRAND LOGOS
     ========================= */
 
-    .brand-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-      margin-top: 25px;
-      padding: 5px 40px;
-    }
+    /* =========================
+   BRAND LOGO MARQUEE
+========================= */
 
-    .brand-logo {
-      max-height: 38px;
-      max-width: 125px;
-      object-fit: contain;
-      filter: grayscale(10%);
-    }
+.brand-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 35px;
 
-    .more-brand {
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-    }
+  /* sedikit fade di sisi kiri-kanan */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
 
-    .more-circle {
-      width: 28px;
-      height: 28px;
-      border: 2px solid var(--blue-light);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 17px;
-    }
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.brand-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+
+  animation: brandScroll 35s linear infinite;
+
+  will-change: transform;
+}
+
+.brand-item {
+  width: 160px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-right: 55px;
+}
+
+.brand-item img {
+  max-width: 130px;
+  max-height: 45px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================
+   INFINITE ANIMATION
+========================= */
+
+@keyframes brandScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(
+      calc(-50% - 27.5px)
+    );
+  }
+
+}
+
+
+/* =========================
+   PAUSE WHEN HOVER
+========================= */
+
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
 
     /* =========================
        NETWORK
@@ -1507,58 +1562,148 @@
 
       <!-- BRAND LOGOS -->
 
-      <div class="brand-row">
+      <div class="brand-marquee">
+  <div class="brand-track">
 
-        <img
-          src="assets/logo-cummins.png"
-          class="brand-logo"
-          alt="Cummins"
-        />
-
-        <img
-          src="assets/logo-new-holland.png"
-          class="brand-logo"
-          alt="New Holland"
-        />
-
-        <img
-          src="assets/logo-case.png"
-          class="brand-logo"
-          alt="CASE"
-        />
-
-        <img
-          src="assets/logo-yanmar.png"
-          class="brand-logo"
-          alt="Yanmar"
-        />
-
-        <img
-          src="assets/logo-merlo.png"
-          class="brand-logo"
-          alt="Merlo"
-        />
-
-        <img
-          src="assets/logo-astec.png"
-          class="brand-logo"
-          alt="Astec"
-        />
-
-        <img
-          src="assets/logo-liugong.png"
-          class="brand-logo"
-          alt="LiuGong"
-        />
-
-        <div class="more-brand">
-          <div class="more-circle">+</div>
-          And More
-        </div>
-
-      </div>
-
+    <div class="brand-item">
+      <img src="assets/logo-cummins.png" alt="Cummins">
     </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-new-holland.png" alt="New Holland">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-case.png" alt="CASE">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-yanmar.png" alt="Yanmar">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-merlo.png" alt="Merlo">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-astec.png" alt="Astec">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-liugong.png" alt="LiuGong">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-8.png" alt="Brand 8">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-9.png" alt="Brand 9">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-10.png" alt="Brand 10">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-11.png" alt="Brand 11">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-12.png" alt="Brand 12">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-13.png" alt="Brand 13">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-14.png" alt="Brand 14">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-15.png" alt="Brand 15">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-16.png" alt="Brand 16">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-17.png" alt="Brand 17">
+    </div>
+
+    <!-- DUPLIKASI UNTUK LOOP -->
+    <div class="brand-item">
+      <img src="assets/logo-cummins.png" alt="Cummins">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-new-holland.png" alt="New Holland">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-case.png" alt="CASE">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-yanmar.png" alt="Yanmar">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-merlo.png" alt="Merlo">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-astec.png" alt="Astec">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-liugong.png" alt="LiuGong">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-8.png" alt="Brand 8">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-9.png" alt="Brand 9">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-10.png" alt="Brand 10">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-11.png" alt="Brand 11">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-12.png" alt="Brand 12">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-13.png" alt="Brand 13">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-14.png" alt="Brand 14">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-15.png" alt="Brand 15">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-16.png" alt="Brand 16">
+    </div>
+
+    <div class="brand-item">
+      <img src="assets/logo-17.png" alt="Brand 17">
+    </div>
+
+  </div>
+</div>
 
   </section>
 
@@ -1597,108 +1742,11 @@
 
       <div class="map-area">
 
-        <!-- INDONESIA MAP -->
-        <svg
-          class="map-svg"
-          viewBox="0 0 800 300"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-
-          <path
-            d="M90 135
-               C110 105 140 110 165 130
-               C185 145 190 160 175 175
-               C150 195 115 188 95 168
-               C80 155 78 145 90 135Z
-
-               M205 110
-               C225 95 245 100 265 115
-               L310 140
-               L335 160
-               L305 178
-               L270 168
-               L235 180
-               L210 158
-               Z
-
-               M360 105
-               L425 92
-               L475 110
-               L495 132
-               L470 145
-               L430 138
-               L400 155
-               L365 142
-               Z
-
-               M500 115
-               L565 105
-               L620 120
-               L670 135
-               L700 158
-               L675 174
-               L625 160
-               L580 170
-               L535 152
-               L505 138
-               Z
-
-               M325 190
-               L375 180
-               L415 195
-               L455 215
-               L435 230
-               L385 220
-               L350 230
-               L315 212
-               Z"
-            fill="#dce9f4"
-            opacity="0.9"
-          />
-
-        </svg>
-
-
-        <!-- MAP PINS -->
-
-        <div class="map-pin pin-1"></div>
-        <div class="map-pin pin-2"></div>
-        <div class="map-pin pin-3"></div>
-        <div class="map-pin pin-4"></div>
-        <div class="map-pin pin-5"></div>
-        <div class="map-pin pin-6"></div>
-        <div class="map-pin pin-7"></div>
-
-
-        <div class="network-list">
-
-          <div>
-            <span>▣</span>
-            Head Office<br />Jakarta
-          </div>
-
-          <div>
-            <span>●</span>
-            Branches
-          </div>
-
-          <div>
-            <span>◉</span>
-            Service Points
-          </div>
-
-          <div>
-            <span>◆</span>
-            Parts Depots
-          </div>
-
-        </div>
-
-
-        <div class="network-note">
-          Indonesia<br />
-          Always Within Reach
-        </div>
+        <img
+  src="assets/Map Indonesia.png"
+  alt="Altrak 1978 Nationwide Network"
+  class="network-image"
+/>
 
       </div>
 
