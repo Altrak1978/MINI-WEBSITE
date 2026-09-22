@@ -183,7 +183,6 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      transition: opacity 1.2s ease-in-out;
       will-change: opacity;
     }
 
@@ -207,7 +206,7 @@
     }
 
     .hero-bg-next {
-      opacity: 0;
+      display: none;
     }
 
     .hero::after {
@@ -632,7 +631,7 @@
 
   background:
     url("assets/Map Indonesia.png")
-    center center / cover no-repeat;
+    center center / 100% 100% no-repeat;
 }
     .network-wrapper {
       display: grid;
@@ -2090,10 +2089,7 @@
 
   isAnimating = true;
 
-  /* =========================
-     DETERMINE NEXT SLIDE
-  ========================= */
-
+  /* Tentukan slide berikutnya */
   if (direction === "next") {
     currentSlide++;
 
@@ -2102,7 +2098,6 @@
     }
 
   } else {
-
     currentSlide--;
 
     if (currentSlide < 0) {
@@ -2112,27 +2107,25 @@
 
   const slide = heroSlides[currentSlide];
 
-
   /* =========================
-     LOAD IMAGE FIRST
-     DON'T START FADE YET
+     LOAD IMAGE TERLEBIH DAHULU
   ========================= */
 
-  const imageLoader = new Image();
+  const newImage = new Image();
 
-  imageLoader.onload = () => {
+  newImage.onload = function () {
 
-    /* =========================
-       IMAGE IS READY
-       NOW SET BACKGROUND
-    ========================= */
+    /*
+      Gambar SUDAH benar-benar siap.
+      Baru sekarang kita ganti background.
+    */
 
-    nextBg.style.backgroundImage =
+    currentBg.style.backgroundImage =
       `url("${slide.image}")`;
 
 
     /* =========================
-       FADE OUT TEXT
+       TEXT TRANSITION
     ========================= */
 
     heroTitle.classList.add(
@@ -2144,22 +2137,6 @@
     );
 
 
-    /* =========================
-       CROSSFADE BACKGROUND
-    ========================= */
-
-    requestAnimationFrame(() => {
-
-      nextBg.style.opacity = "1";
-      currentBg.style.opacity = "0";
-
-    });
-
-
-    /* =========================
-       CHANGE TEXT
-    ========================= */
-
     setTimeout(() => {
 
       heroTitle.innerHTML =
@@ -2169,49 +2146,39 @@
         slide.description;
 
 
-      requestAnimationFrame(() => {
+      heroTitle.classList.remove(
+        "hero-text-changing"
+      );
 
-        heroTitle.classList.remove(
-          "hero-text-changing"
-        );
+      heroDescription.classList.remove(
+        "hero-text-changing"
+      );
 
-        heroDescription.classList.remove(
-          "hero-text-changing"
-        );
-
-      });
-
-    }, 450);
+    }, 300);
 
 
-    /* =========================
-       FINISH CROSSFADE
-    ========================= */
+    /*
+      Selesai.
+      Tidak ada layer kosong.
+    */
 
     setTimeout(() => {
 
-      currentBg.style.backgroundImage =
-        `url("${slide.image}")`;
-
-      currentBg.style.opacity = "1";
-
-      nextBg.style.opacity = "0";
-
       isAnimating = false;
 
-    }, 1250);
+    }, 500);
 
   };
 
 
   /* =========================
-     IF IMAGE FAILS
+     ERROR HANDLING
   ========================= */
 
-  imageLoader.onerror = () => {
+  newImage.onerror = function () {
 
     console.error(
-      "Hero image gagal dimuat:",
+      "Gagal memuat gambar:",
       slide.image
     );
 
@@ -2221,11 +2188,10 @@
 
 
   /* =========================
-     START IMAGE LOADING
+     START LOADING
   ========================= */
 
-  imageLoader.src = slide.image;
-
+  newImage.src = slide.image;
 }
 
     /* =========================
