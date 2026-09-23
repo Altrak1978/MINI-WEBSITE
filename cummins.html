@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Cummins Power Generation Products - PT Altrak 1978"
+  >
+
+  <title>
+    Cummins Power Generation | PT Altrak 1978
+  </title>
+
+
+  <!-- ==================================================
+       GOOGLE FONT
+  ================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* ==================================================
+       ROOT
+    ================================================== */
+
+    :root {
+
+      --blue: #073b70;
+
+      --blue-dark: #042c53;
+
+      --blue-light: #0c5a9f;
+
+      --yellow: #f6c400;
+
+      --white: #ffffff;
+
+      --light: #f4f8fb;
+
+      --text: #102f52;
+
+      --muted: #62758c;
+
+      --border: #dce6ef;
+
+      --shadow:
+        0 12px 35px
+        rgba(7, 59, 112, 0.10);
+
+    }
+
+
+    /* ==================================================
+       RESET
+    ================================================== */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family: "Inter", sans-serif;
+
+      color: var(--text);
+
+      background: #fff;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+
+      text-decoration: none;
+
+      color: inherit;
+
+    }
+
+
+    button,
+    input {
+
+      font-family: inherit;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+
+      display: block;
+
+    }
+
+
+    .container {
+
+      width:
+        min(
+          1180px,
+          calc(100% - 80px)
+        );
+
+      margin: auto;
+
+    }
+
+
+    /* ==================================================
+       HEADER
+    ================================================== */
+
+    header {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 78px;
+
+      background:
+        rgba(255,255,255,.97);
+
+      backdrop-filter:
+        blur(15px);
+
+      border-bottom:
+        1px solid
+        rgba(0,0,0,.05);
+
+      z-index: 1000;
+
+    }
+
+
+    .navbar {
+
+      height: 78px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+    }
+
+
+    .logo {
+
+      width: 165px;
+
+      height: auto;
+
+    }
+
+
+    .nav-menu {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 38px;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+    }
+
+
+    .nav-menu a {
+
+      position: relative;
+
+      transition: .25s;
+
+    }
+
+
+    .nav-menu a:hover {
+
+      color:
+        var(--blue-light);
+
+    }
+
+
+    .nav-menu a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -8px;
+
+      width: 0;
+
+      height: 2px;
+
+      background:
+        var(--yellow);
+
+      transition: .25s;
+
+    }
+
+
+    .nav-menu a:hover::after {
+
+      width: 100%;
+
+    }
+
+
+    .contact-btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding:
+        12px 20px;
+
+      background:
+        var(--blue);
+
+      color: #fff;
+
+      border-radius: 7px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      transition: .25s;
+
+    }
+
+
+    .contact-btn:hover {
+
+      background:
+        var(--blue-light);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* ==================================================
+       PRODUCT HEADER
+    ================================================== */
+
+    .product-header {
+
+      padding:
+        120px 0 45px;
+
+      background:
+        #f4f8fb;
+
+      border-bottom:
+        1px solid
+        #e1e9f0;
+
+    }
+
+
+    .back-home {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding:
+        10px 16px;
+
+      border:
+        1px solid
+        #cbd9e5;
+
+      border-radius: 6px;
+
+      background: #fff;
+
+      color:
+        var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      margin-bottom: 35px;
+
+      transition: .25s;
+
+    }
+
+
+    .back-home:hover {
+
+      background:
+        var(--blue);
+
+      border-color:
+        var(--blue);
+
+      color: #fff;
+
+      transform:
+        translateX(-2px);
+
+    }
+
+
+    .section-label {
+
+      color:
+        var(--blue-light);
+
+      font-size: 10px;
+
+      letter-spacing: 5px;
+
+      font-weight: 800;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .product-header h1 {
+
+      color:
+        var(--blue);
+
+      font-size:
+        clamp(
+          36px,
+          4vw,
+          52px
+        );
+
+      line-height: 1.05;
+
+      letter-spacing:
+        -1.5px;
+
+      font-weight: 800;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .product-header p {
+
+      color:
+        var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* ==================================================
+       PRODUCT CATALOG
+    ================================================== */
+
+    .catalog {
+
+      padding:
+        45px 0 90px;
+
+      background:
+        #f4f8fb;
+
+    }
+
+
+    .catalog-top {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content:
+        space-between;
+
+      gap: 30px;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .catalog-title {
+
+      color:
+        var(--blue);
+
+      font-size: 24px;
+
+      font-weight: 800;
+
+    }
+
+
+    .catalog-count {
+
+      color:
+        var(--muted);
+
+      font-size: 11px;
+
+      margin-top: 6px;
+
+    }
+
+
+    /* ==================================================
+       SEARCH
+    ================================================== */
+
+    .search-box {
+
+      width: 300px;
+
+    }
+
+
+    .search-box input {
+
+      width: 100%;
+
+      height: 44px;
+
+      padding:
+        0 15px;
+
+      background: #fff;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 7px;
+
+      outline: none;
+
+      color:
+        var(--text);
+
+      font-size: 12px;
+
+      transition: .25s;
+
+    }
+
+
+    .search-box input::placeholder {
+
+      color:
+        #9aaabd;
+
+    }
+
+
+    .search-box input:focus {
+
+      border-color:
+        var(--blue-light);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(12,90,159,.08);
+
+    }
+
+
+    /* ==================================================
+       FILTER
+    ================================================== */
+
+    .filters {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 30px;
+
+    }
+
+
+    .filter-btn {
+
+      padding:
+        9px 16px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 6px;
+
+      background: #fff;
+
+      color:
+        var(--muted);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .25s;
+
+    }
+
+
+    .filter-btn:hover {
+
+      border-color:
+        var(--blue-light);
+
+      color:
+        var(--blue-light);
+
+    }
+
+
+    .filter-btn.active {
+
+      background:
+        var(--blue);
+
+      border-color:
+        var(--blue);
+
+      color: #fff;
+
+    }
+
+
+    /* ==================================================
+       PRODUCT GRID
+    ================================================== */
+
+    .product-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+
+    }
+
+
+    /* ==================================================
+       PRODUCT CARD
+    ================================================== */
+
+    .product-card {
+
+      background: #fff;
+
+      border:
+        1px solid
+        #e1e8ee;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      transition: .3s;
+
+    }
+
+
+    .product-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    /* ==================================================
+       PRODUCT IMAGE
+    ================================================== */
+
+    .product-image {
+
+      height: 235px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          180deg,
+          #edf4f8,
+          #f8fbfd
+        );
+
+      overflow: hidden;
+
+    }
+
+
+    .product-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      padding: 20px;
+
+      transition: .4s;
+
+    }
+
+
+    .product-card:hover
+    .product-image img {
+
+      transform:
+        scale(1.04);
+
+    }
+
+
+    /* ==================================================
+       TEMPORARY IMAGE PLACEHOLDER
+    ================================================== */
+
+    .image-placeholder {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      height: 100%;
+
+      color:
+        #a2b0bd;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      font-weight: 600;
+
+    }
+
+
+    /* ==================================================
+       PRODUCT CONTENT
+    ================================================== */
+
+    .product-content {
+
+      padding:
+        20px;
+
+    }
+
+
+    .product-brand {
+
+      color:
+        var(--blue-light);
+
+      font-size: 9px;
+
+      letter-spacing: 1.8px;
+
+      text-transform:
+        uppercase;
+
+      font-weight: 800;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .product-name {
+
+      color:
+        var(--blue);
+
+      font-size: 17px;
+
+      line-height: 1.3;
+
+      font-weight: 800;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .product-capacity {
+
+      color:
+        var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .product-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color:
+        var(--blue-light);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      transition: .25s;
+
+    }
+
+
+    .product-link:hover {
+
+      gap: 12px;
+
+    }
+
+
+    /* ==================================================
+       PAGINATION
+    ================================================== */
+
+    .pagination {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      margin-top: 50px;
+
+    }
+
+
+    .page-btn {
+
+      width: 37px;
+
+      height: 37px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 6px;
+
+      background: #fff;
+
+      color:
+        var(--muted);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+    }
+
+
+    .page-btn:hover {
+
+      border-color:
+        var(--blue);
+
+      color:
+        var(--blue);
+
+    }
+
+
+    .page-btn.active {
+
+      background:
+        var(--blue);
+
+      border-color:
+        var(--blue);
+
+      color: #fff;
+
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+
+      background:
+        #03477f;
+
+      color: #fff;
+
+      padding:
+        28px 0;
+
+    }
+
+
+    .footer-wrapper {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 30px;
+
+    }
+
+
+    .footer-logo {
+
+      width: 150px;
+
+      filter:
+        brightness(0)
+        invert(1);
+
+    }
+
+
+    .footer-copy {
+
+      color:
+        #d5e5f4;
+
+      font-size: 10px;
+
+    }
+
+
+    /* ==================================================
+       MOBILE
+    ================================================== */
+
+    @media (max-width: 850px) {
+
+      .container {
+
+        width:
+          calc(100% - 40px);
+
+      }
+
+
+      .nav-menu,
+      .contact-btn {
+
+        display: none;
+
+      }
+
+
+      .product-header {
+
+        padding:
+          110px 0 40px;
+
+      }
+
+
+      .product-header h1 {
+
+        font-size: 42px;
+
+      }
+
+
+      .catalog-top {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        gap: 18px;
+
+      }
+
+
+      .search-box {
+
+        width: 100%;
+
+      }
+
+
+      .product-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media (max-width: 560px) {
+
+      .container {
+
+        width:
+          calc(100% - 30px);
+
+      }
+
+
+      .logo {
+
+        width: 140px;
+
+      }
+
+
+      .product-header {
+
+        padding:
+          105px 0 35px;
+
+      }
+
+
+      .back-home {
+
+        margin-bottom: 28px;
+
+      }
+
+
+      .product-header h1 {
+
+        font-size: 34px;
+
+        letter-spacing:
+          -1px;
+
+      }
+
+
+      .product-header p {
+
+        font-size: 13px;
+
+      }
+
+
+      .catalog {
+
+        padding:
+          35px 0 60px;
+
+      }
+
+
+      .catalog-title {
+
+        font-size: 21px;
+
+      }
+
+
+      .filters {
+
+        gap: 7px;
+
+      }
+
+
+      .filter-btn {
+
+        padding:
+          8px 12px;
+
+      }
+
+
+      .product-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 16px;
+
+      }
+
+
+      .product-image {
+
+        height: 240px;
+
+      }
+
+
+      .product-content {
+
+        padding:
+          18px;
+
+      }
+
+
+      .footer-wrapper {
+
+        flex-direction:
+          column;
+
+        text-align:
+          center;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       HEADER
+  ================================================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+
+      <a href="index.html">
+
+        <img
+          src="assets/AL-78-Logo-terevisi.png.png"
+          alt="Altrak 1978"
+          class="logo"
+        >
+
+      </a>
+
+
+      <nav class="nav-menu">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="index.html#solutions">
+          Our Solutions
+        </a>
+
+        <a href="index.html#network">
+          Our Network
+        </a>
+
+        <a href="index.html#services">
+          Our Services
+        </a>
+
+      </nav>
+
+
+      <a
+        href="index.html#contact"
+        class="contact-btn"
+      >
+        Contact Us
+      </a>
+
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ==================================================
+       PRODUCT HEADER
+  ================================================== -->
+
+  <section class="product-header">
+
+    <div class="container">
+
+
+      <!-- BACK TO MAIN WEBSITE -->
+
+      <a
+        href="index.html"
+        class="back-home"
+      >
+
+        ← Back to Altrak 1978
+
+      </a>
+
+
+      <div class="section-label">
+
+        CUMMINS POWER GENERATION
+
+      </div>
+
+
+      <h1>
+
+        Diesel Generator Sets
+
+      </h1>
+
+
+      <p>
+
+        Reliable power solutions for your business.
+
+      </p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       PRODUCT CATALOG
+  ================================================== -->
+
+  <section class="catalog">
+
+    <div class="container">
+
+
+      <!-- CATALOG HEADER -->
+
+      <div class="catalog-top">
+
+
+        <div>
+
+          <div class="catalog-title">
+
+            Cummins Generator Sets
+
+          </div>
+
+
+          <div
+            class="catalog-count"
+            id="productCount"
+          >
+
+            3 Products
+
+          </div>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="productSearch"
+            placeholder="Search product..."
+          >
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ==================================================
+           FILTER
+      ================================================== -->
+
+      <div class="filters">
+
+
+        <button
+          class="filter-btn active"
+          data-filter="all"
+        >
+
+          All Products
+
+        </button>
+
+
+        <button
+          class="filter-btn"
+          data-filter="small"
+        >
+
+          Compact
+
+        </button>
+
+
+        <button
+          class="filter-btn"
+          data-filter="medium"
+        >
+
+          Medium Capacity
+
+        </button>
+
+
+        <button
+          class="filter-btn"
+          data-filter="large"
+        >
+
+          High Capacity
+
+        </button>
+
+
+      </div>
+
+
+
+      <!-- ==================================================
+           PRODUCT GRID
+      ================================================== -->
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      >
+
+
+        <!-- ==================================================
+             PRODUCT 01
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="small"
+          data-name="C17D5I X2.5 G2 15 kVA"
+        >
+
+
+          <div class="product-image">
+
+            <!--
+              NANTI GANTI DENGAN GAMBAR:
+
+              <img
+                src="assets/products/cummins/C17D5I.jpg"
+                alt="Cummins C17D5I"
+              >
+            -->
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              C17D5I / X2.5-G2
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              15 kVA Prime
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+             PRODUCT 02
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="small"
+          data-name="C22D5I X2.5 G2 20 kVA"
+        >
+
+
+          <div class="product-image">
+
+            <!--
+              NANTI GANTI DENGAN GAMBAR
+            -->
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              C22D5I / X2.5-G2
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              20 kVA Prime
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+             PRODUCT 03
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="medium"
+          data-name="C66D5E 4BTAA3.3 G14 60 kVA"
+        >
+
+
+          <div class="product-image">
+
+            <!--
+              NANTI GANTI DENGAN GAMBAR
+            -->
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              C66D5E / 4BTAA3.3-G14
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              60 kVA Prime
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+             PRODUCT 04
+             TEMPLATE
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="medium"
+          data-name="cummins generator"
+        >
+
+
+          <div class="product-image">
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              Product Name
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              Generator Set
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+             PRODUCT 05
+             TEMPLATE
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="large"
+          data-name="cummins generator"
+        >
+
+
+          <div class="product-image">
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              Product Name
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              High Capacity Generator
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+             PRODUCT 06
+             TEMPLATE
+        ================================================== -->
+
+        <article
+          class="product-card"
+          data-category="large"
+          data-name="cummins generator"
+        >
+
+
+          <div class="product-image">
+
+            <div class="image-placeholder">
+
+              PRODUCT IMAGE
+
+            </div>
+
+          </div>
+
+
+          <div class="product-content">
+
+
+            <div class="product-brand">
+
+              Cummins Power Generation
+
+            </div>
+
+
+            <h2 class="product-name">
+
+              Product Name
+
+            </h2>
+
+
+            <p class="product-capacity">
+
+              High Capacity Generator
+
+            </p>
+
+
+            <a
+              href="#"
+              class="product-link"
+            >
+
+              View Details →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+
+      <!-- ==================================================
+           PAGINATION
+      ================================================== -->
+
+      <div class="pagination">
+
+
+        <button
+          class="page-btn active"
+        >
+
+          1
+
+        </button>
+
+
+        <button
+          class="page-btn"
+        >
+
+          2
+
+        </button>
+
+
+        <button
+          class="page-btn"
+        >
+
+          3
+
+        </button>
+
+
+        <button
+          class="page-btn"
+        >
+
+          4
+
+        </button>
+
+
+        <button
+          class="page-btn"
+        >
+
+          →
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
+  <footer>
+
+    <div class="container footer-wrapper">
+
+
+      <img
+        src="assets/AL-78-Logo-terevisi.png.png"
+        alt="Altrak 1978"
+        class="footer-logo"
+      >
+
+
+      <div class="footer-copy">
+
+        © 2026 PT Altrak 1978 · Your Total Partner
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script>
+
+
+    /* ==================================================
+       ELEMENTS
+    ================================================== */
+
+    const searchInput =
+      document.getElementById(
+        "productSearch"
+      );
+
+
+    const filterButtons =
+      document.querySelectorAll(
+        ".filter-btn"
+      );
+
+
+    const productCards =
+      document.querySelectorAll(
+        ".product-card"
+      );
+
+
+    const productCount =
+      document.getElementById(
+        "productCount"
+      );
+
+
+
+    /* ==================================================
+       FILTER + SEARCH
+    ================================================== */
+
+    let activeFilter = "all";
+
+
+    function filterProducts() {
+
+
+      const keyword =
+        searchInput.value
+          .toLowerCase()
+          .trim();
+
+
+      let visibleCount = 0;
+
+
+      productCards.forEach(card => {
+
+
+        const name =
+          card.dataset.name
+            .toLowerCase();
+
+
+        const category =
+          card.dataset.category;
+
+
+        const matchSearch =
+          name.includes(keyword);
+
+
+        const matchFilter =
+          activeFilter === "all" ||
+          category === activeFilter;
+
+
+        if (
+          matchSearch &&
+          matchFilter
+        ) {
+
+          card.style.display = "";
+
+          visibleCount++;
+
+        } else {
+
+          card.style.display =
+            "none";
+
+        }
+
+      });
+
+
+      productCount.textContent =
+        visibleCount +
+        (visibleCount === 1
+          ? " Product"
+          : " Products");
+
+    }
+
+
+
+    /* ==================================================
+       SEARCH
+    ================================================== */
+
+    searchInput.addEventListener(
+      "input",
+      filterProducts
+    );
+
+
+
+    /* ==================================================
+       FILTER BUTTON
+    ================================================== */
+
+    filterButtons.forEach(button => {
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+
+          filterButtons.forEach(
+            btn => {
+
+              btn.classList.remove(
+                "active"
+              );
+
+            }
+          );
+
+
+          button.classList.add(
+            "active"
+          );
+
+
+          activeFilter =
+            button.dataset.filter;
+
+
+          filterProducts();
+
+        }
+      );
+
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
