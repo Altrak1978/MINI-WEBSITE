@@ -544,91 +544,120 @@
    BRAND LOGO MARQUEE
 ========================= */
 
-.brand-marquee {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+/* =========================
+   BRAND LOGOS GRID
+========================= */
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
   margin-top: 35px;
-
-  /* sedikit fade di sisi kiri-kanan */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 6%,
-    black 94%,
-    transparent 100%
-  );
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 6%,
-    black 94%,
-    transparent 100%
-  );
-}
-
-.brand-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-
-  animation: brandScroll 35s linear infinite;
-
-  will-change: transform;
 }
 
 .brand-item {
-  width: 160px;
-  height: 70px;
+  height: 95px;
+  padding: 18px 20px;
+
+  background: #fff;
+  border: 1px solid #e5edf4;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  text-decoration: none;
+  cursor: pointer;
 
-  margin-right: 55px;
+  transition: all 0.25s ease;
 }
 
 .brand-item img {
-  max-width: 130px;
-  max-height: 45px;
-
   width: auto;
   height: auto;
+  max-width: 145px;
+  max-height: 48px;
 
   object-fit: contain;
-
   display: block;
 }
 
+.brand-item:hover {
+  transform: translateY(-3px);
+  border-color: #0b4f8a;
+  box-shadow: 0 8px 20px rgba(11, 53, 93, 0.10);
+}
 
-/* =========================
-   INFINITE ANIMATION
-========================= */
 
-@keyframes brandScroll {
+/* LOGO YANG BENTUKNYA LEBIH TINGGI */
 
-  from {
-    transform: translateX(0);
-  }
+.brand-item img[src*="Cummins"] {
+  max-width: 100px;
+  max-height: 55px;
+}
 
-  to {
-    transform: translateX(
-      calc(-50% - 27.5px)
-    );
-  }
+.brand-item img[src*="Fleetguard"] {
+  max-width: 115px;
+  max-height: 55px;
+}
 
+.brand-item img[src*="Valvoline"] {
+  max-width: 115px;
+  max-height: 55px;
+}
+
+.brand-item img[src*="MIZZOU"] {
+  max-width: 115px;
+  max-height: 55px;
+}
+
+.brand-item img[src*="ALTEQ"] {
+  max-width: 120px;
+  max-height: 55px;
 }
 
 
 /* =========================
-   PAUSE WHEN HOVER
+   RESPONSIVE BRAND GRID
 ========================= */
 
-.brand-marquee:hover .brand-track {
-  animation-play-state: paused;
+@media (max-width: 1100px) {
+  .brand-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .brand-item {
+    height: 85px;
+    padding: 14px;
+  }
+
+  .brand-item img {
+    max-width: 120px;
+    max-height: 42px;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-item {
+    height: 80px;
+  }
+
+  .brand-item img {
+    max-width: 115px;
+    max-height: 40px;
+  }
 }
 
     /* =========================
@@ -1626,82 +1655,82 @@
 
       <!-- BRAND LOGOS -->
 
-      <div class="brand-marquee">
-  <div class="brand-track">
+<div class="brand-grid">
 
-    <div class="brand-item">
-      <img src="assets/Cummins Logo.png" alt="Cummins">
-    </div>
+  <a href="cummins.html" class="brand-item">
+    <img src="assets/Cummins Logo.png" alt="Cummins">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/New Holland Update Logo High Res.webp" alt="New Holland">
-    </div>
+  <a href="new-holland.html" class="brand-item">
+    <img src="assets/New Holland Update Logo High Res.webp" alt="New Holland">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/CASE CONSTRUCTION LOGO.png" alt="CASE">
-    </div>
+  <a href="case.html" class="brand-item">
+    <img src="assets/CASE CONSTRUCTION LOGO.png" alt="CASE Construction">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Yanmar.png" alt="Yanmar">
-    </div>
+  <a href="yanmar.html" class="brand-item">
+    <img src="assets/Yanmar.png" alt="Yanmar">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Merlo_CMYK.png" alt="Merlo">
-    </div>
+  <a href="merlo.html" class="brand-item">
+    <img src="assets/Merlo_CMYK.png" alt="Merlo">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/ASTEC.png" alt="Astec">
-    </div>
+  <a href="astec.html" class="brand-item">
+    <img src="assets/ASTEC.png" alt="ASTEC">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/CaseIH Logo.png" alt="CaseIH">
-    </div>
 
-    <div class="brand-item">
-      <img src="assets/AL POWER LOGO.png" alt="AL POWER LOGO">
-    </div>
+  <a href="case-ih.html" class="brand-item">
+    <img src="assets/CaseIH Logo.png" alt="CASE IH">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Fleetguard Logo.png" alt="Fleetguard">
-    </div>
+  <a href="al-power.html" class="brand-item">
+    <img src="assets/AL POWER LOGO.png" alt="AL Power">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Holset Logo.png" alt="Holset">
-    </div>
+  <a href="fleetguard.html" class="brand-item">
+    <img src="assets/Fleetguard Logo.png" alt="Fleetguard">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Kubota_Logo.svg.png" alt="Kubota">
-    </div>
+  <a href="holset.html" class="brand-item">
+    <img src="assets/Holset Logo.png" alt="Holset">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Logo ASHNA-01.png" alt="Ashna">
-    </div>
+  <a href="kubota.html" class="brand-item">
+    <img src="assets/Kubota_Logo.svg.png" alt="Kubota">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/MIZZOU LOGO (1).png" alt="Mizzou">
-    </div>
+  <a href="ashna.html" class="brand-item">
+    <img src="assets/Logo ASHNA-01.png" alt="ASHNA">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Sang Do Logo.png" alt="Sangdo">
-    </div>
 
-    <div class="brand-item">
-      <img src="assets/SURE FILTER logo.png" alt="Sure Filter">
-    </div>
+  <a href="mizou.html" class="brand-item">
+    <img src="assets/MIZZOU LOGO (1).png" alt="Mizou">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Tire-Header-1.png" alt="Tire">
-    </div>
+  <a href="sangdo.html" class="brand-item">
+    <img src="assets/Sang Do Logo.png" alt="Sangdo">
+  </a>
 
-    <div class="brand-item">
-      <img src="assets/Valvoline Logo.png" alt="Valvoline">
-    </div>
-    
-    <div class="brand-item">
-      <img src="assets/ALTEQ78.png" alt="ALTEQ78">
-    </div>
+  <a href="sure-filter.html" class="brand-item">
+    <img src="assets/SURE FILTER logo.png" alt="Sure Filter">
+  </a>
 
-  </div>
+  <a href="yokohama.html" class="brand-item">
+    <img src="assets/Tire-Header-1.png" alt="Yokohama Off-Highway Tires">
+  </a>
+
+  <a href="valvoline.html" class="brand-item">
+    <img src="assets/Valvoline Logo.png" alt="Valvoline">
+  </a>
+
+  <a href="alteq.html" class="brand-item">
+    <img src="assets/ALTEQ78.png" alt="ALTEQ">
+  </a>
+
 </div>
 
   </section>
