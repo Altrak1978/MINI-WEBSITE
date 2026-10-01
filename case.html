@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CASE Construction | PT Altrak 1978</title>
+
+<style>
+
+:root {
+  --navy: #0b355d;
+  --blue: #123f70;
+  --orange: #f5a623;
+  --orange-dark: #e89517;
+  --text: #163b63;
+  --muted: #66809b;
+  --light: #f4f8fb;
+  --border: #dce6ef;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5edf4;
+
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #254c70;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--orange-dark);
+}
+
+.contact-btn {
+  padding: 11px 20px;
+
+  background: var(--navy);
+  color: #fff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-btn:hover {
+  background: #082846;
+}
+
+
+/* =========================
+   PRODUCT HEADER
+========================= */
+
+.product-header {
+  padding: 125px 0 55px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244,248,251,1) 0%,
+      rgba(244,248,251,0.94) 60%,
+      rgba(255,255,255,1) 100%
+    );
+
+  border-bottom: 1px solid var(--border);
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  color: var(--navy);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.back-home:hover {
+  color: var(--orange-dark);
+}
+
+.brand-heading {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-bottom: 18px;
+}
+
+.case-logo {
+  width: 155px;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+.section-label {
+  color: var(--orange-dark);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.product-header h1 {
+  font-size: 46px;
+  line-height: 1.05;
+
+  color: var(--navy);
+
+  margin-bottom: 12px;
+}
+
+.product-header p {
+  color: #5c7894;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  max-width: 600px;
+}
+
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog {
+  padding: 55px 0 90px;
+  background: #fff;
+}
+
+.catalog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.catalog-title {
+  color: var(--navy);
+
+  font-size: 27px;
+  font-weight: 800;
+
+  margin-bottom: 6px;
+}
+
+.catalog-count {
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.search-box input {
+  width: 280px;
+
+  padding: 13px 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 13px;
+  color: var(--text);
+
+  transition: 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: var(--orange);
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+
+  color: #52708c;
+
+  padding: 10px 16px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange-dark);
+}
+
+.filter-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c7d6e4;
+
+  box-shadow:
+    0 12px 30px rgba(11,53,93,0.10);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+  height: 225px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f6f8fa,
+      #e9eef3
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.product-image::before {
+  content: "CASE";
+
+  position: absolute;
+
+  right: 15px;
+  top: 12px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: rgba(11,53,93,0.25);
+}
+
+.product-image img {
+  width: 90%;
+  height: 90%;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 2;
+}
+
+.image-placeholder {
+  text-align: center;
+
+  color: #8da0b2;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.image-placeholder span {
+  display: block;
+
+  color: #b0bdc9;
+
+  font-size: 9px;
+
+  margin-top: 7px;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================
+   PRODUCT CONTENT
+========================= */
+
+.product-content {
+  padding: 20px 20px 22px;
+}
+
+.product-category {
+  color: var(--orange-dark);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.product-name {
+  color: var(--navy);
+
+  font-size: 21px;
+  line-height: 1.2;
+
+  margin-bottom: 16px;
+}
+
+.spec-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf2f6;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.spec-label {
+  color: #8a9db0;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.spec-value {
+  color: #315776;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+/* =========================
+   LINE BADGE
+========================= */
+
+.line-badge {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 5px 8px;
+
+  background: #fff3df;
+
+  color: #c97900;
+
+  border-radius: 3px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 45px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: #5d7891;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: var(--navy);
+
+  padding: 35px 0;
+}
+
+.footer-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 155px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-text {
+  color: #dce9f4;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   EMPTY RESULT
+========================= */
+
+.no-results {
+  display: none;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #7890a6;
+}
+
+.no-results strong {
+  display: block;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  nav {
+    gap: 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-header h1 {
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  header {
+    height: 68px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .header-inner {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .contact-btn {
+    padding: 9px 14px;
+  }
+
+  .product-header {
+    padding-top: 105px;
+  }
+
+  .brand-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .product-header h1 {
+    font-size: 36px;
+  }
+
+  .catalog-top {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .product-header h1 {
+    font-size: 32px;
+  }
+
+  .catalog-title {
+    font-size: 24px;
+  }
+
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="index.html">
+      <img
+        src="assets/AL-78-Logo-terevisi.png.png"
+        alt="Altrak 1978"
+        class="logo"
+      >
+    </a>
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#solutions">
+        Our Solutions
+      </a>
+
+      <a href="index.html#network">
+        Our Network
+      </a>
+
+      <a href="index.html#services">
+        Our Services
+      </a>
+
+    </nav>
+
+    <a
+      href="index.html#contact"
+      class="contact-btn"
+    >
+      Contact Us
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     PRODUCT HEADER
+========================= -->
+
+<section class="product-header">
+
+  <div class="container">
+
+    <a
+      href="index.html"
+      class="back-home"
+    >
+      ← Back to Altrak 1978
+    </a>
+
+    <div class="brand-heading">
+
+      <img
+        src="assets/CASE CONSTRUCTION LOGO.png"
+        alt="CASE Construction"
+        class="case-logo"
+      >
+
+    </div>
+
+    <div class="section-label">
+      CASE CONSTRUCTION
+    </div>
+
+    <h1>
+      Construction Equipment
+    </h1>
+
+    <p>
+      A complete range of CASE construction equipment
+      engineered for productivity, reliability, and
+      demanding working environments.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CATALOG
+========================= -->
+
+<section class="catalog">
+
+  <div class="container">
+
+    <div class="catalog-top">
+
+      <div>
+
+        <div class="catalog-title">
+          CASE Product Range
+        </div>
+
+        <div
+          class="catalog-count"
+          id="productCount"
+        >
+          24 Products
+        </div>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="productSearch"
+          placeholder="Search model..."
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+      <button
+        class="filter-btn active"
+        data-filter="all"
+      >
+        All Products
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="wheel-loader"
+      >
+        Wheel Loader
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="excavator"
+      >
+        Excavator
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="grader"
+      >
+        Motor Grader
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="compactor"
+      >
+        Compactor
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="dozer"
+      >
+        Crawler Dozer
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="skid"
+      >
+        Skid Steer
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="backhoe"
+      >
+        Backhoe Loader
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="ctl"
+      >
+        Compact Track Loader
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         PRODUCT GRID
+    ========================= -->
+
+    <div
+      class="product-grid"
+      id="productGrid"
+    >
+
+
+      <!-- 621XS -->
+
+      <article
+        class="product-card"
+        data-category="wheel-loader"
+        data-name="621XS"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>621XS</span>
+          </div>
+
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy Line
+          </span>
+
+          <div class="product-category">
+            Wheel Loader
+          </div>
+
+          <h2 class="product-name">
+            621XS
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">
+                Engine
+              </span>
+              <span class="spec-value">
+                FPT Engine NEF6
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">
+                Power
+              </span>
+              <span class="spec-value">
+                96 kW / 128 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">
+                Operating Weight
+              </span>
+              <span class="spec-value">
+                10,708 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">
+                Bucket
+              </span>
+              <span class="spec-value">
+                2.3 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 721F -->
+
+      <article
+        class="product-card"
+        data-category="wheel-loader"
+        data-name="721F"
+      >
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>721F</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy Line
+          </span>
+
+          <div class="product-category">
+            Wheel Loader
+          </div>
+
+          <h2 class="product-name">
+            721F
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9684F
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                145 kW / 195 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Operating Weight</span>
+              <span class="spec-value">
+                14,500 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                2.7 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 821F -->
+
+      <article
+        class="product-card"
+        data-category="wheel-loader"
+        data-name="821F"
+      >
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>821F</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy Line
+          </span>
+
+          <div class="product-category">
+            Wheel Loader
+          </div>
+
+          <h2 class="product-name">
+            821F
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9684F
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                172 kW / 230 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Operating Weight</span>
+              <span class="spec-value">
+                17,600 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                3.4 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 1021F -->
+
+      <article
+        class="product-card"
+        data-category="wheel-loader"
+        data-name="1021F"
+      >
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>1021F</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy Line
+          </span>
+
+          <div class="product-category">
+            Wheel Loader
+          </div>
+
+          <h2 class="product-name">
+            1021F
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F2CFA614C
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                239 kW / 320 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Operating Weight</span>
+              <span class="spec-value">
+                24,593 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                4.4 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 1121F -->
+
+      <article
+        class="product-card"
+        data-category="wheel-loader"
+        data-name="1121F"
+      >
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>1121F</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy Line
+          </span>
+
+          <div class="product-category">
+            Wheel Loader
+          </div>
+
+          <h2 class="product-name">
+            1121F
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F2CFA614B
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                259 kW / 347 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Operating Weight</span>
+              <span class="spec-value">
+                27,200 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                5 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           EXCAVATOR
+      ================================================= -->
+
+      <article class="product-card" data-category="excavator" data-name="CX130C CX130C Forestry">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>CX130C</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Excavator C Series
+          </div>
+
+          <h2 class="product-name">
+            CX130C / Forestry
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Isuzu GG-4JJ1X
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                71 kW / 95 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                13,600 / 16,700 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                0.51 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="excavator" data-name="CX210C CX210C Forestry">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>CX210C</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Excavator C Series
+          </div>
+
+          <h2 class="product-name">
+            CX210C / Forestry
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Isuzu GF-4HK1X
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                117 kW / 157 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                21,500 / 22,000 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                0.9 / 1 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="excavator" data-name="CX380C">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>CX380C</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Excavator C Series
+          </div>
+
+          <h2 class="product-name">
+            CX380C
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Isuzu GH-6HK1X
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                200 kW / 268 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                36,700 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                2.2 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="excavator" data-name="CX490">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>CX490</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Excavator C Series
+          </div>
+
+          <h2 class="product-name">
+            CX490
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Isuzu GH-6UZ1X
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                245 kW / 328 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                48,700 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                3.2 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="excavator" data-name="CX220 LR">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>CX220 LR</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Excavator C Series
+          </div>
+
+          <h2 class="product-name">
+            CX220 LR
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Isuzu GF-4HK1X
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                117.3 kW / 159 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                23,300 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Bucket</span>
+              <span class="spec-value">
+                0.37 m³
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           MOTOR GRADER
+      ================================================= -->
+
+      <article class="product-card" data-category="grader" data-name="845 B VHP">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>845 B VHP</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Motor Grader
+          </div>
+
+          <h2 class="product-name">
+            845 B VHP
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9684L
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                104 kW / 140 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                14,605 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Moldboard</span>
+              <span class="spec-value">
+                3,658 mm
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="grader" data-name="865 B VHP">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>865 B VHP</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Motor Grader
+          </div>
+
+          <h2 class="product-name">
+            865 B VHP
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9687C
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                153 kW / 205 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                15,587 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Moldboard</span>
+              <span class="spec-value">
+                3,962 mm
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="grader" data-name="885 B VHP">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>885 B VHP</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Motor Grader
+          </div>
+
+          <h2 class="product-name">
+            885 B VHP
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9684L
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                163 kW / 219 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                17,217 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Moldboard</span>
+              <span class="spec-value">
+                4,267 mm
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           COMPACTOR
+      ================================================= -->
+
+      <article class="product-card" data-category="compactor" data-name="450DX Tandem">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>450DX</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Compactor
+          </div>
+
+          <h2 class="product-name">
+            TANDEM 450 DX
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                Mahindra Industrial 45 H
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                31 HP @ 1400 rpm
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                3,225 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Drum / Tire</span>
+              <span class="spec-value">
+                4,360 / 3,120 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="compactor" data-name="1110EX-D">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>1110EX-D</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Compactor
+          </div>
+
+          <h2 class="product-name">
+            1110EX-D
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine S8000
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                102 HP @ 2200 rpm
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                11,080 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Drum / Tire</span>
+              <span class="spec-value">
+                27,965 / 16,186 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="compactor" data-name="110EX-PD">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>110EX-PD</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Compactor
+          </div>
+
+          <h2 class="product-name">
+            110EX-PD
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine S8000
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                102 HP @ 2200 rpm
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                12,390 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Drum / Tire</span>
+              <span class="spec-value">
+                26,190 / 14,346 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           CRAWLER DOZER
+      ================================================= -->
+
+      <article class="product-card" data-category="dozer" data-name="1650L">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>1650L</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Crawler Dozer
+          </div>
+
+          <h2 class="product-name">
+            1650L
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HE9684U
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                107 kW / 144 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                17,960 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Blade</span>
+              <span class="spec-value">
+                P.A.T 3.2 cum
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="dozer" data-name="2050M">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>2050M</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Heavy Line</span>
+
+          <div class="product-category">
+            Crawler Dozer
+          </div>
+
+          <h2 class="product-name">
+            2050M
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine F4HFA613N
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                160 kW / 214 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                20,600 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Blade</span>
+              <span class="spec-value">
+                P.A.T 5.6 cum
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           SKID STEER
+      ================================================= -->
+
+      <article class="product-card" data-category="skid" data-name="SR130B">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>SR130B</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Skid Steer Loader
+          </div>
+
+          <h2 class="product-name">
+            SR130B
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                ISM Engine
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                49 HP @ 2800 rpm
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                2,344 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">ROC</span>
+              <span class="spec-value">
+                590 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="skid" data-name="SR200B">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>SR200B</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Skid Steer Loader
+          </div>
+
+          <h2 class="product-name">
+            SR200B
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                74 HP @ 2800 rpm
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                3,184 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">ROC</span>
+              <span class="spec-value">
+                905 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           BACKHOE
+      ================================================= -->
+
+      <article class="product-card" data-category="backhoe" data-name="570V">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>570V</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Backhoe Loader
+          </div>
+
+          <h2 class="product-name">
+            570V
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine S8000
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                64 kW / 86 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                7,710 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="backhoe" data-name="570SV">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>570SV</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Backhoe Loader
+          </div>
+
+          <h2 class="product-name">
+            570SV
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine S8000
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                71 kW / 96 HP
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                7,710 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================================
+           COMPACT TRACK LOADER
+      ================================================= -->
+
+      <article class="product-card" data-category="ctl" data-name="TR270B">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>TR270B</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Compact Track Loader
+          </div>
+
+          <h2 class="product-name">
+            TR270B
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                55 kW
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                3,750 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">ROC</span>
+              <span class="spec-value">
+                1,225 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="product-card" data-category="ctl" data-name="TV380B">
+
+        <div class="product-image">
+          <div class="image-placeholder">
+            PRODUCT IMAGE
+            <span>TV380B</span>
+          </div>
+        </div>
+
+        <div class="product-content">
+
+          <span class="line-badge">Light Line</span>
+
+          <div class="product-category">
+            Compact Track Loader
+          </div>
+
+          <h2 class="product-name">
+            TV380B
+          </h2>
+
+          <div class="spec-list">
+
+            <div class="spec-item">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">
+                FPT Engine
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">
+                67 kW
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">
+                4,625 kg
+              </span>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">ROC</span>
+              <span class="spec-value">
+                1,723 kg
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div
+      class="no-results"
+      id="noResults"
+    >
+
+      <strong>
+        No products found
+      </strong>
+
+      Try another model or category.
+
+    </div>
+
+
+    <div class="pagination">
+
+      <button class="page-btn active">
+        1
+      </button>
+
+      <button class="page-btn">
+        2
+      </button>
+
+      <button class="page-btn">
+        3
+      </button>
+
+      <button class="page-btn">
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <img
+      src="assets/AL-78-Logo-terevisi.png.png"
+      alt="Altrak 1978"
+      class="footer-logo"
+    >
+
+    <div class="footer-text">
+      © 2026 PT Altrak 1978. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+const searchInput =
+  document.getElementById("productSearch");
+
+const filterButtons =
+  document.querySelectorAll(".filter-btn");
+
+const productCards =
+  document.querySelectorAll(".product-card");
+
+const productCount =
+  document.getElementById("productCount");
+
+const noResults =
+  document.getElementById("noResults");
+
+let activeFilter = "all";
+
+
+function filterProducts() {
+
+  const keyword =
+    searchInput.value
+      .toLowerCase()
+      .trim();
+
+  let visibleCount = 0;
+
+
+  productCards.forEach(card => {
+
+    const name =
+      card.dataset.name
+        .toLowerCase();
+
+    const category =
+      card.dataset.category;
+
+
+    const matchSearch =
+      name.includes(keyword);
+
+    const matchFilter =
+      activeFilter === "all" ||
+      category === activeFilter;
+
+
+    if (matchSearch && matchFilter) {
+
+      card.style.display = "";
+
+      visibleCount++;
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+
+  productCount.textContent =
+    visibleCount +
+    (visibleCount === 1
+      ? " Product"
+      : " Products");
+
+
+  if (visibleCount === 0) {
+
+    noResults.style.display = "block";
+
+  } else {
+
+    noResults.style.display = "none";
+
+  }
+
+}
+
+
+searchInput.addEventListener(
+  "input",
+  filterProducts
+);
+
+
+filterButtons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      filterButtons.forEach(btn => {
+
+        btn.classList.remove("active");
+
+      });
+
+
+      button.classList.add("active");
+
+
+      activeFilter =
+        button.dataset.filter;
+
+
+      filterProducts();
+
+    }
+  );
+
+});
+
+</script>
+
+</body>
+</html>
