@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>New Holland Agriculture | PT Altrak 1978</title>
+
+<style>
+
+:root {
+  --navy: #0b355d;
+  --blue: #0066b3;
+  --blue-dark: #004d89;
+  --yellow: #f5d400;
+
+  --text: #163b63;
+  --muted: #66809b;
+
+  --light: #f4f8fb;
+  --border: #dce6ef;
+
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76px;
+
+  background: rgba(255,255,255,0.96);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5edf4;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #254c70;
+
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.contact-btn {
+  padding: 11px 20px;
+
+  background: var(--navy);
+  color: #fff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-btn:hover {
+  background: #082846;
+}
+
+
+/* =========================
+   PRODUCT HEADER
+========================= */
+
+.product-header {
+
+  padding: 125px 0 55px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4f8fb 0%,
+      #f4f8fb 55%,
+      #ffffff 100%
+    );
+
+  border-bottom: 1px solid var(--border);
+}
+
+.back-home {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  color: var(--navy);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.back-home:hover {
+  color: var(--blue);
+}
+
+.brand-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 18px;
+}
+
+.newholland-logo {
+
+  width: 190px;
+
+  max-height: 75px;
+
+  object-fit: contain;
+}
+
+.section-label {
+
+  color: var(--blue);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.product-header h1 {
+
+  font-size: 46px;
+
+  line-height: 1.05;
+
+  color: var(--navy);
+
+  margin-bottom: 12px;
+}
+
+.product-header p {
+
+  color: #5c7894;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  max-width: 620px;
+}
+
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog {
+
+  padding: 55px 0 90px;
+
+  background: #fff;
+}
+
+.catalog-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.catalog-title {
+
+  color: var(--navy);
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  margin-bottom: 6px;
+}
+
+.catalog-count {
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.search-box input {
+
+  width: 280px;
+
+  padding: 13px 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 13px;
+
+  color: var(--text);
+
+  transition: 0.2s ease;
+}
+
+.search-box input:focus {
+
+  border-color: var(--blue);
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filters {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: #52708c;
+
+  padding: 10px 16px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+
+  border-color: var(--blue);
+
+  color: var(--blue);
+}
+
+.filter-btn.active {
+
+  background: var(--blue);
+
+  border-color: var(--blue);
+
+  color: #fff;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.product-card {
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.product-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #c7d6e4;
+
+  box-shadow:
+    0 12px 30px rgba(11,53,93,0.10);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+
+  height: 225px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f6f8fa,
+      #e9eef3
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.product-image::before {
+
+  content: "NEW HOLLAND";
+
+  position: absolute;
+
+  right: 15px;
+
+  top: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(0,102,179,0.25);
+}
+
+.product-image img {
+
+  width: 90%;
+
+  height: 90%;
+
+  object-fit: contain;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.image-placeholder {
+
+  text-align: center;
+
+  color: #8da0b2;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.image-placeholder span {
+
+  display: block;
+
+  color: #b0bdc9;
+
+  font-size: 9px;
+
+  margin-top: 7px;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================
+   PRODUCT CONTENT
+========================= */
+
+.product-content {
+
+  padding: 20px 20px 22px;
+}
+
+.product-category {
+
+  color: var(--blue);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.product-name {
+
+  color: var(--navy);
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  margin-bottom: 16px;
+}
+
+.spec-list {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf2f6;
+}
+
+.spec-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.spec-label {
+
+  color: #8a9db0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.spec-value {
+
+  color: #315776;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+/* =========================
+   PRODUCT LINE BADGE
+========================= */
+
+.line-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 5px 8px;
+
+  background: #eaf4fc;
+
+  color: var(--blue);
+
+  border-radius: 3px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 45px;
+}
+
+.page-btn {
+
+  width: 36px;
+
+  height: 36px;
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: #5d7891;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.page-btn.active {
+
+  background: var(--blue);
+
+  color: #fff;
+
+  border-color: var(--blue);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  background: var(--navy);
+
+  padding: 35px 0;
+}
+
+.footer-inner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.footer-logo {
+
+  width: 155px;
+
+  filter: brightness(0) invert(1);
+}
+
+.footer-text {
+
+  color: #dce9f4;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results {
+
+  display: none;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #7890a6;
+}
+
+.no-results strong {
+
+  display: block;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  nav {
+    gap: 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-header h1 {
+    font-size: 40px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  header {
+    height: 68px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .header-inner {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .contact-btn {
+    padding: 9px 14px;
+  }
+
+  .product-header {
+    padding-top: 105px;
+  }
+
+  .brand-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .product-header h1 {
+    font-size: 36px;
+  }
+
+  .catalog-top {
+
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .product-header h1 {
+    font-size: 32px;
+  }
+
+  .catalog-title {
+    font-size: 24px;
+  }
+
+  .filters {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="index.html">
+
+      <img
+        src="assets/AL-78-Logo-terevisi.png.png"
+        alt="Altrak 1978"
+        class="logo"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#solutions">
+        Our Solutions
+      </a>
+
+      <a href="index.html#network">
+        Our Network
+      </a>
+
+      <a href="index.html#services">
+        Our Services
+      </a>
+
+    </nav>
+
+
+    <a
+      href="index.html#contact"
+      class="contact-btn"
+    >
+      Contact Us
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     PRODUCT HEADER
+========================= -->
+
+<section class="product-header">
+
+  <div class="container">
+
+
+    <a
+      href="index.html"
+      class="back-home"
+    >
+      ← Back to Altrak 1978
+    </a>
+
+
+    <div class="brand-heading">
+
+      <img
+        src="assets/New Holland Update Logo High Res.webp"
+        alt="New Holland Agriculture"
+        class="newholland-logo"
+      >
+
+    </div>
+
+
+    <div class="section-label">
+      NEW HOLLAND AGRICULTURE
+    </div>
+
+
+    <h1>
+      Agricultural Tractors
+    </h1>
+
+
+    <p>
+      Reliable agricultural machinery designed to
+      support productivity, performance, and
+      efficiency across farming operations.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CATALOG
+========================= -->
+
+<section class="catalog">
+
+  <div class="container">
+
+
+    <div class="catalog-top">
+
+      <div>
+
+        <div class="catalog-title">
+          New Holland Product Range
+        </div>
+
+        <div
+          class="catalog-count"
+          id="productCount"
+        >
+          11 Products
+        </div>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="productSearch"
+          placeholder="Search model..."
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+      <button
+        class="filter-btn active"
+        data-filter="all"
+      >
+        All Products
+      </button>
+
+
+      <button
+        class="filter-btn"
+        data-filter="heavy"
+      >
+        Heavy / Medium
+      </button>
+
+
+      <button
+        class="filter-btn"
+        data-filter="utility"
+      >
+        Utility
+      </button>
+
+
+      <button
+        class="filter-btn"
+        data-filter="compact"
+      >
+        Compact Tractor
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         PRODUCT GRID
+    ========================= -->
+
+    <div
+      class="product-grid"
+      id="productGrid"
+    >
+
+
+      <!-- 6610S -->
+
+      <article
+        class="product-card"
+        data-category="heavy"
+        data-name="6610S"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              6610S
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy / Medium
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            6610S
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                98 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2300 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                3909 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                4,185 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 7610S -->
+
+      <article
+        class="product-card"
+        data-category="heavy"
+        data-name="7610S"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              7610S
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy / Medium
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            7610S
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                110 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2300 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                3909 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                4,265 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TD5.110 -->
+
+      <article
+        class="product-card"
+        data-category="heavy"
+        data-name="TD5.110"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TD5.110
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy / Medium
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TD5.110
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                110 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2300 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                3908 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                3,650 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- T7.150 -->
+
+      <article
+        class="product-card"
+        data-category="heavy"
+        data-name="T7.150"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              T7.150
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy / Medium
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            T7.150
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                155 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2200 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                6728 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                5,750 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- T7.180 -->
+
+      <article
+        class="product-card"
+        data-category="heavy"
+        data-name="T7.180"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              T7.180
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Heavy / Medium
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            T7.180
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                182 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2200 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                6728 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                5,750 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TT2.50 -->
+
+      <article
+        class="product-card"
+        data-category="compact"
+        data-name="TT2.50"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TT2.50
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Compact
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TT2.50
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                50 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2600 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                2621 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                1,492 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TT3.50 -->
+
+      <article
+        class="product-card"
+        data-category="compact"
+        data-name="TT3.50"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TT3.50
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Compact
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TT3.50
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                49.5 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2100 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                2931 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                2,395 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TT55 -->
+
+      <article
+        class="product-card"
+        data-category="compact"
+        data-name="TT55"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TT55
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Compact
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TT55
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                55 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2500 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                2931 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                2,355 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TT4.75 -->
+
+      <article
+        class="product-card"
+        data-category="utility"
+        data-name="TT4.75"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TT4.75
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Utility
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TT4.75
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                75 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2300 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                2931 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                2,810 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TT4.90 -->
+
+      <article
+        class="product-card"
+        data-category="utility"
+        data-name="TT4.90"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TT4.90
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Utility
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TT4.90
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                90 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2300 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                3908 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                3,250 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TD90 -->
+
+      <article
+        class="product-card"
+        data-category="utility"
+        data-name="TD90"
+      >
+
+        <div class="product-image">
+
+          <div class="image-placeholder">
+
+            PRODUCT IMAGE
+
+            <span>
+              TD90
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="product-content">
+
+          <span class="line-badge">
+            Utility
+          </span>
+
+          <div class="product-category">
+            Agricultural Tractor
+          </div>
+
+          <h2 class="product-name">
+            TD90
+          </h2>
+
+
+          <div class="spec-list">
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Power
+              </span>
+
+              <span class="spec-value">
+                90 HP
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Engine Speed
+              </span>
+
+              <span class="spec-value">
+                2500 rpm
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Displacement
+              </span>
+
+              <span class="spec-value">
+                3908 cc
+              </span>
+
+            </div>
+
+
+            <div class="spec-item">
+
+              <span class="spec-label">
+                Weight
+              </span>
+
+              <span class="spec-value">
+                3,560 kg
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div
+      class="no-results"
+      id="noResults"
+    >
+
+      <strong>
+        No products found
+      </strong>
+
+      Try another model or category.
+
+    </div>
+
+
+    <!-- PAGINATION -->
+
+    <div class="pagination">
+
+      <button class="page-btn active">
+        1
+      </button>
+
+      <button class="page-btn">
+        2
+      </button>
+
+      <button class="page-btn">
+        →
+      </button>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <img
+      src="assets/AL-78-Logo-terevisi.png.png"
+      alt="Altrak 1978"
+      class="footer-logo"
+    >
+
+    <div class="footer-text">
+      © 2026 PT Altrak 1978. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+const searchInput =
+  document.getElementById("productSearch");
+
+const filterButtons =
+  document.querySelectorAll(".filter-btn");
+
+const productCards =
+  document.querySelectorAll(".product-card");
+
+const productCount =
+  document.getElementById("productCount");
+
+const noResults =
+  document.getElementById("noResults");
+
+let activeFilter = "all";
+
+
+function filterProducts() {
+
+  const keyword =
+    searchInput.value
+      .toLowerCase()
+      .trim();
+
+  let visibleCount = 0;
+
+
+  productCards.forEach(card => {
+
+    const name =
+      card.dataset.name
+        .toLowerCase();
+
+    const category =
+      card.dataset.category;
+
+
+    const matchSearch =
+      name.includes(keyword);
+
+
+    const matchFilter =
+      activeFilter === "all" ||
+      category === activeFilter;
+
+
+    if (matchSearch && matchFilter) {
+
+      card.style.display = "";
+
+      visibleCount++;
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+
+  productCount.textContent =
+    visibleCount +
+    (
+      visibleCount === 1
+      ? " Product"
+      : " Products"
+    );
+
+
+  noResults.style.display =
+    visibleCount === 0
+    ? "block"
+    : "none";
+
+}
+
+
+/* SEARCH */
+
+searchInput.addEventListener(
+  "input",
+  filterProducts
+);
+
+
+/* FILTER */
+
+filterButtons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      filterButtons.forEach(btn => {
+
+        btn.classList.remove("active");
+
+      });
+
+
+      button.classList.add("active");
+
+
+      activeFilter =
+        button.dataset.filter;
+
+
+      filterProducts();
+
+    }
+  );
+
+});
+
+</script>
+
+
+</body>
+
+</html>
