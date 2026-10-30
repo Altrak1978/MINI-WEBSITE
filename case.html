@@ -530,6 +530,20 @@ nav a:hover {
   border-color: var(--navy);
 }
 
+.page-btn:hover:not(:disabled) {
+  border-color: var(--orange);
+  color: var(--orange-dark);
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-btn.active:hover {
+  color: #fff;
+}
+
 
 /* =========================
    FOOTER
@@ -2378,25 +2392,7 @@ footer {
     </div>
 
 
-    <div class="pagination">
-
-      <button class="page-btn active">
-        1
-      </button>
-
-      <button class="page-btn">
-        2
-      </button>
-
-      <button class="page-btn">
-        3
-      </button>
-
-      <button class="page-btn">
-        →
-      </button>
-
-    </div>
+    <div class="pagination" id="pagination" aria-label="Product pages"></div>
 
   </div>
 
