@@ -2423,125 +2423,111 @@ footer {
 
 
 <script>
+/* SEARCH + FILTER + PAGINATION: 8 PRODUCTS PER PAGE */
 
-/* =========================
-   SEARCH + FILTER
-========================= */
+const searchInput = document.getElementById("productSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const productCards = Array.from(document.querySelectorAll(".product-card"));
+const productCount = document.getElementById("productCount");
+const noResults = document.getElementById("noResults");
+const pagination = document.getElementById("pagination");
 
-const searchInput =
-  document.getElementById("productSearch");
-
-const filterButtons =
-  document.querySelectorAll(".filter-btn");
-
-const productCards =
-  document.querySelectorAll(".product-card");
-
-const productCount =
-  document.getElementById("productCount");
-
-const noResults =
-  document.getElementById("noResults");
-
+const productsPerPage = 8;
 let activeFilter = "all";
+let currentPage = 1;
 
+function getFilteredProducts() {
+  const keyword = searchInput.value.toLowerCase().trim();
 
-function filterProducts() {
-
-  const keyword =
-    searchInput.value
-      .toLowerCase()
-      .trim();
-
-  let visibleCount = 0;
-
-
-  productCards.forEach(card => {
-
-    const name =
-      card.dataset.name
-        .toLowerCase();
-
-    const category =
-      card.dataset.category;
-
-
-    const matchSearch =
-      name.includes(keyword);
-
-    const matchFilter =
-      activeFilter === "all" ||
-      category === activeFilter;
-
-
-    if (matchSearch && matchFilter) {
-
-      card.style.display = "";
-
-      visibleCount++;
-
-    } else {
-
-      card.style.display = "none";
-
-    }
-
+  return productCards.filter(card => {
+    const name = (card.dataset.name || card.textContent).toLowerCase();
+    const category = card.dataset.category || "";
+    return name.includes(keyword) &&
+      (activeFilter === "all" || category === activeFilter);
   });
-
-
-  productCount.textContent =
-    visibleCount +
-    (visibleCount === 1
-      ? " Product"
-      : " Products");
-
-
-  if (visibleCount === 0) {
-
-    noResults.style.display = "block";
-
-  } else {
-
-    noResults.style.display = "none";
-
-  }
-
 }
 
+function renderPagination(totalPages) {
+  pagination.innerHTML = "";
 
-searchInput.addEventListener(
-  "input",
-  filterProducts
-);
+  if (totalPages <= 1) {
+    pagination.style.display = "none";
+    return;
+  }
 
+  pagination.style.display = "flex";
 
-filterButtons.forEach(button => {
+  const addButton = (label, page, disabled = false, active = false) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "page-btn" + (active ? " active" : "");
+    button.textContent = label;
+    button.disabled = disabled;
 
-  button.addEventListener(
-    "click",
-    () => {
+    if (active) button.setAttribute("aria-current", "page");
 
-      filterButtons.forEach(btn => {
-
-        btn.classList.remove("active");
-
+    button.addEventListener("click", () => {
+      currentPage = page;
+      renderProducts();
+      document.getElementById("productGrid").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       });
+    });
 
+    pagination.appendChild(button);
+  };
 
-      button.classList.add("active");
+  addButton("←", Math.max(1, currentPage - 1), currentPage === 1);
 
+  for (let page = 1; page <= totalPages; page++) {
+    addButton(String(page), page, false, page === currentPage);
+  }
 
-      activeFilter =
-        button.dataset.filter;
+  addButton("→", Math.min(totalPages, currentPage + 1),
+    currentPage === totalPages);
+}
 
+function renderProducts() {
+  const filteredProducts = getFilteredProducts();
+  const totalProducts = filteredProducts.length;
+  const totalPages = Math.ceil(totalProducts / productsPerPage);
 
-      filterProducts();
+  if (totalPages === 0) currentPage = 1;
+  else currentPage = Math.min(currentPage, totalPages);
 
-    }
+  const start = (currentPage - 1) * productsPerPage;
+  const visibleOnPage = new Set(
+    filteredProducts.slice(start, start + productsPerPage)
   );
 
+  productCards.forEach(card => {
+    card.style.display = visibleOnPage.has(card) ? "" : "none";
+  });
+
+  productCount.textContent =
+    totalProducts + (totalProducts === 1 ? " Product" : " Products");
+
+  noResults.style.display = totalProducts === 0 ? "block" : "none";
+  renderPagination(totalPages);
+}
+
+searchInput.addEventListener("input", () => {
+  currentPage = 1;
+  renderProducts();
 });
 
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+    activeFilter = button.dataset.filter;
+    currentPage = 1;
+    renderProducts();
+  });
+});
+
+renderProducts();
 </script>
 
 </body>
