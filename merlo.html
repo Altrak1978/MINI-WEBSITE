@@ -377,87 +377,41 @@ nav a:hover {
 
 
 /* =========================
-   PRODUCT IMAGE
+   PRODUCT IMAGE - FULL FRAME
 ========================= */
 
 .product-image {
-
-  height: 225px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f6f8fa,
-      #e9eef3
-    );
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  position: relative;
-
-  overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(145deg, #f6f8fa, #e9eef3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .product-image::before {
-
-  content: "MERLO";
-
-  position: absolute;
-
-  right: 15px;
-
-  top: 12px;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-
-  color: rgba(79,174,50,0.25);
+    content: "MERLO";
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: rgba(79,174,50,0.25);
+    z-index: 3;
 }
 
 .product-image img {
-
-  width: 90%;
-
-  height: 90%;
-
-  object-fit: contain;
-
-  position: relative;
-
-  z-index: 2;
-}
-
-.image-placeholder {
-
-  text-align: center;
-
-  color: #8da0b2;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-}
-
-.image-placeholder span {
-
-  display: block;
-
-  color: #b0bdc9;
-
-  font-size: 9px;
-
-  margin-top: 7px;
-
-  letter-spacing: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
 }
 
 
@@ -986,17 +940,12 @@ footer {
       >
 
         <div class="product-image">
-
-          <div class="image-placeholder">
-
-            PRODUCT IMAGE
-
-            <span>
-              P50.18EE
-            </span>
-
-          </div>
-
+          <img
+            src="assets/product/merlo/P50-18EE.webp"
+            alt="Merlo P50.18EE"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
 
@@ -1085,17 +1034,12 @@ footer {
       >
 
         <div class="product-image">
-
-          <div class="image-placeholder">
-
-            PRODUCT IMAGE
-
-            <span>
-              P40.17EE
-            </span>
-
-          </div>
-
+          <img
+            src="assets/product/merlo/P40-17EE.webp"
+            alt="Merlo P40.17EE"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
 
@@ -1184,17 +1128,12 @@ footer {
       >
 
         <div class="product-image">
-
-          <div class="image-placeholder">
-
-            PRODUCT IMAGE
-
-            <span>
-              P120.10EE
-            </span>
-
-          </div>
-
+          <img
+            src="assets/product/merlo/P120-10EE.webp"
+            alt="Merlo P120.10EE"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
 
@@ -1283,17 +1222,12 @@ footer {
       >
 
         <div class="product-image">
-
-          <div class="image-placeholder">
-
-            PRODUCT IMAGE
-
-            <span>
-              TF42.7-100EE
-            </span>
-
-          </div>
-
+          <img
+            src="assets/product/merlo/TF42-7-100EE.webp"
+            alt="Merlo TF42.7-100EE"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
 
