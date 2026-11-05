@@ -283,7 +283,10 @@
     ========================= */
 
     .product-image {
-      height: 270px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      min-height: 230px;
 
       background: #f6f8fa;
 
@@ -300,9 +303,9 @@
       width: 100%;
       height: 100%;
 
-      object-fit: contain;
-
-      padding: 20px;
+      object-fit: cover;
+      object-position: center;
+      padding: 0;
 
       display: block;
     }
@@ -732,9 +735,12 @@
 
           <div class="product-image">
 
-            <div class="image-placeholder">
-              PRODUCT IMAGE
-            </div>
+            <img
+              src="assets/product/alteq78/ALTEQ-BL95-EV.webp"
+              alt="ALTEQ BL95-EV"
+              loading="lazy"
+              decoding="async"
+            >
 
           </div>
 
@@ -828,9 +834,12 @@
 
           <div class="product-image">
 
-            <div class="image-placeholder">
-              PRODUCT IMAGE
-            </div>
+            <img
+              src="assets/product/alteq78/ALTEQ-CGL9600.webp"
+              alt="ALTEQ CGL9600"
+              loading="lazy"
+              decoding="async"
+            >
 
           </div>
 
@@ -937,9 +946,12 @@
 
           <div class="product-image">
 
-            <div class="image-placeholder">
-              PRODUCT IMAGE
-            </div>
+            <img
+              src="assets/product/alteq78/EX20-EV.webp"
+              alt="EX20 EV"
+              loading="lazy"
+              decoding="async"
+            >
 
           </div>
 
