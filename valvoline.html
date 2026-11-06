@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valvoline Mining Solutions | PT Altrak 1978</title>
+<style>
+:root{--blue:#063b70;--blue-dark:#032b52;--blue-light:#0b5ca8;--text:#202a35;--muted:#6c8197;--bg:#f4f8fb;--border:#dce6ef}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 60px));margin:0 auto}
+header{min-height:78px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 45px;position:sticky;top:0;z-index:1000}
+.logo{width:145px;height:auto;display:block}nav{display:flex;align-items:center;gap:28px}nav a{font-size:14px;font-weight:600;color:#163f66;transition:.2s}nav a:hover{color:var(--blue-light)}
+.contact-btn{background:var(--blue);color:#fff;padding:11px 20px;border-radius:5px;font-size:13px;font-weight:700}.contact-btn:hover{background:var(--blue-dark)}
+.hero{background:linear-gradient(120deg,#eaf3fa,#f8fbfd);border-bottom:1px solid var(--border);padding:58px 0 52px}.back-home{display:inline-flex;margin-bottom:30px;color:var(--blue);font-size:13px;font-weight:700}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.hero-copy{max-width:760px}.eyebrow{color:#0872c9;font-size:12px;font-weight:800;letter-spacing:4px;margin-bottom:13px}
+h1{color:var(--blue);font-size:clamp(36px,5vw,58px);line-height:1.04;margin-bottom:15px}.hero-copy p{color:#567391;font-size:17px;line-height:1.65;max-width:700px}.brand-mark{width:210px;max-width:30%;height:auto;object-fit:contain}
+.catalog{padding:42px 0 90px}.catalog-top{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:24px}.catalog-title{color:var(--blue);font-size:30px;font-weight:800;margin-bottom:5px}.catalog-count{color:var(--muted);font-size:13px}
+.search-box{width:340px}.search-box input{width:100%;height:44px;border:1px solid var(--border);border-radius:5px;background:#fff;padding:0 15px;font-size:14px;outline:none}.search-box input:focus{border-color:var(--blue-light);box-shadow:0 0 0 3px rgba(11,92,168,.08)}
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}.filter-btn{border:1px solid var(--border);background:#fff;color:#42627e;padding:9px 16px;border-radius:4px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}.filter-btn:hover{border-color:var(--blue);color:var(--blue)}.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.product-card{background:#fff;border:1px solid var(--border);border-radius:7px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}.product-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(5,46,80,.10)}
+.product-image{width:100%;height:255px;background:#f6f8fa;overflow:hidden;border-bottom:1px solid var(--border)}.product-image img{width:100%;height:100%;object-fit:cover;object-position:center;padding:0;display:block}
+.product-content{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}.product-brand{color:#1774bd;font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:9px}.product-name{color:var(--blue);font-size:22px;line-height:1.2;font-weight:800;margin-bottom:10px}.product-grade{color:#263746;font-size:14px;font-weight:800;line-height:1.45;margin-bottom:9px}.product-description{color:#52677b;font-size:13px;line-height:1.55;margin-bottom:15px}
+.spec-list{border-top:1px solid var(--border);margin-top:auto;padding-top:13px}.spec-heading{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}.feature-list{padding-left:17px;color:#34495c;font-size:12px;line-height:1.55;margin-bottom:12px}.pack-size{border-top:1px solid #e8eef3;padding-top:10px;color:#34495c;font-size:12px;line-height:1.5}.pack-size strong{color:var(--blue)}
+.no-result{display:none;grid-column:1/-1;text-align:center;padding:65px 20px;color:var(--muted)}
+footer{background:#075087;color:#fff;padding:38px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-logo{width:150px;filter:brightness(0) invert(1)}.footer-text{font-size:12px;color:rgba(255,255,255,.85)}
+@media(max-width:950px){header{padding:14px 25px}nav{gap:16px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){header{padding:15px 20px;flex-wrap:wrap}nav{order:3;width:100%;justify-content:center;flex-wrap:wrap;gap:13px}.contact-btn{display:none}.hero{padding:38px 0}.hero-inner{align-items:flex-start}.brand-mark{width:115px}.catalog-top{align-items:stretch;flex-direction:column}.search-box{width:100%}.product-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.container{width:calc(100% - 30px)}.logo{width:125px}nav a{font-size:11px}.hero-inner{flex-direction:column-reverse;gap:20px}.brand-mark{width:145px;max-width:55%}h1{font-size:37px}.catalog-title{font-size:25px}.product-image{height:240px}.footer-inner{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html"><img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978" class="logo"></a>
+<nav><a href="index.html">Home</a><a href="index.html#solutions">Our Solutions</a><a href="index.html#network">Our Network</a><a href="index.html#services">Our Services</a></nav>
+<a href="index.html#contact" class="contact-btn">Contact Us</a>
+</header>
+<section class="hero"><div class="container">
+<a href="index.html" class="back-home">← Back to Altrak 1978</a>
+<div class="hero-inner"><div class="hero-copy"><div class="eyebrow">VALVOLINE MINING SOLUTIONS</div><h1>Tough Lubricants for Toughest Terrains</h1><p>Lubricant solutions for mining, off-highway and heavy-duty equipment applications.</p></div>
+<img class="brand-mark" src="assets/VALVOLINE-LOGO.png" alt="Valvoline logo"></div>
+</div></section>
+<main class="catalog"><div class="container">
+<div class="catalog-top"><div><div class="catalog-title">Valvoline Products</div><div class="catalog-count" id="productCount">10 Products</div></div>
+<div class="search-box"><input type="text" id="productSearch" placeholder="Search product, grade, or application..."></div></div>
+<div class="filters">
+<button class="filter-btn active" data-filter="all">All Products</button>
+<button class="filter-btn" data-filter="engine-oil">Engine Oil</button>
+<button class="filter-btn" data-filter="transmission">Transmission &amp; Gear Oil</button>
+<button class="filter-btn" data-filter="hydraulic">Hydraulic Oil</button>
+<button class="filter-btn" data-filter="coolant">Coolant</button>
+<button class="filter-btn" data-filter="grease">Grease</button>
+</div>
+<div class="product-grid" id="productGrid">
+
+      <article class="product-card" data-category="transmission" data-name="Drive Train Transmission Oil SAE 10, 30, 50 Meets performance requirements of Caterpillar TO-4, Komatsu Micro clutch, Eaton Fuller and Tremac/TTC equipment.">
+        <div class="product-image"><img src="assets/product/valvoline/DRIVE-TRAIN-TRANSMISSION-OIL.webp" alt="Valvoline Drive Train Transmission Oil" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Drive Train Transmission Oil</h2>
+          <div class="product-grade">SAE 10, 30, 50</div>
+          <p class="product-description">Meets performance requirements of Caterpillar TO-4, Komatsu Micro clutch, Eaton Fuller and Tremac/TTC equipment.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Consistent and reliable friction performance and elastomer compatibility.</li><li>Helps guard against gear wear, rust, corrosion, foaming and oxidation.</li><li>Superior wear control and strong extreme pressure performance.</li><li>Exceeds CAT TO-4 standard.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L, 18L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="transmission" data-name="Gear Gard Range 85W-140, 80W-90; SAE 140, 90; GL-4 / GL-5 Gear oil range formulated for severe-duty operating conditions.">
+        <div class="product-image"><img src="assets/product/valvoline/GEAR-GARD-RANGE.webp" alt="Valvoline Gear Gard Range" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Gear Gard Range</h2>
+          <div class="product-grade">85W-140, 80W-90; SAE 140, 90; GL-4 / GL-5</div>
+          <p class="product-description">Gear oil range formulated for severe-duty operating conditions.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Outstanding thermal stability for cleanliness and longer service life.</li><li>Protects parts from rust and corrosion.</li><li>Specially formulated to meet severe-duty operation.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L, 18L, 1L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="coolant" data-name="Zerex HD Nitrite Free Coolant Extended Life Coolant Best suited for longer drain in all on-highway and off-highway mining heavy-duty diesel engines.">
+        <div class="product-image"><img src="assets/product/valvoline/ZEREX-HD-NITRITE-FREE-COOLANT.webp" alt="Valvoline Zerex HD Nitrite Free Coolant" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Zerex HD Nitrite Free Coolant</h2>
+          <div class="product-grade">Extended Life Coolant</div>
+          <p class="product-description">Best suited for longer drain in all on-highway and off-highway mining heavy-duty diesel engines.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Long life: up to 6 years / 600,000 miles / 12,000 hours of service.*</li><li>Organic Acid Technology protects diesel engines from liner pitting and cavitation erosion.</li><li>Silicate- and nitrite-free extended-life chemistry protects cooling-system metals, including aluminum, from corrosion.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 1000L, 208L, 20L, 4L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="grease" data-name="Supreme Grease EP2 Super Premium Lithium Complex Grease For mining and off-highway applications, with high load-bearing capacity for heavy-duty and heavy-load applications.">
+        <div class="product-image"><img src="assets/product/valvoline/SUPREME-GREASE-EP2.webp" alt="Valvoline Supreme Grease EP2" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Supreme Grease EP2</h2>
+          <div class="product-grade">Super Premium Lithium Complex Grease</div>
+          <p class="product-description">For mining and off-highway applications, with high load-bearing capacity for heavy-duty and heavy-load applications.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Higher service life which reduces re-greasing interval.</li><li>Excellent water resistance helps prevent water washout.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 180 kg, 18 kg</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="grease" data-name="Lithium EP2 Grease Extreme Pressure Grease For use in off-highway and mining applications.">
+        <div class="product-image"><img src="assets/product/valvoline/LITHIUM-EP2-GREASE.webp" alt="Valvoline Lithium EP2 Grease" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Lithium EP2 Grease</h2>
+          <div class="product-grade">Extreme Pressure Grease</div>
+          <p class="product-description">For use in off-highway and mining applications.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Mechanical stability and EP characteristics under severe operating conditions.</li><li>Excellent lubrication in both high- and low-temperature conditions.</li><li>Good resistance to water wash-out; performs well under heavy-load and high-speed conditions.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 180 kg, 18 kg</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="engine-oil" data-name="ProFleet LS 10W-40 · API CI-4 / ACEA E6, E7 Long-drain oil suitable for Euro IV, V and VI heavy-duty diesel engines used in mining.">
+        <div class="product-image"><img src="assets/product/valvoline/PROFLEET-LS.webp" alt="Valvoline ProFleet LS" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">ProFleet LS</h2>
+          <div class="product-grade">10W-40 · API CI-4 / ACEA E6, E7</div>
+          <p class="product-description">Long-drain oil suitable for Euro IV, V and VI heavy-duty diesel engines used in mining.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Full Synthetic Ultra High Performance Diesel Engine Oil (UPHD).</li><li>Unique formulation protects after-treatment systems including EGR, SCR and DPF.</li><li>Longer drain interval and cleaner engine.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L, 18L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="engine-oil" data-name="All Fleet E700 Plus 15W-40 · API CI-4 Plus / SL Best suited for extended-drain use in off-highway mining applications.">
+        <div class="product-image"><img src="assets/product/valvoline/ALL-FLEET-E700-PLUS.webp" alt="Valvoline All Fleet E700 Plus" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">All Fleet E700 Plus</h2>
+          <div class="product-grade">15W-40 · API CI-4 Plus / SL</div>
+          <p class="product-description">Best suited for extended-drain use in off-highway mining applications.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>BioDiesel compatible.</li><li>Excellent soot-dispersancy characteristics help control oil thickening and enhance fuel economy.</li><li>Outstanding high-temperature piston-deposit control for peak engine performance.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L, 18L, 5L, 1L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="engine-oil" data-name="All Fleet Premium 10W-30, 15W-40, 20W-50 · API CI-4 / SL Best suited for trucks and buses, light-duty pickup trucks, mining and construction equipment.">
+        <div class="product-image"><img src="assets/product/valvoline/ALL-FLEET-PREMIUM.webp" alt="Valvoline All Fleet Premium" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">All Fleet Premium</h2>
+          <div class="product-grade">10W-30, 15W-40, 20W-50 · API CI-4 / SL</div>
+          <p class="product-description">Best suited for trucks and buses, light-duty pickup trucks, mining and construction equipment.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>BioDiesel compatible.</li><li>Rapid Flow Technology (RFT) for excellent cold-start protection.</li><li>Excellent high-temperature deposit control provides enhanced engine cleanliness.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 10W-30: 200L, 5L, 1L<br>15W-40: 200L, 25L, 18L, 5L, 4L, 1L<br>20W-50: 200L, 25L, 18L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hydraulic" data-name="Ultramax AW (HLP) ISO Grade 32, 46, 68 and 100 Exceeds DIN 51524 Part II (HLP), Dennison HF-0 and HF-2 specifications.">
+        <div class="product-image"><img src="assets/product/valvoline/ULTRAMAX-AW-HLP.webp" alt="Valvoline Ultramax AW (HLP)" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">Ultramax AW (HLP)</h2>
+          <div class="product-grade">ISO Grade 32, 46, 68 and 100</div>
+          <p class="product-description">Exceeds DIN 51524 Part II (HLP), Dennison HF-0 and HF-2 specifications.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Specially formulated for hydraulic systems employing high-performance pumps.</li><li>Very good oxidation and demulsibility characteristics, with high FZG rating.</li><li>Excellent film strength and anti-wear properties help minimize wear in pumps, rings, valves, pistons and cylinders.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L, 18L</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hydraulic" data-name="AW EHVI 46/68 Exceeds DIN 51524 Part III (HVLP), Dennison HF-0 and HF-2 Suitable for hydraulic applications using high-pressure vane, gear and pressure pumps.">
+        <div class="product-image"><img src="assets/product/valvoline/AW-EHVI-46-68.webp" alt="Valvoline AW EHVI 46/68" loading="lazy" decoding="async"></div>
+        <div class="product-content">
+          <div class="product-brand">Valvoline</div>
+          <h2 class="product-name">AW EHVI 46/68</h2>
+          <div class="product-grade">Exceeds DIN 51524 Part III (HVLP), Dennison HF-0 and HF-2</div>
+          <p class="product-description">Suitable for hydraulic applications using high-pressure vane, gear and pressure pumps.</p>
+          <div class="spec-list">
+            <div class="spec-heading">Key Features</div>
+            <ul class="feature-list"><li>Suitable for various types of earthmoving equipment.</li><li>Very high viscosity index for a wide operating-temperature range.</li><li>Excellent anti-wear properties with strong resistance to oxidation.</li></ul>
+            <div class="pack-size"><strong>Pack sizes:</strong> 200L</div>
+          </div>
+        </div>
+      </article>
+<div class="no-result" id="noResult">No products found.</div>
+</div></div></main>
+<footer><div class="container footer-inner"><img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978" class="footer-logo"><div class="footer-text">© 2026 PT Altrak 1978. All Rights Reserved.</div></div></footer>
+<script>
+const searchInput=document.getElementById("productSearch");
+const filterButtons=document.querySelectorAll(".filter-btn");
+const productCards=document.querySelectorAll(".product-card");
+const productCount=document.getElementById("productCount");
+const noResult=document.getElementById("noResult");
+let activeFilter="all";
+function filterProducts(){
+ const keyword=searchInput.value.toLowerCase().trim();let visibleCount=0;
+ productCards.forEach(card=>{
+  const searchableText=(card.dataset.name+" "+card.textContent).toLowerCase();
+  const matchesSearch=searchableText.includes(keyword);
+  const matchesFilter=activeFilter==="all"||card.dataset.category===activeFilter;
+  if(matchesSearch&&matchesFilter){card.style.display="";visibleCount++}else{card.style.display="none"}
+ });
+ productCount.textContent=visibleCount+(visibleCount===1?" Product":" Products");
+ noResult.style.display=visibleCount===0?"block":"none";
+}
+searchInput.addEventListener("input",filterProducts);
+filterButtons.forEach(button=>button.addEventListener("click",()=>{
+ filterButtons.forEach(item=>item.classList.remove("active"));button.classList.add("active");
+ activeFilter=button.dataset.filter;filterProducts();
+}));
+</script>
+</body></html>
