@@ -1,303 +1,1152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sure Filter heavy duty filtration solutions distributed by PT Altrak 1978 for construction, mining, agriculture, industrial and marine applications.">
-<title>Sure Filter | PT Altrak 1978</title>
-<style>
-:root{--navy:#071e4b;--blue:#0756a0;--cyan:#12a8df;--yellow:#ffd329;--red:#ed1c24;--ink:#17283c;--muted:#60758b;--line:#dce6ef;--pale:#f2f6fa;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
-a{color:inherit;text-decoration:none}
-.container{width:min(1180px,calc(100% - 48px));margin:auto}
-header{height:78px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:sticky;top:0;z-index:50}
-.altrak-logo{width:140px;height:auto;object-fit:contain}
-nav{display:flex;align-items:center;gap:28px}
-nav a{font-size:13px;font-weight:700;color:#254766;transition:.2s}
-nav a:hover{color:var(--cyan)}
-.header-cta{background:var(--blue);color:#fff;padding:11px 18px;border-radius:4px;font-size:12px;font-weight:800}
-.hero{min-height:520px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(4,23,57,.88),rgba(4,37,79,.48)),url('assets/product/sure-filter/sure-filter-hero.webp') center/cover no-repeat,#123b68}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 76%,rgba(0,174,222,.22) 76% 82%,transparent 82%);pointer-events:none}
-.hero-content{position:relative;z-index:1;color:#fff;padding:80px 0;max-width:760px}
-.brand-line{display:flex;align-items:center;gap:20px;margin-bottom:34px}
-.sure-logo{width:210px;max-height:65px;object-fit:contain;object-position:left center}
-.brand-divider{height:45px;width:1px;background:rgba(255,255,255,.55)}
-.brand-caption{font-size:11px;letter-spacing:2px;font-weight:800;color:#d7eaff}
-.eyebrow{font-size:12px;letter-spacing:4px;font-weight:800;color:var(--yellow);margin-bottom:14px}
-h1{font-size:clamp(38px,5.3vw,66px);line-height:1.03;letter-spacing:-1.5px;max-width:730px;margin-bottom:20px;text-transform:uppercase}
-.hero p{font-size:17px;color:#e5eef7;max-width:620px;line-height:1.7;margin-bottom:30px}
-.primary-btn{display:inline-flex;align-items:center;gap:12px;background:var(--yellow);color:#132b49;padding:14px 22px;border-radius:3px;font-size:12px;font-weight:900;letter-spacing:.5px}
-.primary-btn:hover{background:#ffe36a}
-.hero-note{font-size:10px;letter-spacing:1.5px;color:#d8e8f5;margin-top:28px;font-weight:700}
-.intro{padding:76px 0 48px;text-align:center}
-.section-kicker{color:#0785c5;font-size:11px;font-weight:900;letter-spacing:3px;margin-bottom:12px}
-.section-title{color:var(--navy);font-size:clamp(28px,3.4vw,42px);line-height:1.15;margin-bottom:14px}
-.section-desc{max-width:760px;margin:0 auto;color:var(--muted);font-size:15px;line-height:1.8}
-.categories{padding:28px 0 86px;background:linear-gradient(#fff,#f7fafd)}
-.category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.category-card{background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.category-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(6,38,77,.10)}
-.category-image{height:190px;background:#eaf1f7;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.category-image img{width:100%;height:100%;object-fit:cover;display:block}
-.category-image.image-missing:before{content:"SURE FILTER";font-size:20px;letter-spacing:3px;font-weight:900;color:#8da7bd}
-.image-label{position:absolute;left:12px;bottom:12px;background:rgba(5,37,79,.88);color:#fff;padding:5px 8px;font-size:9px;font-weight:900;letter-spacing:1.5px}
-.category-body{padding:19px;display:flex;flex-direction:column;flex:1}
-.category-kicker{font-size:9px;color:#0785c5;letter-spacing:1.6px;font-weight:900;margin-bottom:7px}
-.category-body h3{font-size:17px;line-height:1.25;color:var(--navy);margin-bottom:9px;min-height:42px}
-.category-body p{font-size:12px;color:#61758a;line-height:1.65;margin-bottom:17px}
-.application{border-top:1px solid #e8eef4;padding:11px 0 14px;display:flex;flex-direction:column;gap:2px;margin-top:auto}
-.application span{font-size:9px;letter-spacing:1.3px;color:#91a1b1;font-weight:800}
-.application strong{font-size:11px;color:#304e6c}
-.text-link{font-size:11px;color:var(--blue);font-weight:900;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e8eef4;padding-top:12px}
-.text-link span{font-size:17px}
-.technology{background:var(--navy);color:#fff;padding:82px 0}
-.tech-layout{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.tech-copy .section-kicker{color:var(--yellow)}
-.tech-copy h2{font-size:clamp(28px,3.5vw,42px);line-height:1.15;margin-bottom:16px}
-.tech-copy>p{color:#c7d5e4;font-size:14px;line-height:1.8;margin-bottom:24px}
-.tech-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px}
-.tech-item{border-top:1px solid rgba(255,255,255,.2);padding-top:10px}
-.tech-item strong{display:block;font-size:12px;color:#fff;margin-bottom:4px}
-.tech-item span{display:block;color:#b6c9dc;font-size:11px;line-height:1.5}
-.tech-visual{background:#173b6b;border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:14px}
-.tech-visual img{width:100%;height:360px;object-fit:contain;display:block}
-.tech-visual.image-missing{min-height:300px;display:flex;align-items:center;justify-content:center;color:#9bb4cc;font-size:12px;letter-spacing:2px}
-.applications{padding:82px 0;background:#f3f7fb}
-.applications .section-desc{margin-bottom:34px}
-.application-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.application-tile{height:155px;position:relative;overflow:hidden;border-radius:5px;background:#173e68}
-.application-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
-.application-tile:hover img{transform:scale(1.06)}
-.application-tile:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(2,18,43,.9))}
-.application-tile span{position:absolute;z-index:1;bottom:13px;left:13px;color:#fff;font-size:11px;font-weight:900;letter-spacing:.8px;text-transform:uppercase}
-.quality{padding:80px 0}
-.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
-.quality-card{border:1px solid var(--line);border-radius:6px;padding:23px;background:#fff}
-.quality-number{font-size:28px;font-weight:900;color:var(--cyan);margin-bottom:9px}
-.quality-card h3{font-size:15px;color:var(--navy);margin-bottom:7px}
-.quality-card p{font-size:12px;color:var(--muted);line-height:1.65}
-.inquiry{background:linear-gradient(110deg,#062b59,#075da4);color:#fff;padding:55px 0}
-.inquiry-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.inquiry h2{font-size:clamp(24px,3vw,34px);margin-bottom:7px}
-.inquiry p{font-size:13px;color:#d3e4f3}
-.inquiry .primary-btn{white-space:nowrap}
-footer{background:#061a37;color:#d1deeb;padding:27px 0}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.footer-inner img{width:125px;filter:brightness(0) invert(1)}
-.footer-inner p{font-size:10px;color:#a9bbce}
-@media(max-width:1000px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.application-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){header{padding:0 18px;height:auto;min-height:72px;flex-wrap:wrap;gap:10px}.altrak-logo{width:115px}nav{order:3;width:100%;justify-content:center;gap:16px;padding:0 0 13px}nav a{font-size:11px}.header-cta{font-size:10px;padding:9px 12px}.hero{min-height:470px}.hero-content{padding:65px 0}.sure-logo{width:160px}.brand-caption{font-size:9px}.tech-layout{grid-template-columns:1fr;gap:30px}.tech-visual img{height:270px}.application-grid{grid-template-columns:repeat(2,1fr)}.quality-grid{grid-template-columns:1fr}.inquiry-inner{align-items:flex-start;flex-direction:column}}
-@media(max-width:480px){.container{width:calc(100% - 30px)}.category-grid{grid-template-columns:1fr}.category-image{height:220px}.application-grid{grid-template-columns:1fr 1fr}.application-tile{height:125px}.tech-list{grid-template-columns:1fr}.brand-line{gap:12px}.sure-logo{width:135px}.brand-caption{letter-spacing:1px}.footer-inner{align-items:flex-start;flex-direction:column}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sure Filter | PT Altrak 1978</title>
+
+  <style>
+    :root {
+      --blue: #063b70;
+      --blue-dark: #032b52;
+      --blue-light: #0b5ca8;
+      --text: #12395f;
+      --muted: #6c8197;
+      --bg: #f4f8fb;
+      --white: #ffffff;
+      --border: #dce6ef;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 60px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      height: 78px;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 45px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #163f66;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--blue-light);
+    }
+
+    .contact-btn {
+      background: var(--blue);
+      color: white;
+
+      padding: 11px 20px;
+      border-radius: 5px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      background: var(--blue-dark);
+    }
+
+
+    /* =========================
+       PRODUCT HEADER
+    ========================= */
+
+    .product-header {
+      background: #f4f8fb;
+      padding: 65px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+
+      margin-bottom: 35px;
+
+      transition: 0.2s ease;
+    }
+
+    .back-home:hover {
+      color: var(--blue-light);
+      transform: translateX(-3px);
+    }
+
+    .section-label {
+      color: #0872c9;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 13px;
+    }
+
+    .product-header h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.05;
+      color: var(--blue);
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+
+    .product-header p {
+      max-width: 700px;
+      color: #567391;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       BRAND
+    ========================= */
+
+    .brand-intro {
+      padding: 35px 0 5px;
+    }
+
+    .brand-logo-box {
+      width: 280px;
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .brand-logo-box img {
+      max-width: 270px;
+      max-height: 75px;
+
+      width: auto;
+      height: auto;
+
+      object-fit: contain;
+      display: block;
+    }
+
+
+    /* =========================
+       CATALOG
+    ========================= */
+
+    .catalog {
+      padding: 35px 0 90px;
+    }
+
+    .catalog-top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+
+      margin-bottom: 25px;
+    }
+
+    .catalog-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 5px;
+    }
+
+    .catalog-count {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .search-box {
+      width: 300px;
+    }
+
+    .search-box input {
+      width: 100%;
+      height: 44px;
+
+      border: 1px solid var(--border);
+      border-radius: 5px;
+
+      background: white;
+
+      padding: 0 15px;
+
+      font-size: 14px;
+      outline: none;
+
+      transition: 0.2s ease;
+    }
+
+    .search-box input:focus {
+      border-color: var(--blue-light);
+      box-shadow: 0 0 0 3px rgba(11, 92, 168, 0.08);
+    }
+
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+      background: white;
+
+      color: #42627e;
+
+      padding: 9px 17px;
+      border-radius: 4px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .filter-btn.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+
+    /* =========================
+       PRODUCT GRID
+    ========================= */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+
+      overflow: hidden;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(5, 46, 80, 0.10);
+    }
+
+
+    /* =========================
+       PRODUCT IMAGE
+    ========================= */
+
+    .product-image {
+      width: 100%;
+      height: 230px;
+      background: #f6f8fa;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      padding: 0;
+      display: block;
+    }
+
+
+    /* =========================
+       PRODUCT CONTENT
+    ========================= */
+
+    .product-content {
+      padding: 23px 23px 25px;
+      flex: 1;
+    }
+
+    .product-brand {
+      color: #1774bd;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+
+      margin-bottom: 9px;
+    }
+
+    .product-name {
+      font-size: 24px;
+      line-height: 1.15;
+
+      color: var(--blue);
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       SPECIFICATIONS
+    ========================= */
+
+    .product-description { color: #52677b; font-size: 13px; line-height: 1.6; margin-bottom: 16px; }
+
+    .spec-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+
+      padding: 10px 0;
+
+      border-bottom: 1px solid #edf2f6;
+
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .spec-label {
+      color: #71859a;
+      flex-shrink: 0;
+    }
+
+    .spec-value {
+      color: #183f62;
+      font-weight: 700;
+      text-align: right;
+    }
+
+
+    /* =========================
+       VIEW DETAILS
+    ========================= */
+
+    .product-link {
+      display: inline-block;
+
+      margin-top: 21px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .product-link:hover {
+      color: var(--blue-light);
+      transform: translateX(3px);
+    }
+
+
+    /* =========================
+       PAGINATION
+    ========================= */
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+
+      margin-top: 45px;
+    }
+
+    .page-btn {
+      width: 36px;
+      height: 36px;
+
+      border: 1px solid var(--border);
+      background: white;
+
+      color: #52708d;
+
+      border-radius: 4px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      cursor: pointer;
+    }
+
+    .page-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #075087;
+      color: white;
+
+      padding: 38px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .footer-logo {
+      width: 150px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+    }
+
+
+    /* =========================
+       NO RESULT
+    ========================= */
+
+    .no-result {
+      display: none;
+
+      grid-column: 1 / -1;
+
+      text-align: center;
+
+      padding: 60px 20px;
+
+      color: #71859a;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      header {
+        padding: 0 25px;
+      }
+
+      nav {
+        gap: 18px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .container {
+        width: min(100% - 40px, 1180px);
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      header {
+        height: auto;
+        min-height: 70px;
+
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+
+        padding-top: 5px;
+      }
+
+      .contact-btn {
+        display: none;
+      }
+
+      .product-header {
+        padding-top: 40px;
+      }
+
+      .catalog-top {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .logo {
+        width: 125px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .section-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+      }
+
+      .product-header h1 {
+        font-size: 37px;
+      }
+
+      .product-header p {
+        font-size: 14px;
+      }
+
+      .catalog-title {
+        font-size: 25px;
+      }
+
+      .product-image {
+        height: 210px;
+      }
+
+      .product-name {
+        font-size: 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+  </style>
 </head>
+
+
 <body>
-<header>
-  <a href="index.html"><img class="altrak-logo" src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978"></a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#solutions">Our Solutions</a>
-    <a href="index.html#network">Our Network</a>
-    <a href="index.html#services">Our Services</a>
-  </nav>
-  <a class="header-cta" href="index.html#contact">Contact Us</a>
-</header>
 
-<section class="hero">
-  <div class="container hero-content">
-    <div class="brand-line">
-      <img class="sure-logo" src="assets/SURE-FILTER-LOGO.png" alt="Sure Filter" onerror="this.style.display='none'">
-      <span class="brand-divider"></span>
-      <span class="brand-caption">DISTRIBUTED BY<br>PT ALTRAK 1978</span>
-    </div>
-    <div class="eyebrow">HEAVY DUTY FILTRATION PRODUCTS</div>
-    <h1>When Filtration Matters.</h1>
-    <p>Filtration solutions designed for demanding applications across construction, mining, agriculture, industrial and marine sectors.</p>
-    <a class="primary-btn" href="#product-categories">EXPLORE PRODUCT TYPES <span>↓</span></a>
-    <div class="hero-note">YOUR TOTAL PARTNER · PT ALTRAK 1978</div>
-  </div>
-</section>
 
-<section class="intro container" id="product-categories">
-  <div class="section-kicker">SURE FILTER PRODUCT RANGE</div>
-  <h2 class="section-title">Filtration for Every Critical System</h2>
-  <p class="section-desc">Sure Filter offers a range of filtration products, from air filters and fuel filters to oil filters and hydraulic filters, designed to meet the demands and needs of modern engines and equipment.</p>
-</section>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<section class="categories">
-  <div class="container">
-    <div class="category-grid">
-      
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/AIR-FILTER.webp" alt="Sure Filter Air Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>AIR FILTER</h3>
-          <p>Keeps the intake system clean and helps prevent contaminants from mixing with fuel before entering the combustion chamber.</p>
-          <div class="application"><span>APPLICATION</span><strong>Engine air intake</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/HYDRAULIC-FILTER.webp" alt="Sure Filter Hydraulic Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>HYDRAULIC FILTER</h3>
-          <p>Provides protection and helps prolong hydraulic system life by keeping the system clean.</p>
-          <div class="application"><span>APPLICATION</span><strong>Hydraulic systems</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/CABIN-AIR-FILTER.webp" alt="Sure Filter Cabin Air Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>CABIN AIR FILTER</h3>
-          <p>Electrostatic and activated charcoal media remove dust, dirt, pollen and other contaminants from the vehicle interior.</p>
-          <div class="application"><span>APPLICATION</span><strong>Operator cabin</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/FUEL-FILTER-WATER-SEPARATOR.webp" alt="Sure Filter Fuel Filter / Water Separator" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>FUEL FILTER / WATER SEPARATOR</h3>
-          <p>Removes water contamination to help ensure clean fuel is delivered to the engine. Suitable for automotive, industrial and marine applications.</p>
-          <div class="application"><span>APPLICATION</span><strong>Fuel system</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/OIL-FILTER.webp" alt="Sure Filter Oil Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>OIL FILTER</h3>
-          <p>Cleans oil flowing through the engine, helping reduce premature wear and tear in frictional parts.</p>
-          <div class="application"><span>APPLICATION</span><strong>Engine lubrication</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/AIR-OIL-SEPARATOR.webp" alt="Sure Filter Air/Oil Separator" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>AIR/OIL SEPARATOR</h3>
-          <p>A solution for air compressors, helping decrease oil consumption in the compressor air system and lower pressure drop.</p>
-          <div class="application"><span>APPLICATION</span><strong>Air compressor</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/FUEL-FILTER.webp" alt="Sure Filter Fuel Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>FUEL FILTER</h3>
-          <p>Helps keep the intake system clean, prolong injector life and maintain fuel efficiency.</p>
-          <div class="application"><span>APPLICATION</span><strong>Fuel system</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-      <article class="category-card">
-        <div class="category-image">
-          <img src="assets/product/sure-filter/COOLANT-FILTER.webp" alt="Sure Filter Coolant Filter" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing')">
-          <span class="image-label">SURE FILTER</span>
-        </div>
-        <div class="category-body">
-          <div class="category-kicker">FILTRATION CATEGORY</div>
-          <h3>COOLANT FILTER</h3>
-          <p>Designed to protect the cooling system and enhance durability against corrosion.</p>
-          <div class="application"><span>APPLICATION</span><strong>Cooling system</strong></div>
-          <a class="text-link" href="#inquiry">Request product information <span>↗</span></a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+  <header>
 
-<section class="technology">
-  <div class="container tech-layout">
-    <div class="tech-copy">
-      <div class="section-kicker">ENGINEERED DIFFERENCE</div>
-      <h2>Designed for Strength. Built for Performance.</h2>
-      <p>The Sure Filter brochure highlights construction features intended to support filter integrity, filtration performance and durability in heavy equipment applications.</p>
-      <div class="tech-list">
-        <div class="tech-item"><strong>Steel Tension Spring</strong><span>Manufactured with heat treatment to maintain element support and help prevent bypass.</span></div>
-        <div class="tech-item"><strong>Thicker Body</strong><span>Designed for structural integrity.</span></div>
-        <div class="tech-item"><strong>Intra-Plastisol Leakage Resistance</strong><span>Sure Filter products are made to withstand intra-plastisol leakage.</span></div>
-        <div class="tech-item"><strong>High Performance Media</strong><span>Offers longer service life and causes less restriction.</span></div>
-        <div class="tech-item"><strong>Double Flute Spiral Tube</strong><span>Provides higher strength and better flow rate.</span></div>
-        <div class="tech-item"><strong>Heavy Equipment Base Plate</strong><span>Provides superior structure support for maximum strength.</span></div>
+    <a href="index.html">
+
+      <img
+        src="assets/AL-78-Logo-terevisi.png.png"
+        alt="Altrak 1978"
+        class="logo"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#solutions">
+        Our Solutions
+      </a>
+
+      <a href="index.html#network">
+        Our Network
+      </a>
+
+      <a href="index.html#services">
+        Our Services
+      </a>
+
+    </nav>
+
+
+    <a
+      href="index.html#contact"
+      class="contact-btn"
+    >
+      Contact Us
+    </a>
+
+  </header>
+
+
+
+  <!-- =========================
+       PRODUCT HEADER
+  ========================= -->
+
+  <section class="product-header">
+
+    <div class="container">
+
+
+      <a href="index.html" class="back-home"
+   onclick="if (document.referrer && new URL(document.referrer).origin === location.origin) { history.back(); return false; }">
+  ← Back to Altrak 1978
+</a>
+
+
+      <div class="section-label">
+        SURE FILTER
       </div>
-    </div>
-    <div class="tech-visual">
-      <img src="assets/product/sure-filter/filter-cutaway.webp" alt="Sure Filter element construction cutaway" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('image-missing');this.parentElement.textContent='UPLOAD: filter-cutaway.webp'">
-    </div>
-  </div>
-</section>
 
-<section class="applications">
-  <div class="container">
-    <div class="section-kicker">WIDE RANGE APPLICATION</div>
-    <h2 class="section-title">One Filtration Partner. Multiple Industries.</h2>
-    <p class="section-desc">Sure Filter covers a wide range of applications from passenger car, commercial, construction and mining, agricultural, industrial and marine.</p>
-    <div class="application-grid">
-      <div class="application-tile"><img src="assets/product/sure-filter/app-construction.webp" alt="Construction equipment" loading="lazy"><span>Construction</span></div>
-      <div class="application-tile"><img src="assets/product/sure-filter/app-mining.webp" alt="Mining equipment" loading="lazy"><span>Mining</span></div>
-      <div class="application-tile"><img src="assets/product/sure-filter/app-agriculture.webp" alt="Agricultural equipment" loading="lazy"><span>Agriculture</span></div>
-      <div class="application-tile"><img src="assets/product/sure-filter/app-industrial.webp" alt="Industrial application" loading="lazy"><span>Industrial</span></div>
-      <div class="application-tile"><img src="assets/product/sure-filter/app-marine.webp" alt="Marine application" loading="lazy"><span>Marine</span></div>
+
+      <h1>
+        Heavy Duty Filtration Products
+      </h1>
+
+
+      <p>
+        Filtration solutions for air, fuel, oil, hydraulic and cooling systems across heavy-duty applications.
+      </p>
+
+
     </div>
-  </div>
-</section>
 
-<section class="quality">
-  <div class="container">
-    <div class="section-kicker">QUALITY & TESTING</div>
-    <h2 class="section-title">Laboratory Tested</h2>
-    <p class="section-desc">According to the brochure, Sure Filter products are manufactured according to JIS, ISO and SAE standards to meet efficiency, life expectancy, vibration, impulse and other criteria.</p>
-    <div class="quality-grid">
-      <article class="quality-card"><div class="quality-number">01</div><h3>Triple Loop Multipass Test Stand</h3><p>Testing equipment featured in the Sure Filter brochure.</p></article>
-      <article class="quality-card"><div class="quality-number">02</div><h3>Air Tester Stand Machine</h3><p>Testing facility featured as part of the brand's quality process.</p></article>
-      <article class="quality-card"><div class="quality-number">03</div><h3>Cold & Heat Chamber</h3><p>Temperature testing equipment shown in the brochure.</p></article>
+  </section>
+
+
+
+  <!-- =========================
+       BRAND LOGO
+  ========================= -->
+
+  <section class="brand-intro">
+
+    <div class="container">
+
+      <div class="brand-logo-box">
+
+        <img
+          src="assets/SURE FILTER logo.png"
+          alt="Sure Filter"
+        >
+
+      </div>
+
     </div>
-  </div>
-</section>
 
-<section class="inquiry" id="inquiry">
-  <div class="container inquiry-inner">
-    <div><h2>Looking for the Right Filter?</h2><p>Contact PT Altrak 1978 for product information and filtration support.</p></div>
-    <a class="primary-btn" href="index.html#contact">CONTACT ALTRAK 1978 <span>↗</span></a>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container footer-inner">
-    <img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978">
-    <p>© 2026 PT Altrak 1978. Your Total Partner.</p>
-  </div>
-</footer>
+
+
+  <!-- =========================
+       CATALOG
+  ========================= -->
+
+  <section class="catalog">
+
+    <div class="container">
+
+
+      <div class="catalog-top">
+
+
+        <div>
+
+          <div class="catalog-title">
+            Sure Filter Products
+          </div>
+
+          <div
+            class="catalog-count"
+            id="productCount"
+          >
+            8 Products
+          </div>
+
+        </div>
+
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="productSearch"
+            placeholder="Search product type..."
+          >
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           FILTERS
+      ========================= -->
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="air-filter">Air Filter</button>
+        <button class="filter-btn" data-filter="cabin-air-filter">Cabin Air Filter</button>
+        <button class="filter-btn" data-filter="oil-filter">Oil Filter</button>
+        <button class="filter-btn" data-filter="fuel-filter">Fuel Filter</button>
+        <button class="filter-btn" data-filter="hydraulic-filter">Hydraulic Filter</button>
+        <button class="filter-btn" data-filter="fuel-water-separator">Fuel / Water Separator</button>
+        <button class="filter-btn" data-filter="air-oil-separator">Air/Oil Separator</button>
+        <button class="filter-btn" data-filter="coolant-filter">Coolant Filter</button>
+      </div>
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      >
+
+
+        <article class="product-card" data-category="air-filter" data-name="Air Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/AIR-FILTER.webp" alt="Sure Filter Air Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Air Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Air Filter is most vital in keeping the contamination out of the intake system. It prevents contaminated air from being mixed with the fuel before entering the combustion chamber.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Air Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="cabin-air-filter" data-name="Cabin Air Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/CABIN-AIR-FILTER.webp" alt="Sure Filter Cabin Air Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Cabin Air Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Electrostatic and activated charcoal media remove contaminants of dust, dirt, pollen and pollutants inside the vehicle. Provides effective protection for AC-System and enhances overall comfort.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Cabin Air Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="oil-filter" data-name="Oil Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/OIL-FILTER.webp" alt="Sure Filter Oil Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Oil Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Oil Filter cleans the oil that flows through the engine, thus reducing premature wear and tear in all frictional parts. Sure Filter offers optimum filtration by providing high-efficiency filtration. Clean oil provides good sealing between the piston and the cylinder for maximum fuel economy.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Oil Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="fuel-filter" data-name="Fuel Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/FUEL-FILTER.webp" alt="Sure Filter Fuel Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Fuel Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Fuel Filter makes up the other component in keeping the intake system clean. Clean fuel will prolong the life span of the injector and maintain higher fuel efficiency.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Fuel Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="hydraulic-filter" data-name="Hydraulic Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/HYDRAULIC-FILTER.webp" alt="Sure Filter Hydraulic Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Hydraulic Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Provides protection and prolongs the life span of the hydraulic system by keeping it clean.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Hydraulic Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="fuel-water-separator" data-name="Fuel Filter / Water Separator">
+          <div class="product-image">
+            <img src="assets/product/surefilter/FUEL-FILTER-WATER-SEPARATOR.webp" alt="Sure Filter Fuel Filter / Water Separator" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Fuel Filter / Water Separator</h2>
+            <div class="spec-list">
+              <p class="product-description">Removes water contamination to ensure clean fuel is delivered to the engine. Fuel filter / water separators provide effective protection for engines used in automotive, industrial and marine applications.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Fuel Filter / Water Separator</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="air-oil-separator" data-name="Air/Oil Separator">
+          <div class="product-image">
+            <img src="assets/product/surefilter/AIR-OIL-SEPARATOR.webp" alt="Sure Filter Air/Oil Separator" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Air/Oil Separator</h2>
+            <div class="spec-list">
+              <p class="product-description">Air/Oil Separator is the solution for all air compressors by decreasing the oil consumption in the compressor air system, and lowering the pressure drop in order to take full advantage of the long service life.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Air/Oil Separator</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+
+        <article class="product-card" data-category="coolant-filter" data-name="Coolant Filter">
+          <div class="product-image">
+            <img src="assets/product/surefilter/COOLANT-FILTER.webp" alt="Sure Filter Coolant Filter" loading="lazy" decoding="async">
+          </div>
+          <div class="product-content">
+            <div class="product-brand">Sure Filter</div>
+            <h2 class="product-name">Coolant Filter</h2>
+            <div class="spec-list">
+              <p class="product-description">Designed to protect the cooling system and enhance the durability against corrosion.</p>
+              <div class="spec-row">
+                <span class="spec-label">Product Type</span>
+                <span class="spec-value">Coolant Filter</span>
+              </div>
+            </div>
+            <a href="index.html#contact" class="product-link">Contact Us →</a>
+          </div>
+        </article>
+    
+        <div class="no-result" id="noResult">No products found.</div>
+
+      
+
+
+      </div>
+
+
+      <!-- =========================
+           PAGINATION
+      ========================= -->
+
+      <div class="pagination">
+
+        <button class="page-btn active">
+          1
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+
+      <img
+        src="assets/AL-78-Logo-terevisi.png.png"
+        alt="Altrak 1978"
+        class="footer-logo"
+      >
+
+
+      <div class="footer-text">
+        © 2026 PT Altrak 1978. All Rights Reserved.
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    const searchInput =
+      document.getElementById("productSearch");
+
+
+    const filterButtons =
+      document.querySelectorAll(".filter-btn");
+
+
+    const productCards =
+      document.querySelectorAll(".product-card");
+
+
+    const productCount =
+      document.getElementById("productCount");
+
+
+    const noResult =
+      document.getElementById("noResult");
+
+
+    let activeFilter = "all";
+
+
+    function filterProducts() {
+
+      const keyword =
+        searchInput.value
+          .toLowerCase()
+          .trim();
+
+
+      let visibleCount = 0;
+
+
+      productCards.forEach(card => {
+
+        const name =
+          card.dataset.name.toLowerCase();
+
+        const category =
+          card.dataset.category;
+
+
+        const matchSearch =
+          name.includes(keyword);
+
+
+        const matchFilter =
+          activeFilter === "all" ||
+          category === activeFilter;
+
+
+        if (
+          matchSearch &&
+          matchFilter
+        ) {
+
+          card.style.display = "";
+          visibleCount++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      productCount.textContent =
+        visibleCount +
+        (
+          visibleCount === 1
+            ? " Product"
+            : " Products"
+        );
+
+
+      if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+      } else {
+
+        noResult.style.display = "none";
+
+      }
+
+    }
+
+
+    searchInput.addEventListener(
+      "input",
+      filterProducts
+    );
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+          });
+
+
+          button.classList.add("active");
+
+
+          activeFilter =
+            button.dataset.filter;
+
+
+          filterProducts();
+
+        }
+      );
+
+    });
+
+  </script>
+
 </body>
 </html>
