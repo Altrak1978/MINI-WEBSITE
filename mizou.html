@@ -696,12 +696,10 @@
 
     <div class="container">
 
-      <a
-        href="index.html"
-        class="back-home"
-      >
-        ← Back to Altrak 1978
-      </a>
+      <a href="index.html" class="back-home"
+   onclick="if (document.referrer && new URL(document.referrer).origin === location.origin) { history.back(); return false; }">
+  ← Back to Altrak 1978
+</a>
 
 
       <div class="section-label">
