@@ -1,2434 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="PT Altrak 1978 - Your Total Partner for Power Generation, Construction, Mining, Agriculture, Marine and Industrial Solutions."
-  />
-  <title>PT Altrak 1978 | Your Total Partner</title>
-  <link rel="preload" as="image" href="assets/Konstruksi - Kategori.png" fetchpriority="high">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --blue: #073b70;
-      --blue-dark: #042c53;
-      --blue-light: #0c5a9f;
-      --yellow: #f6c400;
-      --green: #20c878;
-      --white: #ffffff;
-      --light: #f3f8fc;
-      --text: #102f52;
-      --muted: #62758c;
-      --border: #dbe5ef;
-      --shadow: 0 15px 45px rgba(7, 59, 112, 0.12);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: #fff;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 80px));
-      margin: auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 78px;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(15px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .navbar {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      width: 170px;
-      height: auto;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 38px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .nav-menu a {
-      position: relative;
-      transition: 0.25s;
-    }
-
-    .nav-menu a:hover {
-      color: var(--blue-light);
-    }
-
-    .nav-menu a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 2px;
-      background: var(--yellow);
-      transition: 0.25s;
-    }
-
-    .nav-menu a:hover::after {
-      width: 100%;
-    }
-
-    .contact-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: var(--blue);
-      color: #fff;
-      padding: 13px 21px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .contact-btn:hover {
-      background: var(--blue-light);
-      transform: translateY(-2px);
-    }
-
-    .whatsapp-icon {
-      font-size: 17px;
-    }
-
-    .hamburger {
-      display: none;
-      border: none;
-      background: none;
-      font-size: 26px;
-      color: var(--blue);
-      cursor: pointer;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 650px;
-      padding-top: 78px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      color: #fff;
-    }
-
-    /* =========================
-       HERO BACKGROUND CROSSFADE
-    ========================= */
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      will-change: opacity;
-    }
-
-    .hero-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(3, 30, 57, 0.96) 0%,
-          rgba(3, 37, 70, 0.86) 35%,
-          rgba(3, 37, 70, 0.42) 68%,
-          rgba(3, 37, 70, 0.20) 100%
-        );
-    }
-
-    .hero-bg-current {
-      opacity: 1;
-      background-image: url("assets/Konstruksi - Kategori.png");
-    }
-
-    .hero-bg-next {
-      display: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 100px;
-      background: linear-gradient(transparent, rgba(3, 30, 57, 0.7));
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: min(1180px, calc(100% - 80px));
-      margin: auto;
-    }
-
-    .hero-label {
-      font-size: 12px;
-      letter-spacing: 7px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 5vw, 67px);
-      line-height: 1.05;
-      max-width: 700px;
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
-
-    .hero-description {
-      font-size: 20px;
-      max-width: 650px;
-      line-height: 1.5;
-      margin-bottom: 65px;
-    }
-
-    /* TRANSISI TEXT HERO */
-    .hero h1,
-    .hero-description {
-      transition:
-      opacity 0.45s ease,
-      transform 0.45s ease;
-    }
-
-    .hero-text-changing {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-
-    .handwriting {
-      position: absolute;
-      right: 40px;
-      top: 190px;
-      font-family: "Kalam", cursive;
-      font-size: 28px;
-      line-height: 1.05;
-      transform: rotate(-5deg);
-      text-align: center;
-      z-index: 2;
-    }
-
-    .hero-bottom {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      max-width: 720px;
-    }
-
-    .hero-feature {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 0 28px;
-      min-height: 65px;
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .hero-feature svg {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-
-  fill: none;
-  stroke: #fff;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PT Altrak 1978 | Your Total Partner</title>
+<meta name="description" content="PT Altrak 1978 - Your Total Partner untuk Power Generation, Konstruksi, Pertambangan, Pertanian, Marine, dan Industri.">
+<meta property="og:title" content="PT Altrak 1978 | Your Total Partner">
+<meta property="og:type" content="website">
+<style>
+:root{--blue:#0057b8;--blue2:#0a3d8f;--deep:#001a3d;--night:#00102a;--sky:#38a8ff;--cyan:#7fd3ff;--ice:#eaf3ff;--text:#0f2240;--muted:#5a6d8a;--line:#d9e6f7;--red:#e30613}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+section{padding:96px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-weight:700;letter-spacing:.16em;font-size:.78rem;text-transform:uppercase}
+.eyebrow::before{content:"";width:28px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--sky))}
+h2{font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.15;margin:12px 0 16px;color:var(--deep);letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:620px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;font-weight:600;border:2px solid transparent;transition:.25s;cursor:pointer;font-size:1rem}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:.25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-main{background:linear-gradient(135deg,var(--sky),var(--blue));color:#fff;box-shadow:0 10px 28px rgba(0,87,184,.45)}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,87,184,.55)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:#fff;color:var(--blue2)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(32px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+header.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:0 4px 24px rgba(0,40,90,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav img{height:44px;transition:.3s;filter:brightness(0) invert(1)}
+header.solid .nav img{filter:none}
+.menu{display:flex;gap:32px;align-items:center;font-weight:600;font-size:.94rem;color:#fff}
+header.solid .menu{color:var(--deep)}
+.menu a:not(.btn){position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--sky);transition:.3s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:10px 22px;font-size:.9rem}
+.burger{display:none;background:none;border:0;cursor:pointer;color:#fff;font-size:1.8rem}
+header.solid .burger{color:var(--deep)}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;color:#fff;padding:130px 0 150px;background:radial-gradient(900px 500px at 85% 15%,rgba(56,168,255,.45),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,87,184,.7),transparent 60%),linear-gradient(160deg,var(--blue2) 0%,var(--deep) 60%,var(--night) 100%);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%)}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);animation:float 9s ease-in-out infinite}
+.o1{width:380px;height:380px;right:-90px;top:90px;border:2px dashed rgba(127,211,255,.35);animation:spin 40s linear infinite}
+.o2{width:220px;height:220px;right:180px;bottom:120px;border:1px solid rgba(127,211,255,.35)}
+.o3{width:90px;height:90px;left:46%;top:18%;background:linear-gradient(135deg,var(--sky),transparent);opacity:.5}
+@keyframes float{50%{transform:translateY(-26px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:7px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);font-size:.8rem;letter-spacing:.16em;margin-bottom:26px;backdrop-filter:blur(6px)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(127,211,255,.8);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px transparent}}
+.hero h1{font-size:clamp(2.6rem,6vw,4.9rem);line-height:1.04;letter-spacing:-.03em;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--cyan),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin:24px 0 36px;font-size:1.2rem;color:#cfe2fb;max-width:540px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.rot{margin-top:46px;display:flex;align-items:center;gap:12px;color:var(--cyan);font-weight:600;transition:opacity .4s}
+.rot::before{content:"";width:40px;height:2px;background:var(--cyan)}
+.glass{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gc{background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:26px 22px;backdrop-filter:blur(14px);box-shadow:0 20px 50px rgba(0,10,40,.35)}
+.gc:nth-child(2){transform:translateY(28px)}.gc:nth-child(3){transform:translateY(-12px)}.gc:nth-child(4){transform:translateY(16px)}
+.gc b{display:block;font-size:2.5rem;line-height:1;font-weight:800;background:linear-gradient(180deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.gc span{color:#bcd4f2;font-size:.9rem}
+.wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;z-index:2}.wave svg{width:100%;height:90px}
+/* marquee */
+.mq{padding:6px 0 30px;overflow:hidden;background:#fff}
+.mq .track{display:flex;gap:18px;width:max-content;animation:mq 45s linear infinite}
+.mq:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq a,.bgrid a{height:84px;min-width:170px;display:flex;align-items:center;justify-content:center;padding:16px 22px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:.25s}
+.mq img,.bgrid img{max-height:46px;width:auto;object-fit:contain}
+/* solutions bento */
+.sol{background:var(--ice)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:18px;margin-top:44px}
+.tile{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,var(--blue),var(--deep));color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.tile:nth-child(1){grid-column:span 2;grid-row:span 2}
+.tile:nth-child(4){grid-column:span 2}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,26,61,.05) 20%,rgba(0,26,61,.92))}
+.tile:hover img{transform:scale(1.1)}
+.tile .t{padding:26px;width:100%}
+.tile small{color:var(--cyan);letter-spacing:.14em;font-weight:700;font-size:.72rem}
+.tile h3{font-size:1.4rem;margin:2px 0 4px}.tile:nth-child(1) h3{font-size:2rem}
+.tile p{font-size:.92rem;color:#cfe2fb;max-width:360px}
+.go{position:absolute;right:20px;top:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);display:grid;place-items:center;transition:.3s}
+.go svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.4}
+.tile:hover .go{background:var(--sky);transform:rotate(-45deg)}
+/* brands */
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin-top:38px}
+.bgrid a:hover,.mq a:hover{border-color:var(--sky);box-shadow:0 12px 26px rgba(0,87,184,.16);transform:translateY(-4px)}
+/* network */
+.net{background:linear-gradient(160deg,var(--blue2),var(--deep) 70%);color:#fff;overflow:hidden}
+.net::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(127,211,255,.35) 1.5px,transparent 1.5px);background-size:26px 26px;mask-image:linear-gradient(90deg,transparent 30%,#000)}
+.net h2{color:#fff}.net .lead{color:#c3d8f5}.net .eyebrow{color:var(--cyan)}
+.net .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nm{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:26px;backdrop-filter:blur(10px)}
+.nm b{font-size:2.6rem;color:var(--cyan);display:block;line-height:1.1}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.sc{position:relative;padding:34px 26px;border-radius:24px;border:1px solid var(--line);background:#fff;overflow:hidden;transition:.35s}
+.sc::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,var(--blue),var(--deep));opacity:0;transition:.35s;z-index:0}
+.sc>*{position:relative;z-index:1;transition:.35s}
+.sc:hover{transform:translateY(-8px);box-shadow:0 24px 44px rgba(0,87,184,.25)}
+.sc:hover::before{opacity:1}.sc:hover h3,.sc:hover .n{color:#fff}.sc:hover p{color:#cfe2fb}
+.n{position:absolute!important;right:22px;top:14px;font-size:3.4rem;font-weight:800;color:var(--ice)}
+.ico{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--sky),var(--blue));display:grid;place-items:center;margin-bottom:22px;box-shadow:0 10px 22px rgba(0,87,184,.3)}
+.ico svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sc h3{color:var(--deep);margin-bottom:6px}.sc p{color:var(--muted);font-size:.94rem}
+/* cta */
+.fin{padding:20px 0 96px}
+.box{position:relative;overflow:hidden;border-radius:36px;padding:72px 32px;text-align:center;color:#fff;background:radial-gradient(500px 300px at 100% 0,rgba(127,211,255,.5),transparent 70%),linear-gradient(135deg,var(--blue),var(--deep))}
+.box::before{content:"";position:absolute;width:340px;height:340px;left:-100px;bottom:-140px;border:2px dashed rgba(127,211,255,.4);border-radius:50%}
+.box h2{color:#fff;max-width:720px;margin:0 auto 14px}.box p{color:#cfe2fb;margin-bottom:30px;position:relative}
+.box .cta{justify-content:center;position:relative}
+footer{background:var(--night);color:#9db7dc;padding:50px 0 28px}
+.f{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.f img{height:42px;filter:brightness(0) invert(1)}
+.f nav{display:flex;gap:24px;font-size:.9rem}.f nav a:hover{color:#fff}
+.copy{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.85rem;text-align:center}
+@media(max-width:960px){
+ .burger{display:block}
+ .menu{position:absolute;top:72px;left:14px;right:14px;background:#fff;color:var(--deep);flex-direction:column;padding:24px;gap:18px;border-radius:20px;box-shadow:0 20px 50px rgba(0,40,90,.25);display:none}
+ .menu.open{display:flex}
+ .hgrid,.net .wrap{grid-template-columns:1fr}
+ .glass{margin-top:10px}
+ .bento{grid-template-columns:1fr 1fr}.tile:nth-child(1){grid-column:span 2}
+ .svc{grid-template-columns:1fr 1fr}
+ section{padding:70px 0}.hero{padding-top:110px}
 }
-
-    .hero-feature:first-child {
-      padding-left: 0;
-    }
-
-    .hero-feature:last-child {
-      border-right: none;
-    }
-
-    .feature-icon {
-      font-size: 27px;
-      width: 34px;
-      text-align: center;
-    }
-
-    .hero-feature span {
-      font-size: 12px;
-      line-height: 1.45;
-      font-weight: 500;
-    }
-
-    .hero-slider {
-      position: absolute;
-      right: 55px;
-      bottom: 52px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 3;
-    }
-
-    .slider-line {
-      width: 35px;
-      height: 3px;
-      background: var(--yellow);
-    }
-
-    .slider-text {
-      font-size: 11px;
-      width: 100px;
-      line-height: 1.4;
-    }
-
-    .slider-button {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      background: rgba(0, 0, 0, 0.1);
-      color: #fff;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    /* =========================
-       SECTION GLOBAL
-    ========================= */
-
-    section {
-      padding: 75px 0;
-    }
-
-    .section-label {
-      color: var(--blue-light);
-      font-size: 10px;
-      letter-spacing: 6px;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: 36px;
-      line-height: 1.12;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .section-description {
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 14px;
-    }
-
-    /* =========================
-       SOLUTIONS
-    ========================= */
-
-    .solutions {
-      background: var(--light);
-    }
-
-    .solutions-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 65px;
-      align-items: center;
-    }
-
-    .solutions-copy {
-      padding-right: 20px;
-    }
-
-    .solutions-copy .section-title {
-      max-width: 420px;
-      margin-bottom: 18px;
-    }
-
-    .solutions-stats {
-      border-left: 1px solid #aebed0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .stat {
-      min-height: 130px;
-      padding: 15px 35px;
-      border-right: 1px solid #d6e0ea;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .stat:last-child {
-      border-right: none;
-    }
-
-    .stat-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .stat strong {
-      font-size: 27px;
-      color: var(--blue);
-      font-weight: 800;
-    }
-
-    .stat span {
-      font-size: 12px;
-      line-height: 1.5;
-      color: var(--text);
-    }
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: end;
-      margin-bottom: 28px;
-    }
-
-    .products-header .section-description {
-      max-width: 520px;
-      margin-bottom: 7px;
-    }
-
-    .view-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--blue-light);
-      font-size: 12px;
-      font-weight: 800;
-      margin-top: 12px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
-    }
-
-    .product-card {
-      min-height: 295px;
-      background: linear-gradient(180deg, #edf5fa, #f8fbfd);
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-      transition: 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-    }
-
-    .product-image {
-      height: 155px;
-      overflow: hidden;
-      background: #dce8f1;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.4s;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.07);
-    }
-
-    .product-content {
-      padding: 15px 14px;
-    }
-
-    .product-content h3 {
-      font-size: 13px;
-      margin-bottom: 6px;
-      color: var(--blue);
-    }
-
-    .product-content p {
-      font-size: 10px;
-      line-height: 1.45;
-      color: var(--muted);
-      min-height: 31px;
-    }
-
-    .product-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--blue-light);
-      font-size: 10px;
-      font-weight: 800;
-      margin-top: 12px;
-    }
-
-    /* =========================
-       BRAND LOGOS
-    ========================= */
-
-    /* =========================
-   BRAND LOGO MARQUEE
-========================= */
-
-/* =========================
-   BRAND LOGOS GRID
-========================= */
-
-.brand-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 14px;
-  margin-top: 35px;
-}
-
-.brand-item {
-  height: 95px;
-  padding: 18px 20px;
-
-  background: #fff;
-  border: 1px solid #e5edf4;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  transition: all 0.25s ease;
-}
-
-.brand-item img {
-  width: auto;
-  height: auto;
-  max-width: 145px;
-  max-height: 48px;
-
-  object-fit: contain;
-  display: block;
-}
-
-.brand-item:hover {
-  transform: translateY(-3px);
-  border-color: #0b4f8a;
-  box-shadow: 0 8px 20px rgba(11, 53, 93, 0.10);
-}
-
-.brand-item:nth-last-child(4) {
-  grid-column: 2;
-}
-
-.brand-item:nth-last-child(3) {
-  grid-column: 3;
-}
-
-.brand-item:nth-last-child(2) {
-  grid-column: 4;
-}
-
-.brand-item:nth-last-child(1) {
-  grid-column: 5;
-}
-
-
-/* LOGO YANG BENTUKNYA LEBIH TINGGI */
-
-.brand-item img[src*="Cummins"] {
-  max-width: 100px;
-  max-height: 55px;
-}
-
-.brand-item img[src*="Fleetguard"] {
-  max-width: 115px;
-  max-height: 55px;
-}
-
-.brand-item img[src*="Valvoline"] {
-  max-width: 115px;
-  max-height: 55px;
-}
-
-.brand-item img[src*="MIZZOU"] {
-  max-width: 115px;
-  max-height: 55px;
-}
-
-.brand-item img[src*="ALTEQ"] {
-  max-width: 190px;
-  max-height: 75px;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-
-/* =========================
-   RESPONSIVE BRAND GRID
-========================= */
-
-@media (max-width: 1100px) {
-  .brand-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .brand-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .brand-item {
-    height: 85px;
-    padding: 14px;
-  }
-
-  .brand-item img {
-    max-width: 120px;
-    max-height: 42px;
-  }
-}
-
-@media (max-width: 500px) {
-  .brand-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brand-item {
-    height: 80px;
-  }
-
-  .brand-item img {
-    max-width: 115px;
-    max-height: 40px;
-  }
-}
-
-    /* =========================
-       NETWORK
-    ========================= */
-
-    .network {
-  position: relative;
-  color: #fff;
-  padding: 80px 0;
-  overflow: hidden;
-
-  background-image: none;
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-    .network-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .network .section-label {
-      color: #bcd7ef;
-    }
-
-    .network .section-title {
-      color: #fff;
-      max-width: 430px;
-      margin-bottom: 20px;
-    }
-
-    .network-description {
-      color: #d8e5f1;
-      max-width: 480px;
-      font-size: 14px;
-      line-height: 1.65;
-      margin-bottom: 25px;
-    }
-
-    .outline-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 20px;
-      border: 1px solid rgba(255,255,255,0.8);
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .outline-btn:hover {
-      background: #fff;
-      color: var(--blue);
-    }
-
-    .map-area {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .network-image {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .map-svg {
-      width: 100%;
-      max-width: 650px;
-      opacity: 0.9;
-    }
-
-    .map-pin {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background: var(--blue-light);
-      border: 3px solid #fff;
-      border-radius: 50% 50% 50% 0;
-      transform: rotate(-45deg);
-      box-shadow: 0 5px 15px rgba(0,0,0,.3);
-    }
-
-    .map-pin::after {
-      content: "";
-      width: 6px;
-      height: 6px;
-      background: #fff;
-      border-radius: 50%;
-      position: absolute;
-      top: 6px;
-      left: 6px;
-    }
-
-    .pin-1 { left: 24%; top: 37%; }
-    .pin-2 { left: 31%; top: 48%; }
-    .pin-3 { left: 37%; top: 58%; }
-    .pin-4 { left: 48%; top: 52%; }
-    .pin-5 { left: 55%; top: 67%; }
-    .pin-6 { left: 67%; top: 54%; }
-    .pin-7 { left: 79%; top: 39%; }
-
-    .network-note {
-      position: absolute;
-      bottom: 10px;
-      right: 15%;
-      font-family: "Kalam", cursive;
-      font-size: 22px;
-      transform: rotate(-5deg);
-    }
-
-    .network-note::after {
-      content: "";
-      display: block;
-      width: 115px;
-      height: 4px;
-      background: var(--yellow);
-      transform: rotate(-5deg);
-      margin-left: 10px;
-    }
-
-    .network-list {
-      position: absolute;
-      right: -20px;
-      top: 10px;
-      width: 150px;
-      border: 1px solid rgba(255,255,255,.4);
-      border-radius: 10px;
-      padding: 18px;
-      background: rgba(0,30,60,.2);
-      backdrop-filter: blur(5px);
-    }
-
-    .network-list div {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 10px;
-      margin-bottom: 16px;
-    }
-
-    .network-list div:last-child {
-      margin-bottom: 0;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      position: relative;
-      overflow: hidden;
-
-      background-image: none;
-      background-position: center center;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-
-      color: #0b355d;
-    }
-
-    .services::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.60) 0%,
-    rgba(255, 255, 255, 0.48) 20%,
-    rgba(255, 255, 255, 0.28) 38%,
-    rgba(255, 255, 255, 0.10) 55%,
-    rgba(255, 255, 255, 0) 72%
-);
-
-  z-index: 1;
-  pointer-events: none;
-}
-
-    .services-wrapper {
-  position: relative;
-  z-index: 2;
-
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: center;
-}
-
-    .services .section-title {
-  text-shadow: none;
-}
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 13px;
-      align-items: center;
-    }
-
-    .service-card {
-      background: rgba(255,255,255,.93);
-      min-height: 155px;
-      padding: 22px 15px;
-      border: 1px solid #e0e7ee;
-      border-radius: 7px;
-      text-align: center;
-      box-shadow: 0 7px 25px rgba(7,59,112,.05);
-      transition: .3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      font-size: 32px;
-      margin-bottom: 13px;
-      color: var(--blue);
-    }
-
-    .service-card h3 {
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .service-card p {
-      font-size: 10px;
-      line-height: 1.5;
-      color: var(--muted);
-    }
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
-      padding: 70px 0;
-      color: #fff;
-      position: relative;
-      background: linear-gradient(90deg, rgba(4,36,68,.9), rgba(4,36,68,.4));
-    }
-
-    .cta-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .cta h2 {
-      font-size: 34px;
-      line-height: 1.15;
-      max-width: 500px;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 12px;
-    }
-
-    .btn-whatsapp {
-      background: #16c76b;
-      color: #fff;
-      padding: 14px 23px;
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      transition: .3s;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-      background: #0eae5b;
-    }
-
-    .btn-email {
-      background: #fff;
-      color: var(--blue);
-      padding: 14px 23px;
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      transition: .3s;
-    }
-
-    .btn-email:hover {
-      transform: translateY(-2px);
-    }
-
-    .cta-features {
-      display: flex;
-      gap: 50px;
-      text-align: center;
-    }
-
-    .cta-feature {
-      width: 105px;
-    }
-
-    .cta-feature-icon {
-      font-size: 28px;
-      margin-bottom: 9px;
-    }
-
-    .cta-feature p {
-      font-size: 10px;
-      line-height: 1.4;
-      margin: 0;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #03477f;
-      color: #fff;
-      padding: 28px 0;
-    }
-
-    .footer-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .footer-logo {
-      width: 155px;
-      filter: brightness(0) invert(1);
-    }
-
-    .footer-links {
-      display: flex;
-      align-items: center;
-      gap: 17px;
-      color: #d5e5f4;
-      font-size: 10px;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    .social {
-      display: flex;
-      gap: 15px;
-      font-size: 16px;
-    }
-
-    .social a {
-      transition: .2s;
-    }
-
-    .social a:hover {
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       SCROLL ANIMATION
-    ========================= */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1100px) {
-      .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .brand-row {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero-slider {
-        display: none;
-      }
-
-      .network-list {
-        right: 0;
-      }
-    }
-
-    @media (max-width: 850px) {
-      .container,
-      .hero-content {
-        width: min(100% - 40px, 700px);
-      }
-
-      .nav-menu,
-      header .contact-btn {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .hero {
-        min-height: 760px;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-      }
-
-      .hero-description {
-        font-size: 17px;
-      }
-
-      .handwriting {
-        right: 20px;
-        top: 120px;
-        font-size: 22px;
-      }
-
-      .hero-bottom {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 0;
-      }
-
-      .hero-feature:nth-child(2) {
-        border-right: none;
-      }
-
-      .solutions-wrapper,
-      .network-wrapper,
-      .services-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .solutions-stats {
-        border-left: none;
-      }
-
-      .products-header {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .network-list {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-top: 25px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .network-list div {
-        margin-bottom: 0;
-      }
-
-      .cta-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .cta-features {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .footer-wrapper {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 560px) {
-      section {
-        padding: 55px 0;
-      }
-
-      .container,
-      .hero-content {
-        width: calc(100% - 30px);
-      }
-
-      .logo {
-        width: 145px;
-      }
-
-      .hero {
-        min-height: 730px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero-description {
-        font-size: 15px;
-        margin-bottom: 40px;
-      }
-
-      .handwriting {
-        display: none;
-      }
-
-      .hero-bottom {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-feature {
-        padding: 0 10px;
-      }
-
-      .hero-feature:first-child {
-        padding-left: 0;
-      }
-
-      .solutions-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .stat {
-        border-right: none;
-        border-bottom: 1px solid #d6e0ea;
-      }
-
-      .stat:last-child {
-        border-bottom: none;
-      }
-
-      .product-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .brand-row {
-        padding: 0;
-      }
-
-      .brand-logo {
-        max-width: 90px;
-      }
-
-      .map-area {
-        min-height: 250px;
-      }
-
-      .network-note {
-        font-size: 18px;
-        right: 5%;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cta h2 {
-        font-size: 28px;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .btn-whatsapp,
-      .btn-email {
-        justify-content: center;
-      }
-
-      .cta-features {
-        gap: 10px;
-      }
-    }
-  </style>
+@media(max-width:560px){.bento{grid-template-columns:1fr;grid-auto-rows:210px}.tile:nth-child(1),.tile:nth-child(4){grid-column:auto}.tile:nth-child(1){grid-row:span 1}.svc{grid-template-columns:1fr}.o1,.o2{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-
 <body>
+<header id="hd"><div class="wrap nav">
+ <a href="#home"><img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978"></a>
+ <button class="burger" id="burger" aria-label="Buka menu">☰</button>
+ <nav class="menu" id="menu">
+  <a href="#home">Home</a><a href="#solutions">Our Solutions</a><a href="#brands">Brands</a><a href="#network">Our Network</a><a href="#services">Our Services</a>
+  <a class="btn btn-main" href="#contact">Contact Us</a>
+ </nav>
+</div></header>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
-  <header>
-    <div class="container navbar">
-
-      <!-- GANTI LOGO DI SINI -->
-      <a href="#home">
-        <img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978" class="logo" fetchpriority="high" decoding="async" />
-      </a>
-
-      <nav class="nav-menu">
-        <a href="#home">Home</a>
-        <a href="#solutions">Our Solutions</a>
-        <a href="#network">Our Network</a>
-        <a href="#services">Our Services</a>
-      </nav>
-
-      <a href="#contact" class="contact-btn">
-        <span class="whatsapp-icon">◉</span>
-        Contact Us
-      </a>
-
-      <button class="hamburger" id="hamburger">
-        ☰
-      </button>
-
-    </div>
-  </header>
-
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <section class="hero" id="home">
-
-    <div class="hero-bg hero-bg-current"></div>
-    <div class="hero-bg hero-bg-next"></div>
-
-    <div class="hero-content">
-
-      <div class="hero-label">
-        ALTRAK 1978
-      </div>
-
-      <h1>
-        Powering Construction.<br />
-        Moving Businesses.
-      </h1>
-
-      <p class="hero-description">
-        Your Total Partner for a Stronger, More Sustainable Indonesia.
-      </p>
-
-      <div class="hero-bottom">
-
-        <div class="hero-feature">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M8 12l-2 2a2 2 0 0 0 2.8 2.8l2-2"/>
-    <path d="M16 12l2-2a2 2 0 0 0-2.8-2.8l-2 2"/>
-    <path d="M9 15l3 3a2 2 0 0 0 2.8-2.8"/>
-    <path d="M15 9l-3-3a2 2 0 0 0-2.8 2.8"/>
-    <path d="M6 14l-2-2"/>
-    <path d="M18 10l2 2"/>
-  </svg>
-
+<main>
+<section class="hero" id="home">
+ <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+ <div class="wrap hgrid">
   <div>
-    Trusted<br>
-    Since 1978
+   <span class="chip"><i></i>ALTRAK 1978</span>
+   <h1>Powering Construction. <span>Moving Businesses.</span></h1>
+   <p class="sub">Your Total Partner for a Stronger, More Sustainable Indonesia.</p>
+   <div class="cta">
+    <a class="btn btn-main" href="#solutions">Lihat Solusi Kami <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn-ghost" href="#contact">Hubungi Kami</a>
+   </div>
+   <div class="rot" id="rot">Trusted Since 1978</div>
   </div>
-</div>
-
-        <div class="hero-feature">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="9" cy="8" r="3"/>
-    <circle cx="17" cy="9" r="2.5"/>
-    <path d="M3 19c0-3.3 2.7-5 6-5s6 1.7 6 5"/>
-    <path d="M14 15c.9-.5 1.9-.8 3-.8 2.5 0 4 1.3 4 3.8"/>
-  </svg>
-
-  <div>
-    Nationwide<br>
-    Support
+  <div class="glass">
+   <div class="gc"><b data-n="45" data-s="+">0</b><span>Tahun Berpengalaman</span></div>
+   <div class="gc"><b data-n="50" data-s="+">0</b><span>Cabang &amp; Service Point</span></div>
+   <div class="gc"><b data-n="1000" data-s="+">0</b><span>Profesional Berdedikasi</span></div>
+   <div class="gc"><b data-n="6" data-s="">0</b><span>Industri Dilayani</span></div>
   </div>
-</div>
+ </div>
+ <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#fff" d="M0 60C240 100 480 10 720 40s480 50 720 10V90H0z"/></svg></div>
+</section>
 
-        <div class="hero-feature">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="12" cy="12" r="3"/>
-    <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V20h-2.4v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6v-2.4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L7.3 8.6 9 6.9l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5V5h2.4v.8a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1z"/>
-  </svg>
+<div class="mq"><div class="track" id="track"></div></div>
 
-  <div>
-    Complete<br>
-    Solutions
+<section class="sol" id="solutions">
+ <div class="wrap">
+  <div class="reveal"><span class="eyebrow">Our Solutions</span>
+  <h2>Complete Solutions for Every Industry</h2>
+  <p class="lead">Dari power generation hingga konstruksi, pertambangan, pertanian, marine, dan lainnya — alat andal, suku cadang asli, layanan profesional, dan solusi sewa.</p></div>
+  <div class="bento">
+   <a class="tile reveal" href="cummins.html"><img loading="lazy" src="assets/Power%20Generation.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>01</small><h3>Power Generation</h3><p>Solusi tenaga listrik yang andal untuk bisnis Anda.</p></div></a>
+   <a class="tile reveal" href="#brands"><img loading="lazy" src="assets/Construction.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>02</small><h3>Construction</h3><p>Dibangun untuk produktivitas.</p></div></a>
+   <a class="tile reveal" href="#brands"><img loading="lazy" src="assets/Mining.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>03</small><h3>Mining</h3><p>Untuk tantangan lebih berat.</p></div></a>
+   <a class="tile reveal" href="#brands"><img loading="lazy" src="assets/Agriculture.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>04</small><h3>Agriculture</h3><p>Mendukung ketahanan pangan nasional.</p></div></a>
+   <a class="tile reveal" href="#brands"><img loading="lazy" src="assets/Marine%20Engine.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>05</small><h3>Marine</h3><p>Menggerakkan perjalanan Anda.</p></div></a>
+   <a class="tile reveal" href="#brands"><img loading="lazy" src="assets/Industrial.png" alt=""><span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="t"><small>06</small><h3>Industrial</h3><p>Dukungan untuk beragam industri.</p></div></a>
   </div>
-</div>
+ </div>
+</section>
 
-        <div class="hero-feature">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M20 4C12 4 6 7.5 6 13c0 4 3 7 7 7 5.5 0 7-6 7-16z"/>
-    <path d="M4 20c2-5 6-8 12-10"/>
-  </svg>
+<section id="brands">
+ <div class="wrap">
+  <div class="reveal"><span class="eyebrow">Our Products</span>
+  <h2>World-Class Brands. Real-World Impact.</h2>
+  <p class="lead">Peralatan berkualitas tinggi dari merek global terkemuka untuk menjawab tantangan terberat Anda.</p></div>
+  <div class="bgrid" id="bgrid"></div>
+ </div>
+</section>
 
-  <div>
-    Towards a<br>
-    Sustainable<br>
-    Future
+<section class="net" id="network">
+ <div class="wrap">
+  <div class="reveal"><span class="eyebrow">Our Network</span>
+  <h2>Nationwide Support. Closer to You.</h2>
+  <p class="lead">Dengan 50+ cabang dan service point di seluruh Indonesia, kami siap mendukung bisnis Anda di mana pun berada.</p>
+  <p style="margin-top:28px"><a class="btn btn-white" href="#contact">Temukan Cabang Terdekat <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></div>
+  <div class="nums reveal">
+   <div class="nm"><b>50+</b>Cabang &amp; Service Point</div>
+   <div class="nm"><b>24/7</b>Dukungan Teknis</div>
+   <div class="nm"><b>100%</b>Suku Cadang Asli</div>
+   <div class="nm"><b>1978</b>Dipercaya Sejak</div>
   </div>
-</div>
-
-      </div>
-
-    </div>
-
-    <div class="handwriting">
-      Building<br />
-      a Brighter<br />
-      Tomorrow
-    </div>
-
-    <div class="hero-slider">
-      <div class="slider-line"></div>
-      <div class="slider-text">
-        From Energy<br />
-        to a Better Tomorrow
-      </div>
-
-      <button class="slider-button">‹</button>
-      <button class="slider-button">›</button>
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SOLUTIONS
-  ========================= -->
-
-  <section class="solutions reveal" id="solutions">
-
-    <div class="container solutions-wrapper">
-
-      <div class="solutions-copy">
-
-        <div class="section-label">
-          OUR SOLUTIONS
-        </div>
-
-        <h2 class="section-title">
-          Complete Solutions<br />
-          for Every Industry
-        </h2>
-
-        <p class="section-description" style="margin-top:18px;">
-          From power generation to construction, mining, agriculture,
-          marine, and beyond — we provide reliable equipment,
-          genuine parts, professional service, and rental solutions
-          to keep your business moving forward.
-        </p>
-
-      </div>
-
-      <div class="solutions-stats">
-
-        <div class="stat">
-          <div class="stat-icon">▥</div>
-          <strong>50+</strong>
-          <span>
-            Branches &<br />
-            Service Points
-          </span>
-        </div>
-
-        <div class="stat">
-          <div class="stat-icon">♟</div>
-          <strong>1,000+</strong>
-          <span>
-            Dedicated<br />
-            Professionals
-          </span>
-        </div>
-
-        <div class="stat">
-          <div class="stat-icon">⚙</div>
-          <strong>Various</strong>
-          <span>
-            Trusted by<br />
-            Various Industries
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       PRODUCTS
-  ========================= -->
-
-  <section class="products reveal">
-
-    <div class="container">
-
-      <div class="products-header">
-
-        <div>
-          <div class="section-label">
-            OUR PRODUCTS
-          </div>
-
-          <h2 class="section-title">
-            World-Class Brands.<br />
-            Real-World Impact.
-          </h2>
-        </div>
-
-        <div>
-
-          <p class="section-description">
-            We provide a wide range of high-quality equipment
-            from leading global brands to support your toughest challenges.
-          </p>
-
-          <a href="#" class="view-all">
-            View All Products →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="product-grid">
-
-        <!-- PRODUCT 1 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Power Generation.png"
-              alt="Power Generation"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Power Generation</h3>
-            <p>Reliable power solutions for your business</p>
-            <a href="cummins.html" class="product-link">
-                  View Products →
-                </a>
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Construction.png"
-              alt="Construction Equipment"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Construction Equipment</h3>
-            <p>Built for productivity</p>
-            <a href="#" class="product-link">
-              View Products →
-            </a>
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Mining.png"
-              alt="Mining Equipment"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Mining Equipment</h3>
-            <p>For heavier challenges</p>
-            <a href="#" class="product-link">
-              View Products →
-            </a>
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Agriculture.png"
-              alt="Agriculture Equipment"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Agriculture</h3>
-            <p>Supporting food security</p>
-            <a href="#" class="product-link">
-              View Products →
-            </a>
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 5 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Marine Engine.png"
-              alt="Marine Equipment"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Marine</h3>
-            <p>Powering your journey</p>
-            <a href="#" class="product-link">
-              View Products →
-            </a>
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 6 -->
-        <div class="product-card">
-
-          <div class="product-image">
-            <img
-              src="assets/Industrial.png"
-              alt="Industrial Equipment"
-             loading="lazy" decoding="async" />
-          </div>
-
-          <div class="product-content">
-            <h3>Industrial</h3>
-            <p>Support for various industries</p>
-            <a href="#" class="product-link">
-              View Products →
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- BRAND LOGOS -->
-
-<div class="brand-grid">
-
-  <a href="cummins-category.html" class="brand-item">
-    <img src="assets/Cummins Logo.png" alt="Cummins" loading="lazy" decoding="async">
-  </a>
-
-  <a href="newholland.html" class="brand-item">
-    <img src="assets/New Holland Update Logo High Res.webp" alt="New Holland" loading="lazy" decoding="async">
-  </a>
-
-  <a href="case.html" class="brand-item">
-    <img src="assets/CASE CONSTRUCTION LOGO.png" alt="CASE Construction" loading="lazy" decoding="async">
-  </a>
-
-  <a href="caseih.html" class="brand-item">
-    <img src="assets/CaseIH Logo.png" alt="CASE IH" loading="lazy" decoding="async">
-  </a>
-
-  <a href="yanmar.html" class="brand-item">
-    <img src="assets/Yanmar.png" alt="Yanmar" loading="lazy" decoding="async">
-  </a>
-
-  <a href="merlo.html" class="brand-item">
-    <img src="assets/Merlo_CMYK.png" alt="Merlo" loading="lazy" decoding="async">
-  </a>
-
-
-  <a href="alteq78.html" class="brand-item">
-    <img src="assets/ALTEQ78.png" alt="ALTEQ" loading="lazy" decoding="async">
-  </a>
-
-  <a href="mizou.html" class="brand-item">
-    <img src="assets/MIZZOU LOGO (1).png" alt="Mizou" loading="lazy" decoding="async">
-  </a>
-
-  <a href="ashna.html" class="brand-item">
-    <img src="assets/Logo ASHNA-01.png" alt="ASHNA" loading="lazy" decoding="async">
-  </a>
-
-  <a href="valvoline.html" class="brand-item">
-    <img src="assets/Valvoline Logo.png" alt="Valvoline" loading="lazy" decoding="async">
-  </a>
-
-  <a href="fleetguard.html" class="brand-item">
-    <img src="assets/Fleetguard Logo.png" alt="Fleetguard" loading="lazy" decoding="async">
-  </a>
-
-  <a href="holset.html" class="brand-item">
-    <img src="assets/Holset Logo.png" alt="Holset" loading="lazy" decoding="async">
-  </a>
-
-
-  <a href="sangdo.html" class="brand-item">
-    <img src="assets/Sang Do Logo.png" alt="Sangdo" loading="lazy" decoding="async">
-  </a>
-
-  <a href="kubota.html" class="brand-item">
-    <img src="assets/Kubota_Logo.svg.png" alt="Kubota" loading="lazy" decoding="async">
-  </a>
-
-  <a href="galaxy.html" class="brand-item">
-    <img src="assets/LOGO GALAXY.png" alt="GALAXY" loading="lazy" decoding="async">
-  </a>
-
-  <a href="sure-filter.html" class="brand-item">
-    <img src="assets/SURE FILTER logo.png" alt="Sure Filter" loading="lazy" decoding="async">
-  </a>
-  
-  <a href="sinoboom.html" class="brand-item">
-    <img src="assets/Sinoboom.png" alt="sinoboom" loading="lazy" decoding="async">
-  </a>
-
-  <a href="sps.html" class="brand-item">
-    <img src="assets/SPS_Logo.png" alt="SPS" loading="lazy" decoding="async">
-  </a>
-
-  <a href="ciptatech.html" class="brand-item">
-    <img src="assets/Ciptatech.png" alt="Ciptatech" loading="lazy" decoding="async">
-  </a>
-
-  <a href="altrak-power-lighting.html" class="brand-item">
-    <img src="assets/AL POWER LIGHT LOGO.png" alt="AL Power" loading="lazy" decoding="async">
-  </a>
-
-  <a href="Altrak-Hydraulic.html" class="brand-item">
-    <img src="assets/Altrak Hydraulic.png" alt="AL Hydraulic" loading="lazy" decoding="async">
-  </a>
-
-  <a href="altrak-power-rent.html" class="brand-item">
-    <img src="assets/ALTRAK POWER RENT.png" alt="AL Power Rent" loading="lazy" decoding="async">
-  </a>  
-
-</div>
-
-  </section>
-
-
-  <!-- =========================
-       NETWORK
-  ========================= -->
-
-  <section class="network reveal" id="network" data-bg="assets/Map Indonesia.png">
-
-    <div class="container network-wrapper">
-
-      <div>
-
-        <div class="section-label">
-          OUR NETWORK
-        </div>
-
-        <h2 class="section-title">
-          Nationwide Support.<br />
-          Closer to You.
-        </h2>
-
-        <p class="network-description">
-          With 50+ branches and service points across Indonesia,
-          we are always ready to support your business —
-          wherever you are.
-        </p>
-
-        <a href="#" class="outline-btn">
-          ◉ &nbsp; View Our Network
-        </a>
-
-      </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SERVICES
-  ========================= -->
-
-  <section class="services reveal" id="services" data-bg="assets/mekanik.png">
-
-    <div class="container services-wrapper">
-
-      <div class="services-copy">
-
-        <div class="section-label">
-          OUR SERVICES
-        </div>
-
-        <h2 class="section-title">
-          More Than Equipment.<br />
-          A Long-Term Partnership.
-        </h2>
-
-      </div>
-
-
-      <div>
-
-        <p
-          class="section-description"
-          style="margin-bottom:28px; max-width:500px;"
-        >
-          We deliver end-to-end support to ensure your equipment
-          performs at its best, throughout its lifecycle.
-        </p>
-
-
-        <div class="service-grid">
-
-          <div class="service-card">
-            <div class="service-icon">🤝</div>
-            <h3>Sales</h3>
-            <p>
-              Consultative sales for the right solutions
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⚙</div>
-            <h3>Parts</h3>
-            <p>
-              Genuine parts for optimal performance
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h3>Service</h3>
-            <p>
-              Professional service and technical support
-            </p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⛑</div>
-            <h3>Rental</h3>
-            <p>
-              Flexible rental solutions for your project needs
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       CTA
-  ========================= -->
-
-  <section class="cta reveal" id="contact" data-bg="assets/cta-background.jpg">
-
-    <div class="container cta-wrapper">
-
-      <div>
-
-        <h2>
-          Let’s Build a Stronger<br />
-          Indonesia Together.
-        </h2>
-
-        <p>
-          Talk to us and find the right solution for your business.
-        </p>
-
-        <div class="cta-buttons">
-
-          <!-- GANTI NOMOR WHATSAPP -->
-          <a
-            href="https://wa.me/628XXXXXXXXXX"
-            target="_blank"
-            class="btn-whatsapp"
-          >
-            ◉ Chat via WhatsApp
-          </a>
-
-          <!-- GANTI EMAIL -->
-          <a
-            href="mailto:info@altrak1978.co.id"
-            class="btn-email"
-          >
-            ✉ Contact Us
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="cta-features">
-
-        <div class="cta-feature">
-
-          <div class="cta-feature-icon">
-            ◉
-          </div>
-
-          <p>
-            Reliable Today
-          </p>
-
-        </div>
-
-
-        <div class="cta-feature">
-
-          <div class="cta-feature-icon">
-            ⚙
-          </div>
-
-          <p>
-            More Productive
-            Tomorrow
-          </p>
-
-        </div>
-
-
-        <div class="cta-feature">
-
-          <div class="cta-feature-icon">
-            ◒
-          </div>
-
-          <p>
-            A Sustainable
-            Indonesia
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <div class="container footer-wrapper">
-
-      <img
-        src="assets/AL-78-Logo-terevisi.png.png"
-        alt="Altrak 1978"
-        class="footer-logo"
-       loading="lazy" decoding="async" />
-
-
-      <div class="footer-links">
-
-        <a href="#">Privacy Policy</a>
-
-        <span>|</span>
-
-        <a href="#">Terms of Use</a>
-
-        <span>|</span>
-
-        <a href="https://www.altrak1978.co.id" target="_blank">
-          altrak1978.co.id
-        </a>
-
-      </div>
-
-
-      <div class="social">
-
-        <span>Follow Us</span>
-
-        <!-- GANTI LINK SOCIAL MEDIA -->
-        <a href="#" target="_blank">in</a>
-        <a href="#" target="_blank">◎</a>
-        <a href="#" target="_blank">▶</a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
-
-  <script>
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
-
-    // Muat background section bawah hanya saat mendekati layar.
-    const deferredBackgrounds = document.querySelectorAll("[data-bg]");
-
-    if ("IntersectionObserver" in window) {
-      const backgroundObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-
-          const section = entry.target;
-          const imageUrl = section.dataset.bg;
-
-          if (section.id === "contact") {
-            section.style.backgroundImage =
-              `linear-gradient(90deg, rgba(4,36,68,.9), rgba(4,36,68,.4)), url("${imageUrl}")`;
-            section.style.backgroundPosition = "center";
-            section.style.backgroundSize = "cover";
-            section.style.backgroundRepeat = "no-repeat";
-          } else {
-            section.style.backgroundImage = `url("${imageUrl}")`;
-          }
-
-          observer.unobserve(section);
-        });
-      }, { rootMargin: "250px 0px" });
-
-      deferredBackgrounds.forEach(section => backgroundObserver.observe(section));
-    } else {
-      deferredBackgrounds.forEach(section => {
-        section.style.backgroundImage = `url("${section.dataset.bg}")`;
-      });
-    }
-
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", () => {
-
-      const isOpen = navMenu.classList.toggle("mobile-open");
-
-      if (isOpen) {
-
-        navMenu.style.display = "flex";
-        navMenu.style.position = "absolute";
-        navMenu.style.top = "78px";
-        navMenu.style.left = "0";
-        navMenu.style.width = "100%";
-        navMenu.style.background = "#fff";
-        navMenu.style.flexDirection = "column";
-        navMenu.style.padding = "25px";
-        navMenu.style.gap = "22px";
-        navMenu.style.boxShadow = "0 10px 30px rgba(0,0,0,.1)";
-
-      } else {
-
-        navMenu.style.display = "";
-
-      }
-
-    });
-
-
-    /* =========================
-       CLOSE MOBILE MENU
-    ========================= */
-
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-
-      link.addEventListener("click", () => {
-
-        if (window.innerWidth <= 850) {
-
-          navMenu.classList.remove("mobile-open");
-          navMenu.style.display = "";
-
-        }
-
-      });
-
-    });
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const observer = new IntersectionObserver(
-      entries => {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-
-            entry.target.classList.add("active");
-
-          }
-
-        });
-
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-
-    document.querySelectorAll(".reveal").forEach(element => {
-
-      observer.observe(element);
-
-    });
-
-
-    /* =========================
-       HEADER BACKGROUND
-    ========================= */
-
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", () => {
-
-      if (window.scrollY > 40) {
-
-        header.style.boxShadow =
-          "0 5px 25px rgba(7,59,112,.10)";
-
-      } else {
-
-        header.style.boxShadow = "none";
-
-      }
-
-    });
-
-
-    /* =========================
-       HERO SLIDER
-    ========================= */
-
-    const heroSlides = [
-      {
-        image: "assets/Konstruksi - Kategori.png",
-        title: "Powering Construction.<br>Moving Businesses.",
-        description:
-          "Your Total Partner for a Stronger, More Sustainable Indonesia."
-      },
-
-      {
-        image: "assets/Agriculture - Kategori.png",
-        title: "Growing Agriculture.<br>Building Indonesia.",
-        description:
-          "Reliable solutions to support Indonesia's agricultural future."
-      },
-
-      {
-        image: "assets/Powergen - Kategori.png",
-        title: "Reliable Power.<br>Ready for Tomorrow.",
-        description:
-          "Power solutions designed to keep your business moving."
-      }
-    ];
-
-    let currentSlide = 0;
-    let isAnimating = false;
-
-    const currentBg =
-      document.querySelector(".hero-bg-current");
-
-    const nextBg =
-      document.querySelector(".hero-bg-next");
-
-    const heroTitle =
-      document.querySelector(".hero h1");
-
-    const heroDescription =
-      document.querySelector(".hero-description");
-
-    const sliderButtons =
-      document.querySelectorAll(".slider-button");
-
-
-    /* =========================
-       PRELOAD HERO IMAGES
-    ========================= */
-
-    // Slide pertama diprioritaskan di <head>.
-    // Slide berikutnya dimuat hanya saat dipilih pengunjung.
-
-
-    /* =========================
-       INITIAL HERO IMAGE
-    ========================= */
-
-    currentBg.style.backgroundImage =
-      `url("${heroSlides[0].image}")`;
-
-
-    /* =========================
-       CHANGE HERO SLIDE
-    ========================= */
-
-    function updateHero(direction = "next") {
-
-  if (isAnimating) return;
-
-  isAnimating = true;
-
-  /* Tentukan slide berikutnya */
-  if (direction === "next") {
-    currentSlide++;
-
-    if (currentSlide >= heroSlides.length) {
-      currentSlide = 0;
-    }
-
-  } else {
-    currentSlide--;
-
-    if (currentSlide < 0) {
-      currentSlide = heroSlides.length - 1;
-    }
-  }
-
-  const slide = heroSlides[currentSlide];
-
-  /* =========================
-     LOAD IMAGE TERLEBIH DAHULU
-  ========================= */
-
-  const newImage = new Image();
-
-  newImage.onload = function () {
-
-    /*
-      Gambar SUDAH benar-benar siap.
-      Baru sekarang kita ganti background.
-    */
-
-    currentBg.style.backgroundImage =
-      `url("${slide.image}")`;
-
-
-    /* =========================
-       TEXT TRANSITION
-    ========================= */
-
-    heroTitle.classList.add(
-      "hero-text-changing"
-    );
-
-    heroDescription.classList.add(
-      "hero-text-changing"
-    );
-
-
-    setTimeout(() => {
-
-      heroTitle.innerHTML =
-        slide.title;
-
-      heroDescription.textContent =
-        slide.description;
-
-
-      heroTitle.classList.remove(
-        "hero-text-changing"
-      );
-
-      heroDescription.classList.remove(
-        "hero-text-changing"
-      );
-
-    }, 300);
-
-
-    /*
-      Selesai.
-      Tidak ada layer kosong.
-    */
-
-    setTimeout(() => {
-
-      isAnimating = false;
-
-    }, 500);
-
-  };
-
-
-  /* =========================
-     ERROR HANDLING
-  ========================= */
-
-  newImage.onerror = function () {
-
-    console.error(
-      "Gagal memuat gambar:",
-      slide.image
-    );
-
-    isAnimating = false;
-
-  };
-
-
-  /* =========================
-     START LOADING
-  ========================= */
-
-  newImage.src = slide.image;
-}
-
-    /* =========================
-       NEXT / PREVIOUS BUTTONS
-    ========================= */
-
-   sliderButtons.forEach((button, index) => {
-
-  button.addEventListener("click", () => {
-
-    if (index === 1) {
-      updateHero("next");
-    } else {
-      updateHero("previous");
-    }
-
-    startHeroAutoSlide();
-
-  });
-
-});
-
-    /* =========================
-   AUTO SLIDE
-========================= */
-
-let heroAutoSlide;
-
-function startHeroAutoSlide() {
-
-  clearInterval(heroAutoSlide);
-
-  heroAutoSlide = setInterval(() => {
-
-    updateHero("next");
-
-  }, 5000);
-
-}
-
-startHeroAutoSlide();
-
-    /* =========================
-       ACTIVE NAVIGATION
-    ========================= */
-
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-menu a");
-
-    window.addEventListener("scroll", () => {
-
-      let current = "";
-
-      sections.forEach(section => {
-
-        const sectionTop =
-          section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-
-      });
-
-      navLinks.forEach(link => {
-
-        link.style.color = "";
-
-        if (
-          link.getAttribute("href") === "#" + current
-        ) {
-          link.style.color = "#0c5a9f";
-        }
-
-      });
-
-    });
-
-    const heroSection =
-  document.querySelector(".hero");
-
-heroSection.addEventListener("mouseenter", () => {
-  clearInterval(heroAutoSlide);
-});
-
-heroSection.addEventListener("mouseleave", () => {
-  startHeroAutoSlide();
-});
-
-  </script>
-
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <div class="reveal"><span class="eyebrow">Our Services</span>
+  <h2>More Than Equipment. A Long-Term Partnership.</h2>
+  <p class="lead">Dukungan menyeluruh agar peralatan Anda bekerja optimal sepanjang siklus hidupnya.</p></div>
+  <div class="svc">
+   <div class="sc reveal"><span class="n">01</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div><h3>Sales</h3><p>Penjualan konsultatif untuk solusi yang tepat.</p></div>
+   <div class="sc reveal"><span class="n">02</span><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h3>Parts</h3><p>Suku cadang asli untuk performa optimal.</p></div>
+   <div class="sc reveal"><span class="n">03</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 6a4 4 0 005 5l-9 9a2 2 0 01-3-3l9-9a4 4 0 00-2-2z"/></svg></div><h3>Service</h3><p>Layanan profesional dan dukungan teknis.</p></div>
+   <div class="sc reveal"><span class="n">04</span><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5h8v2"/></svg></div><h3>Rental</h3><p>Solusi sewa fleksibel sesuai kebutuhan proyek.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="fin" id="contact">
+ <div class="wrap"><div class="box reveal">
+  <h2>Let’s Build a Stronger Indonesia Together.</h2>
+  <p>Hubungi kami dan temukan solusi yang tepat untuk bisnis Anda.</p>
+  <div class="cta">
+   <!-- GANTI nomor WhatsApp (format 62812xxxxxxx) -->
+   <a class="btn btn-white" href="https://wa.me/628XXXXXXXXXX">Chat via WhatsApp</a>
+   <a class="btn btn-ghost" href="mailto:info@altrak1978.co.id">Kirim Email</a>
+  </div>
+ </div></div>
+</section>
+</main>
+
+<footer><div class="wrap">
+ <div class="f"><img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978">
+ <nav><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="https://www.altrak1978.co.id" target="_blank" rel="noopener">altrak1978.co.id</a></nav></div>
+ <div class="copy">© 2026 PT Altrak 1978. All rights reserved.</div>
+</div></footer>
+
+<script>
+const brands=[["Cummins","Cummins Logo.png","cummins-category.html"],["New Holland","New Holland Update Logo High Res.webp","newholland.html"],["CASE Construction","CASE CONSTRUCTION LOGO.png","case.html"],["CASE IH","CaseIH Logo.png","caseih.html"],["Yanmar","Yanmar.png","yanmar.html"],["Merlo","Merlo_CMYK.png","merlo.html"],["ALTEQ","ALTEQ78.png","alteq78.html"],["Mizou","MIZZOU LOGO (1).png","mizou.html"],["ASHNA","Logo ASHNA-01.png","ashna.html"],["Valvoline","Valvoline Logo.png","valvoline.html"],["Fleetguard","Fleetguard Logo.png","fleetguard.html"],["Holset","Holset Logo.png","holset.html"],["Sangdo","Sang Do Logo.png","sangdo.html"],["Kubota","Kubota_Logo.svg.png","kubota.html"],["Galaxy","LOGO GALAXY.png","galaxy.html"],["Sure Filter","SURE FILTER logo.png","sure-filter.html"],["Sinoboom","Sinoboom.png","sinoboom.html"],["SPS","SPS_Logo.png","sps.html"],["Ciptatech","Ciptatech.png","ciptatech.html"],["AL Power Lighting","AL POWER LIGHT LOGO.png","altrak-power-lighting.html"],["AL Hydraulic","Altrak Hydraulic.png","Altrak-Hydraulic.html"],["AL Power Rent","ALTRAK POWER RENT.png","altrak-power-rent.html"]];
+const tile=b=>`<a href="${b[2]}" title="${b[0]}"><img loading="lazy" src="assets/${encodeURI(b[1])}" alt="${b[0]}"></a>`;
+document.getElementById("bgrid").innerHTML=brands.map(tile).join("");
+document.getElementById("track").innerHTML=brands.concat(brands).map(tile).join("");
+const msgs=["Trusted Since 1978","Nationwide Support","Complete Solutions","Towards a Sustainable Future","Building a Brighter Tomorrow"];
+let i=0;const rot=document.getElementById("rot");
+setInterval(()=>{rot.style.opacity=0;setTimeout(()=>{i=(i+1)%msgs.length;rot.textContent=msgs[i];rot.style.opacity=1},400)},3200);
+const hd=document.getElementById("hd"),menu=document.getElementById("menu");
+const sc=()=>hd.classList.toggle("solid",scrollY>40);sc();addEventListener("scroll",sc,{passive:true});
+document.getElementById("burger").onclick=()=>{menu.classList.toggle("open");hd.classList.add("solid")};
+menu.querySelectorAll("a").forEach(a=>a.onclick=()=>menu.classList.remove("open"));
+document.querySelectorAll("[data-n]").forEach(el=>{const t=+el.dataset.n,s=el.dataset.s;let st=null;
+ const f=ts=>{st=st||ts;const p=Math.min((ts-st)/1600,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString("en")+s;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach((el,k)=>{el.style.transitionDelay=(k%3)*90+"ms";io.observe(el)});
+</script>
 </body>
 </html>
