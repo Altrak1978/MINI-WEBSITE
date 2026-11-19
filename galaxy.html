@@ -1,92 +1,894 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Galaxy | Primex – solusi ban untuk kebutuhan konstruksi, industri, pertambangan, material handling, komersial, kehutanan, dan pertanian. Didistribusikan oleh Altrak 1978.">
-  <title>Galaxy | Primex Tyres – Altrak 1978</title>
-  <style>
-    :root{--red:#d71920;--ink:#17191d;--muted:#68707b;--line:#e7e9ed;--soft:#f5f6f8}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-    a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .topline{height:5px;background:var(--red)}
-    header{border-bottom:1px solid var(--line);background:#fff}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.brand-mark{width:42px;height:42px;border:3px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:12px;font-weight:900}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.8px;font-weight:700}.nav-note{font-size:13px;color:var(--muted);font-weight:700}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#17191d 0%,#292d33 62%,#3b4149 100%);color:#fff;padding:86px 0 82px}.hero:after{content:"";position:absolute;width:480px;height:480px;border:48px solid rgba(255,255,255,.055);border-radius:50%;right:-70px;top:-170px;box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.018)}.hero-inner{position:relative;z-index:1;max-width:720px}.eyebrow{color:#ff646a;font-size:12px;letter-spacing:2.5px;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-2px;margin:18px 0}.hero h1 span{color:#ff424a}.hero p{font-size:17px;color:#d7dbe0;max-width:620px;margin:22px 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:14px 22px;border-radius:4px;font-size:13px;font-weight:800;letter-spacing:.3px;transition:.2s}.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#b91219;transform:translateY(-2px)}.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}.btn-outline:hover{background:#fff;color:var(--ink)}
-    section{padding:68px 0}.section-head{max-width:720px;margin-bottom:30px}.kicker{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:800;text-transform:uppercase}.section-head h2{font-size:clamp(27px,4vw,39px);line-height:1.15;margin:9px 0 12px;letter-spacing:-.8px}.section-head p{margin:0;color:var(--muted)}
-    .intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}.intro-copy p{color:var(--muted);margin:0 0 14px}.brand-panel{background:var(--soft);border-left:4px solid var(--red);padding:30px}.brand-panel strong{font-size:27px;letter-spacing:1px}.brand-panel p{font-size:14px;color:var(--muted);margin:8px 0 0}
-    .applications{background:var(--soft)}.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.app-card{background:#fff;border:1px solid var(--line);padding:25px 23px;min-height:166px;transition:.2s}.app-card:hover{border-color:#f0a0a3;transform:translateY(-3px)}.app-no{font-size:11px;color:var(--red);font-weight:900;letter-spacing:1.5px}.app-card h3{font-size:18px;margin:12px 0 7px}.app-card p{font-size:13px;color:var(--muted);margin:0}
-    .catalog{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;background:#1d2025;color:#fff;padding:36px 40px}.catalog h2{font-size:27px;margin:7px 0}.catalog p{color:#c5c9cf;margin:0;max-width:650px;font-size:14px}.catalog .btn{white-space:nowrap}
-    .note{font-size:12px;color:var(--muted);margin-top:16px}footer{background:#111317;color:#c5c9cf;padding:25px 0;font-size:12px}footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer strong{color:#fff}
-    @media(max-width:760px){.hero{padding:65px 0}.intro-grid{grid-template-columns:1fr;gap:25px}.app-grid{grid-template-columns:repeat(2,1fr)}.catalog{grid-template-columns:1fr;padding:28px}.catalog .btn{justify-self:start}}
-    @media(max-width:480px){.wrap{width:min(100% - 30px,1160px)}.nav{min-height:66px}.nav-note{font-size:11px}.app-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}.hero p{font-size:15px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy | Primex Tyres | PT Altrak 1978</title>
+<style>
+
+:root {
+  --navy: #0b355d;
+  --blue: #0066b3;
+  --blue-dark: #004d89;
+  --yellow: #f5d400;
+
+  --text: #163b63;
+  --muted: #66809b;
+
+  --light: #f4f8fb;
+  --border: #dce6ef;
+
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76px;
+
+  background: rgba(255,255,255,0.96);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5edf4;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #254c70;
+
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.contact-btn {
+  padding: 11px 20px;
+
+  background: var(--navy);
+  color: #fff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-btn:hover {
+  background: #082846;
+}
+
+
+/* =========================
+   PRODUCT HEADER
+========================= */
+
+.product-header {
+
+  padding: 125px 0 55px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4f8fb 0%,
+      #f4f8fb 55%,
+      #ffffff 100%
+    );
+
+  border-bottom: 1px solid var(--border);
+}
+
+.back-home {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  color: var(--navy);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.back-home:hover {
+  color: var(--blue);
+}
+
+.brand-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 18px;
+}
+
+.newholland-logo {
+
+  width: 190px;
+
+  max-height: 75px;
+
+  object-fit: contain;
+}
+
+.section-label {
+
+  color: var(--blue);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.product-header h1 {
+
+  font-size: 46px;
+
+  line-height: 1.05;
+
+  color: var(--navy);
+
+  margin-bottom: 12px;
+}
+
+.product-header p {
+
+  color: #5c7894;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  max-width: 620px;
+}
+
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog {
+
+  padding: 55px 0 90px;
+
+  background: #fff;
+}
+
+.catalog-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.catalog-title {
+
+  color: var(--navy);
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  margin-bottom: 6px;
+}
+
+.catalog-count {
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.search-box input {
+
+  width: 280px;
+
+  padding: 13px 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 13px;
+
+  color: var(--text);
+
+  transition: 0.2s ease;
+}
+
+.search-box input:focus {
+
+  border-color: var(--blue);
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filters {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: #52708c;
+
+  padding: 10px 16px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+
+  border-color: var(--blue);
+
+  color: var(--blue);
+}
+
+.filter-btn.active {
+
+  background: var(--blue);
+
+  border-color: var(--blue);
+
+  color: #fff;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.product-card {
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.product-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #c7d6e4;
+
+  box-shadow:
+    0 12px 30px rgba(11,53,93,0.10);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+
+  height: 225px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f6f8fa,
+      #e9eef3
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.product-image::before {
+
+  content: "NEW HOLLAND";
+
+  position: absolute;
+
+  right: 15px;
+
+  top: 12px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(0,102,179,0.25);
+}
+
+.product-image img {
+
+  width: 90%;
+
+  height: 90%;
+
+  object-fit: contain;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.image-placeholder {
+
+  text-align: center;
+
+  color: #8da0b2;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.image-placeholder span {
+
+  display: block;
+
+  color: #b0bdc9;
+
+  font-size: 9px;
+
+  margin-top: 7px;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================
+   PRODUCT CONTENT
+========================= */
+
+.product-content {
+
+  padding: 20px 20px 22px;
+}
+
+.product-category {
+
+  color: var(--blue);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.product-name {
+
+  color: var(--navy);
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  margin-bottom: 16px;
+}
+
+.spec-list {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf2f6;
+}
+
+.spec-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.spec-label {
+
+  color: #8a9db0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.spec-value {
+
+  color: #315776;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+/* =========================
+   PRODUCT LINE BADGE
+========================= */
+
+.line-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 5px 8px;
+
+  background: #eaf4fc;
+
+  color: var(--blue);
+
+  border-radius: 3px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 45px;
+}
+
+.page-btn {
+
+  width: 36px;
+
+  height: 36px;
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: #5d7891;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.page-btn.active {
+
+  background: var(--blue);
+
+  color: #fff;
+
+  border-color: var(--blue);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  background: var(--navy);
+
+  padding: 35px 0;
+}
+
+.footer-inner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.footer-logo {
+
+  width: 155px;
+
+  filter: brightness(0) invert(1);
+}
+
+.footer-text {
+
+  color: #dce9f4;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results {
+
+  display: none;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #7890a6;
+}
+
+.no-results strong {
+
+  display: block;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  nav {
+    gap: 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-header h1 {
+    font-size: 40px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  header {
+    height: 68px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .header-inner {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .contact-btn {
+    padding: 9px 14px;
+  }
+
+  .product-header {
+    padding-top: 105px;
+  }
+
+  .brand-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .product-header h1 {
+    font-size: 36px;
+  }
+
+  .catalog-top {
+
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .product-header h1 {
+    font-size: 32px;
+  }
+
+  .catalog-title {
+    font-size: 24px;
+  }
+
+  .filters {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+}
+
+
+
+/* GALAXY IMPLEMENTATION IMAGES */
+.implementation { padding: 48px 0 70px; background: var(--light); border-top: 1px solid var(--border); }
+.implementation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.implementation-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.implementation-image { width: 100%; aspect-ratio: 16 / 9; background: linear-gradient(145deg,#f6f8fa,#e9eef3); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.implementation-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.implementation-image span { color: #8da0b2; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.implementation-name { padding: 14px 16px; color: var(--navy); font-size: 14px; font-weight: 800; }
+@media (max-width: 950px) { .implementation-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .implementation-grid { grid-template-columns: 1fr; } }
+
+/* GALAXY BRAND HEADING */
+.galaxy-brand { width: 300px; max-width: 100%; height: auto; object-fit: contain; display: block; }
+.catalog-download { display: inline-block; margin-top: 18px; padding: 13px 22px; background: var(--blue); color: #fff; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: .5px; }
+.catalog-download:hover { background: var(--blue-dark); }
+
+</style>
 </head>
 <body>
-  <div class="topline"></div>
-  <header>
-    <div class="wrap nav">
-      <div class="brand"><div class="brand-mark">A78</div><div>ALTRAK 1978<small>YOUR TOTAL PARTNER</small></div></div>
-      <div class="nav-note">AUTHORIZED DISTRIBUTION</div>
+<header>
+  <div class="header-inner">
+    <a href="index.html"><img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978" class="logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#solutions">Our Solutions</a>
+      <a href="index.html#network">Our Network</a>
+      <a href="index.html#services">Our Services</a>
+    </nav>
+    <a href="index.html#contact" class="contact-btn">Contact Us</a>
+  </div>
+</header>
+
+<section class="product-header">
+  <div class="container">
+    <a href="index.html" class="back-home">← Back to Altrak 1978</a>
+    <div class="brand-heading"><img src="assets/product/galaxy/galaxy-primex-logo.png" alt="Galaxy Primex" class="galaxy-brand"></div>
+    <div class="section-label">TYRE SOLUTIONS</div>
+    <h1>Tyre Solutions</h1>
+    <p>Galaxy | Primex offers a wide range of tyre solutions for construction and industrial equipment, earthmoving and mining, material handling, commercial vehicles, forestry, and agricultural applications. Explore the application categories below and download the technical catalog for further product information.</p>
+  </div>
+</section>
+
+<section class="implementation">
+  <div class="container">
+    <div class="catalog-top">
+      <div>
+        <div class="catalog-title">Product Applications</div>
+        <div class="catalog-count">Galaxy | Primex Tyres</div>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="eyebrow">Tyre Solutions</div>
-        <h1>GALAXY <span>|</span><br>PRIMEX</h1>
-        <p>Solusi ban untuk mendukung berbagai kebutuhan alat dan kendaraan di sektor konstruksi, industri, pertambangan, material handling, komersial, kehutanan, dan pertanian.</p>
-        <div class="hero-actions">
-          <a class="btn btn-red" href="assets/product/galaxy/galaxy-primex-catalog.pdf" download>DOWNLOAD TECHNICAL CATALOG ↓</a>
-          <a class="btn btn-outline" href="#applications">LIHAT APLIKASI</a>
-        </div>
-      </div>
-    </section>
+    <div class="implementation-grid">
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/construction-industrial.jpg" alt="Construction & Industrial application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 01</span>';"></div>
+        <div class="implementation-name">Construction &amp; Industrial</div>
+      </article>
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/earthmover-mining.jpg" alt="Earthmover & Mining application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 02</span>';"></div>
+        <div class="implementation-name">Earthmover &amp; Mining</div>
+      </article>
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/material-handling.jpg" alt="Material Handling application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 03</span>';"></div>
+        <div class="implementation-name">Material Handling</div>
+      </article>
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/commercial.jpg" alt="Commercial application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 04</span>';"></div>
+        <div class="implementation-name">Commercial</div>
+      </article>
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/forestry.jpg" alt="Forestry application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 05</span>';"></div>
+        <div class="implementation-name">Forestry</div>
+      </article>
+      <article class="implementation-card">
+        <div class="implementation-image"><img src="assets/product/galaxy/implementation/agriculture.jpg" alt="Agriculture application" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>IMAGE SLOT 06</span>';"></div>
+        <div class="implementation-name">Agriculture</div>
+      </article>
+    </div>
 
-    <section>
-      <div class="wrap intro-grid">
-        <div class="intro-copy">
-          <div class="kicker">About the brand</div>
-          <div class="section-head"><h2>Designed for demanding applications.</h2></div>
-          <p>Galaxy dan Primex menghadirkan pilihan produk ban untuk beragam jenis mesin, kendaraan, dan kondisi operasional. Portofolionya mencakup kebutuhan sektor industri hingga aplikasi pertanian.</p>
-          <p>Untuk melihat pilihan produk, ukuran, spesifikasi teknis, dan informasi aplikasi secara lebih lengkap, silakan unduh katalog teknis resmi melalui tautan di halaman ini.</p>
-        </div>
-        <div class="brand-panel">
-          <strong>GALAXY <span style="color:var(--red)">/</span> PRIMEX</strong>
-          <p>Product range for construction, industrial, earthmover, material handling, commercial, forestry, and agricultural applications.</p>
-        </div>
-      </div>
-    </section>
+    <div style="margin-top:38px;">
+      <div class="catalog-title">Technical Catalog</div>
+      <div class="catalog-count">Galaxy | Primex</div>
+      <a class="catalog-download" href="assets/product/galaxy/galaxy-primex-catalog.pdf" download>DOWNLOAD CATALOG (PDF)</a>
+    </div>
+  </div>
+</section>
 
-    <section class="applications" id="applications">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Product applications</div>
-          <h2>One range. Multiple industries.</h2>
-          <p>Ragam kategori aplikasi yang tercantum dalam katalog Galaxy | Primex.</p>
-        </div>
-        <div class="app-grid">
-          <article class="app-card"><div class="app-no">01 / INDUSTRY</div><h3>Construction & Industrial</h3><p>Untuk aplikasi skid steer, backhoe, telehandler, dan compact wheel loader.</p></article>
-          <article class="app-card"><div class="app-no">02 / EARTHMOVER</div><h3>Excavator, Paver & Compactor</h3><p>Kategori ban untuk kebutuhan alat berat dan pekerjaan konstruksi.</p></article>
-          <article class="app-card"><div class="app-no">03 / MATERIAL</div><h3>Material Handling</h3><p>Mencakup earthmover, port, forklift, dan underground mining.</p></article>
-          <article class="app-card"><div class="app-no">04 / COMMERCIAL</div><h3>Commercial</h3><p>Pilihan kategori untuk aplikasi kendaraan komersial.</p></article>
-          <article class="app-card"><div class="app-no">05 / FORESTRY</div><h3>Forestry</h3><p>Kategori produk untuk kebutuhan operasional kehutanan.</p></article>
-          <article class="app-card"><div class="app-no">06 / AGRICULTURE</div><h3>Agriculture</h3><p>Untuk traktor, combine harvester, agri transport, serta fronts & implement.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="catalog">
-          <div><div class="eyebrow">Technical information</div><h2>Explore the complete product catalog.</h2><p>Temukan detail kategori, pilihan produk, ukuran, dan informasi teknis Galaxy | Primex dalam satu katalog lengkap.</p></div>
-          <a class="btn btn-red" href="assets/product/galaxy/galaxy-primex-catalog.pdf" download>DOWNLOAD CATALOG ↓</a>
-        </div>
-        <p class="note">Catatan: Informasi model dan spesifikasi lengkap tersedia di dalam file katalog teknis.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="wrap foot"><div><strong>ALTRAK 1978</strong> · Your Total Partner</div><div>Galaxy | Primex Tyres</div></div></footer>
+<footer>
+  <div class="container footer-inner">
+    <img src="assets/AL-78-Logo-terevisi.png.png" alt="Altrak 1978" class="footer-logo">
+    <div class="footer-text">Your Total Partner</div>
+  </div>
+</footer>
 </body>
 </html>
