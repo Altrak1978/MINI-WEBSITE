@@ -814,6 +814,49 @@ footer {
 .brand-logo { width:210px; max-height:105px; object-fit:contain; object-position:left center; margin-bottom:18px; }
 @media(max-width:700px) { .category-grid { grid-template-columns:1fr; } }
 
+
+/* =========================
+   IMPLEMENTATION IMAGES
+========================= */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+.category-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11,53,93,.10);
+}
+.category-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  background: #f4f8fb;
+}
+.category-content { padding: 20px; }
+.category-content h3 {
+  color: var(--navy);
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+.category-content p {
+  color: #5c7894;
+  font-size: 14px;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .category-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -856,14 +899,24 @@ footer {
   <div class="container">
     <div class="catalog-title">Product Categories</div>
     <div class="category-grid">
-      <div class="category-card">
-        <h3>Electrical Switchboard</h3>
-        <p>Electrical switchboard and panel solutions, including control panels and distribution boards featured in the brochure.</p>
-      </div>
-      <div class="category-card">
-        <h3>Metal Fabrication</h3>
-        <p>Fabricated equipment and components featured in the brochure, supporting a range of industrial and equipment applications.</p>
-      </div>
+      <article class="category-card">
+        <img class="category-image"
+             src="assets/product/ciptatech/implementation/electrical-switchboard.jpg"
+             alt="Electrical switchboard and control panel products">
+        <div class="category-content">
+          <h3>Electrical Switchboard</h3>
+          <p>Electrical panel solutions including genset control panels, distribution boards, battery chargers, and automatic transfer switch panels.</p>
+        </div>
+      </article>
+      <article class="category-card">
+        <img class="category-image"
+             src="assets/product/ciptatech/implementation/metal-fabrication.jpg"
+             alt="Metal fabrication products and equipment">
+        <div class="category-content">
+          <h3>Metal Fabrication</h3>
+          <p>Fabricated components and equipment such as buckets, grabbers, canopies, tanks, trailers, and other supporting equipment.</p>
+        </div>
+      </article>
     </div>
     <div class="download-area">
       <a class="download-btn" href="assets/product/ciptatech/cipta-andalan-teknindo.pdf" download>
